@@ -15,6 +15,7 @@
 		377E2FD82BD9943B00135B48 /* YoutubeMiniaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */; };
 		377E2FE22BD9943B00135B48 /* YoutubeMiniaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */; };
 		377E2FE42BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */; };
+		377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FF02BD9974000135B48 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeMiniaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITests.swift; sourceTree = "<group>"; };
 		377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		377E2FF02BD9974000135B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		377E2FB72BD9943A00135B48 = {
 			isa = PBXGroup;
 			children = (
+				377E2FF02BD9974000135B48 /* GoogleService-Info.plist */,
 				377E2FC22BD9943A00135B48 /* YoutubeMinia */,
 				377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */,
 				377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */,
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				377E2FCD2BD9943B00135B48 /* Preview Assets.xcassets in Resources */,
+				377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */,
 				377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
