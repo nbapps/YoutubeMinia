@@ -16,6 +16,35 @@
 		377E2FE22BD9943B00135B48 /* YoutubeMiniaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */; };
 		377E2FE42BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */; };
 		377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FF02BD9974000135B48 /* GoogleService-Info.plist */; };
+		377E2FF42BD997E600135B48 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 377E2FF32BD997E600135B48 /* FirebaseAnalytics */; };
+		377E2FF62BD997E600135B48 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 377E2FF52BD997E600135B48 /* FirebaseAnalyticsSwift */; };
+		377E2FF82BD997E600135B48 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 377E2FF72BD997E600135B48 /* FirebaseAppCheck */; };
+		377E2FFA2BD997E600135B48 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 377E2FF92BD997E600135B48 /* FirebaseCrashlytics */; };
+		377E2FFE2BD997E600135B48 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 377E2FFD2BD997E600135B48 /* FirebaseRemoteConfig */; };
+		377E30002BD997E600135B48 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 377E2FFF2BD997E600135B48 /* FirebaseRemoteConfigSwift */; };
+		377E30022BD9981900135B48 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30012BD9981900135B48 /* Database.swift */; };
+		377E30042BD99A1300135B48 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 377E30032BD99A0600135B48 /* Config.xcconfig */; };
+		377E30072BD99A6B00135B48 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30062BD99A6B00135B48 /* Config.swift */; };
+		377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */; };
+		377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300A2BD99F4900135B48 /* Double+Extensions.swift */; };
+		377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300C2BD9A11000135B48 /* ProgressBar.swift */; };
+		377E300F2BD9AC2700135B48 /* devVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 377E300E2BD9AC2700135B48 /* devVideo.json */; };
+		377E30122BD9AC6500135B48 /* FoundationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 377E30112BD9AC6500135B48 /* FoundationKit */; };
+		377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30142BD9ADB200135B48 /* YTDecodable.swift */; };
+		377E30192BD9B00F00135B48 /* devChannel.json in Resources */ = {isa = PBXBuildFile; fileRef = 377E30182BD9B00F00135B48 /* devChannel.json */; };
+		377E30282BD9BABE00135B48 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */; };
+		377E30292BD9BABE00135B48 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301D2BD9BABE00135B48 /* Roboto-Italic.ttf */; };
+		377E302A2BD9BABE00135B48 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301E2BD9BABE00135B48 /* Roboto-Black.ttf */; };
+		377E302B2BD9BABE00135B48 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301F2BD9BABE00135B48 /* Roboto-BlackItalic.ttf */; };
+		377E302C2BD9BABE00135B48 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30202BD9BABE00135B48 /* Roboto-Medium.ttf */; };
+		377E302D2BD9BABE00135B48 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30212BD9BABE00135B48 /* Roboto-BoldItalic.ttf */; };
+		377E302E2BD9BABE00135B48 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30222BD9BABE00135B48 /* Roboto-Thin.ttf */; };
+		377E302F2BD9BABE00135B48 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30232BD9BABE00135B48 /* Roboto-Light.ttf */; };
+		377E30302BD9BABE00135B48 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */; };
+		377E30312BD9BABE00135B48 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30252BD9BABE00135B48 /* Roboto-LightItalic.ttf */; };
+		377E30322BD9BABE00135B48 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */; };
+		377E30332BD9BABE00135B48 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */; };
+		377E30352BD9BDF900135B48 /* YMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30342BD9BDF900135B48 /* YMViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +78,29 @@
 		377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITests.swift; sourceTree = "<group>"; };
 		377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		377E2FF02BD9974000135B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		377E30012BD9981900135B48 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		377E30032BD99A0600135B48 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		377E30052BD99A2200135B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		377E30062BD99A6B00135B48 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		377E300A2BD99F4900135B48 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		377E300C2BD9A11000135B48 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		377E300E2BD9AC2700135B48 /* devVideo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = devVideo.json; sourceTree = "<group>"; };
+		377E30142BD9ADB200135B48 /* YTDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTDecodable.swift; sourceTree = "<group>"; };
+		377E30182BD9B00F00135B48 /* devChannel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = devChannel.json; sourceTree = "<group>"; };
+		377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		377E301D2BD9BABE00135B48 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		377E301E2BD9BABE00135B48 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		377E301F2BD9BABE00135B48 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		377E30202BD9BABE00135B48 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		377E30212BD9BABE00135B48 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		377E30222BD9BABE00135B48 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		377E30232BD9BABE00135B48 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		377E30252BD9BABE00135B48 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		377E30342BD9BDF900135B48 /* YMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +108,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377E2FF62BD997E600135B48 /* FirebaseAnalyticsSwift in Frameworks */,
+				377E2FFA2BD997E600135B48 /* FirebaseCrashlytics in Frameworks */,
+				377E30002BD997E600135B48 /* FirebaseRemoteConfigSwift in Frameworks */,
+				377E2FFE2BD997E600135B48 /* FirebaseRemoteConfig in Frameworks */,
+				377E30122BD9AC6500135B48 /* FoundationKit in Frameworks */,
+				377E2FF82BD997E600135B48 /* FirebaseAppCheck in Frameworks */,
+				377E2FF42BD997E600135B48 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				377E2FF02BD9974000135B48 /* GoogleService-Info.plist */,
+				377E30032BD99A0600135B48 /* Config.xcconfig */,
 				377E2FC22BD9943A00135B48 /* YoutubeMinia */,
 				377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */,
 				377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */,
@@ -100,10 +160,20 @@
 		377E2FC22BD9943A00135B48 /* YoutubeMinia */ = {
 			isa = PBXGroup;
 			children = (
+				377E30052BD99A2200135B48 /* Info.plist */,
 				377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */,
+				377E30132BD9ADAC00135B48 /* Model */,
+				377E300A2BD99F4900135B48 /* Double+Extensions.swift */,
+				377E300E2BD9AC2700135B48 /* devVideo.json */,
+				377E30182BD9B00F00135B48 /* devChannel.json */,
+				377E30012BD9981900135B48 /* Database.swift */,
+				377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */,
 				377E2FC52BD9943A00135B48 /* ContentView.swift */,
+				377E30342BD9BDF900135B48 /* YMViewModel.swift */,
+				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
+				377E30062BD99A6B00135B48 /* Config.swift */,
 				377E2FC72BD9943A00135B48 /* Item.swift */,
-				377E2FC92BD9943B00135B48 /* Assets.xcassets */,
+				377E301A2BD9BA9400135B48 /* Ressources */,
 				377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */,
 				377E2FCB2BD9943B00135B48 /* Preview Content */,
 			);
@@ -135,6 +205,42 @@
 			path = YoutubeMiniaUITests;
 			sourceTree = "<group>";
 		};
+		377E30132BD9ADAC00135B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				377E30142BD9ADB200135B48 /* YTDecodable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		377E301A2BD9BA9400135B48 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				377E301B2BD9BAAF00135B48 /* font */,
+				377E2FC92BD9943B00135B48 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		377E301B2BD9BAAF00135B48 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				377E301E2BD9BABE00135B48 /* Roboto-Black.ttf */,
+				377E301F2BD9BABE00135B48 /* Roboto-BlackItalic.ttf */,
+				377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */,
+				377E30212BD9BABE00135B48 /* Roboto-BoldItalic.ttf */,
+				377E301D2BD9BABE00135B48 /* Roboto-Italic.ttf */,
+				377E30232BD9BABE00135B48 /* Roboto-Light.ttf */,
+				377E30252BD9BABE00135B48 /* Roboto-LightItalic.ttf */,
+				377E30202BD9BABE00135B48 /* Roboto-Medium.ttf */,
+				377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */,
+				377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */,
+				377E30222BD9BABE00135B48 /* Roboto-Thin.ttf */,
+				377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +257,15 @@
 			dependencies = (
 			);
 			name = YoutubeMinia;
+			packageProductDependencies = (
+				377E2FF32BD997E600135B48 /* FirebaseAnalytics */,
+				377E2FF52BD997E600135B48 /* FirebaseAnalyticsSwift */,
+				377E2FF72BD997E600135B48 /* FirebaseAppCheck */,
+				377E2FF92BD997E600135B48 /* FirebaseCrashlytics */,
+				377E2FFD2BD997E600135B48 /* FirebaseRemoteConfig */,
+				377E2FFF2BD997E600135B48 /* FirebaseRemoteConfigSwift */,
+				377E30112BD9AC6500135B48 /* FoundationKit */,
+			);
 			productName = YoutubeMinia;
 			productReference = 377E2FC02BD9943A00135B48 /* YoutubeMinia.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +338,10 @@
 				Base,
 			);
 			mainGroup = 377E2FB72BD9943A00135B48;
+			packageReferences = (
+				377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				377E30102BD9AC6500135B48 /* XCRemoteSwiftPackageReference "FoundationKit" */,
+			);
 			productRefGroup = 377E2FC12BD9943A00135B48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,8 +358,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377E30322BD9BABE00135B48 /* Roboto-MediumItalic.ttf in Resources */,
+				377E30302BD9BABE00135B48 /* Roboto-ThinItalic.ttf in Resources */,
+				377E30282BD9BABE00135B48 /* Roboto-Bold.ttf in Resources */,
+				377E30312BD9BABE00135B48 /* Roboto-LightItalic.ttf in Resources */,
+				377E30042BD99A1300135B48 /* Config.xcconfig in Resources */,
+				377E30192BD9B00F00135B48 /* devChannel.json in Resources */,
+				377E30332BD9BABE00135B48 /* Roboto-Regular.ttf in Resources */,
 				377E2FCD2BD9943B00135B48 /* Preview Assets.xcassets in Resources */,
+				377E302F2BD9BABE00135B48 /* Roboto-Light.ttf in Resources */,
 				377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */,
+				377E302A2BD9BABE00135B48 /* Roboto-Black.ttf in Resources */,
+				377E302D2BD9BABE00135B48 /* Roboto-BoldItalic.ttf in Resources */,
+				377E30292BD9BABE00135B48 /* Roboto-Italic.ttf in Resources */,
+				377E302B2BD9BABE00135B48 /* Roboto-BlackItalic.ttf in Resources */,
+				377E302C2BD9BABE00135B48 /* Roboto-Medium.ttf in Resources */,
+				377E300F2BD9AC2700135B48 /* devVideo.json in Resources */,
+				377E302E2BD9BABE00135B48 /* Roboto-Thin.ttf in Resources */,
 				377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +402,13 @@
 			files = (
 				377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */,
 				377E2FC82BD9943A00135B48 /* Item.swift in Sources */,
+				377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */,
+				377E30072BD99A6B00135B48 /* Config.swift in Sources */,
+				377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */,
+				377E30022BD9981900135B48 /* Database.swift in Sources */,
+				377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */,
+				377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */,
+				377E30352BD9BDF900135B48 /* YMViewModel.swift in Sources */,
 				377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +448,7 @@
 /* Begin XCBuildConfiguration section */
 		377E2FE52BD9943B00135B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 377E30032BD99A0600135B48 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -370,6 +512,7 @@
 		};
 		377E2FE62BD9943B00135B48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 377E30032BD99A0600135B48 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -437,6 +580,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YoutubeMinia/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,6 +609,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YoutubeMinia/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,6 +736,63 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+		377E30102BD9AC6500135B48 /* XCRemoteSwiftPackageReference "FoundationKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nbapps/FoundationKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		377E2FF32BD997E600135B48 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		377E2FF52BD997E600135B48 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		377E2FF72BD997E600135B48 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		377E2FF92BD997E600135B48 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		377E2FFD2BD997E600135B48 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		377E2FFF2BD997E600135B48 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		377E30112BD9AC6500135B48 /* FoundationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 377E30102BD9AC6500135B48 /* XCRemoteSwiftPackageReference "FoundationKit" */;
+			productName = FoundationKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 377E2FB82BD9943A00135B48 /* Project object */;
 }

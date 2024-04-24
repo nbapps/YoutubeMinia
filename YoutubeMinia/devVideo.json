@@ -1,0 +1,82 @@
+{
+    "kind": "youtube#videoListResponse",
+    "etag": "hUDsvttwdg1QUdO6Wl1lCmpZCRs",
+    "items": [
+        {
+            "kind": "youtube#video",
+            "etag": "zIJGHDkUkl83GFMoluSjRh8tWhU",
+            "id": "f7_CHu0ADhM",
+            "snippet": {
+                "publishedAt": "2024-04-23T15:31:39Z",
+                "channelId": "UCLOAPb7ATQUs_nDs9ViLcMw",
+                "title": "Quel abonné codera la meilleure solution ?",
+                "description": "Un grand merci à tous les devs qui se sont prêtés à ce challenge improvisé avec @BastiUi \n\nC’était cool de voir tous vos projets progresser jour à jour, je n’ai pas trop pu rendre compte de cette progression dans cette vidéo mais au moins j’ai pu vous présenter les différents projets soumis.\n\nDans tous les cas, on a enfin un outil pour ça grâce à vous et je peux vous promettre que ça va grandement simplifier la vie de nombreuses personnes gravitant dans l’écosystème des YouTubers. Attendez vous à voir votre card sur les vidéos de grands YouTubers prochainement !\n\nDans l’ordre d’apparition de la vidéo, les candidats et leurs projets sont :\n\nhttps://ytpng.vercel.app / https://twitter.com/kevscript\nhttps://miniadownloader.ledocdev.com/ / https://twitter.com/darrell_kidjo\nhttps://wid.yt/youtube-widget / https://twitter.com/leobrtlt\nhttps://gitlab.com/kwuray/youtube-thumbnail-screenshot / https://twitter.com/LeVraiJesus\nhttps://cardyt.be / https://twitter.com/Maksance\nhttps://ytbcard.vercel.app/ / https://twitter.com/FabienBouns\nhttps://jyc.dev/thumb-meta / https://twitter.com/jycouet\nhttps://custom-youtube-thumbnail.gabin.app / https://twitter.com/gabinaureche\n\nBravo à tous ! Maintenant, il ne peut y avoir qu’un grand gagnant… Rendez-vous en fin de vidéo !\n\nMon SaaS pour mettre en relation les YouTubers et les Sponsors\nhttps://meetsponsors.com\nDevenez affiliés et gagnez 20% sur tous les abonnements\nhttps://meetsponsors.lemonsqueezy.com/affiliates?aff_ref=jBPw18Q3\n\nMes tutos et codes sources :\nhttps://shop.benjamincode.tv\n\nRejoignez moi sur Twitter :\nhttps://twitter.com/benjamincode\n\nInsta : https://instagram.com/benjamincode/\nTwitch : https://www.twitch.tv/benjamincode\nMail : b1jam1code@gmail.com\nPartners Manager : Loic Coutal\nMiniamaker : https://twitter.com/Kas0bel\nMonteur : https://twitter.com/TeddyCoste1 & Moi\n\nChapitrage :\n00:00 Introduction\n01:24 La problématique\n03:27 Conseils généraux\n04:38 Les résultats\n07:04 Ne perdons pas espoir…\n08:14 Vraiment…\n13:13 Le gagnant\n15:21 Atteindre la forme ultime…\n\nLes musiques que j'utilise sur la chaîne sont soit : \n- de moi (dans de nombreux cas : guitar / saxo / nappes de synthés)\n- de Obsimo\n- de Luxie (Ilovedyou https://www.youtube.com/watch?v=gQhZip9eIa0)\n- de Paradise of Yesterday (https://paradiseofyesterday.bandcamp.com/) pour tout ce qui est synth pop",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/f7_CHu0ADhM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/f7_CHu0ADhM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/f7_CHu0ADhM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/f7_CHu0ADhM/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/f7_CHu0ADhM/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Benjamin Code",
+                "tags": [
+                    "benjamin code",
+                    "web developer",
+                    "developer frontend",
+                    "frontend",
+                    "creative developer",
+                    "aristide benoist",
+                    "awwwards",
+                    "learn how to code"
+                ],
+                "categoryId": "27",
+                "liveBroadcastContent": "none",
+                "defaultLanguage": "fr",
+                "localized": {
+                    "title": "Quel abonné codera la meilleure solution ?",
+                    "description": "Un grand merci à tous les devs qui se sont prêtés à ce challenge improvisé avec @BastiUi \n\nC’était cool de voir tous vos projets progresser jour à jour, je n’ai pas trop pu rendre compte de cette progression dans cette vidéo mais au moins j’ai pu vous présenter les différents projets soumis.\n\nDans tous les cas, on a enfin un outil pour ça grâce à vous et je peux vous promettre que ça va grandement simplifier la vie de nombreuses personnes gravitant dans l’écosystème des YouTubers. Attendez vous à voir votre card sur les vidéos de grands YouTubers prochainement !\n\nDans l’ordre d’apparition de la vidéo, les candidats et leurs projets sont :\n\nhttps://ytpng.vercel.app / https://twitter.com/kevscript\nhttps://miniadownloader.ledocdev.com/ / https://twitter.com/darrell_kidjo\nhttps://wid.yt/youtube-widget / https://twitter.com/leobrtlt\nhttps://gitlab.com/kwuray/youtube-thumbnail-screenshot / https://twitter.com/LeVraiJesus\nhttps://cardyt.be / https://twitter.com/Maksance\nhttps://ytbcard.vercel.app/ / https://twitter.com/FabienBouns\nhttps://jyc.dev/thumb-meta / https://twitter.com/jycouet\nhttps://custom-youtube-thumbnail.gabin.app / https://twitter.com/gabinaureche\n\nBravo à tous ! Maintenant, il ne peut y avoir qu’un grand gagnant… Rendez-vous en fin de vidéo !\n\nMon SaaS pour mettre en relation les YouTubers et les Sponsors\nhttps://meetsponsors.com\nDevenez affiliés et gagnez 20% sur tous les abonnements\nhttps://meetsponsors.lemonsqueezy.com/affiliates?aff_ref=jBPw18Q3\n\nMes tutos et codes sources :\nhttps://shop.benjamincode.tv\n\nRejoignez moi sur Twitter :\nhttps://twitter.com/benjamincode\n\nInsta : https://instagram.com/benjamincode/\nTwitch : https://www.twitch.tv/benjamincode\nMail : b1jam1code@gmail.com\nPartners Manager : Loic Coutal\nMiniamaker : https://twitter.com/Kas0bel\nMonteur : https://twitter.com/TeddyCoste1 & Moi\n\nChapitrage :\n00:00 Introduction\n01:24 La problématique\n03:27 Conseils généraux\n04:38 Les résultats\n07:04 Ne perdons pas espoir…\n08:14 Vraiment…\n13:13 Le gagnant\n15:21 Atteindre la forme ultime…\n\nLes musiques que j'utilise sur la chaîne sont soit : \n- de moi (dans de nombreux cas : guitar / saxo / nappes de synthés)\n- de Obsimo\n- de Luxie (Ilovedyou https://www.youtube.com/watch?v=gQhZip9eIa0)\n- de Paradise of Yesterday (https://paradiseofyesterday.bandcamp.com/) pour tout ce qui est synth pop"
+                },
+                "defaultAudioLanguage": "fr"
+            },
+            "contentDetails": {
+                "duration": "PT16M31S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+            },
+            "statistics": {
+                "viewCount": "19740",
+                "likeCount": "1560",
+                "favoriteCount": "0",
+                "commentCount": "60"
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 1
+    }
+}
