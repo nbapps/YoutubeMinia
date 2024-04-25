@@ -9,13 +9,10 @@ import SwiftUI
 import SwiftData
 import Combine
 
-
-
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
 
-    @EnvironmentObject private var viewModel: YMViewModel
+    @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
 
     var body: some View {
         NavigationStack {
@@ -28,5 +25,5 @@ struct ContentView: View {
     ContentView()
         .frame(width: 800, height: 500)
         .dataContainer(inMemory: true)
-        .environmentObject(YMViewModel.shared)
+        .environmentObject(ThumbnailMakerViewModel.shared)
 }

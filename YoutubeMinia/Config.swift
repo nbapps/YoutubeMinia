@@ -18,7 +18,7 @@ struct Config {
             URLQueryItem(name: "id", value: videoId),
             URLQueryItem(name: "key", value: apiKey)
         ]
-        print(urlComponents.url)
+        
         return urlComponents.url?.absoluteURL
     }
     
@@ -30,7 +30,6 @@ struct Config {
             URLQueryItem(name: "key", value: apiKey)
         ]
 
-        print(urlComponents.url)
         return urlComponents.url?.absoluteURL
     }
     

@@ -8,10 +8,10 @@
 import Foundation
 
 extension UserDefaults {
-    static let lastVideoURlStrKey = "lastURlStrKey"
-    var lastVideoURlStr: String {
-        get { string(forKey: Self.lastVideoURlStrKey) ?? "" }
-        set { set(newValue, forKey: Self.lastVideoURlStrKey) }
+    static let videoURlStrKey = "lastURlStrKey"
+    var videoURlStr: String {
+        get { string(forKey: Self.videoURlStrKey) ?? "" }
+        set { set(newValue, forKey: Self.videoURlStrKey) }
     }
     
     static let showDurationKey = "showDurationKey"

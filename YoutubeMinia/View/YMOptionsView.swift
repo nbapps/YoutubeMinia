@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct YMOptionsView: View {
-    @EnvironmentObject private var viewModel: YMViewModel
+    @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
     
     var body: some View {
         List {
@@ -40,5 +40,5 @@ struct YMOptionsView: View {
 
 #Preview {
     YMOptionsView()
-        .environmentObject(YMViewModel.shared)
+        .environmentObject(ThumbnailMakerViewModel.shared)
 }

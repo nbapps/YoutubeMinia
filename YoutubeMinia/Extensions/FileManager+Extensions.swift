@@ -17,10 +17,12 @@ typealias SharableImage = UIImage
 
 enum FileManagerError: Error {
     case noImage
+    case cantGetData
 }
 
 extension FileManager {
-    func saveImageToDownloads(image: SharableImage?, fileName: String, fileExt: String) throws {
+    @discardableResult
+    func saveImageToDownloads(image: SharableImage?, fileName: String, fileExt: String) throws -> URL {
         guard let image else { throw FileManagerError.noImage }
         let downloadsDirectory = urls(for: .downloadsDirectory, in: .userDomainMask).first!
         
@@ -28,11 +30,11 @@ extension FileManager {
         let fileURL = downloadsDirectory.appendingPathComponent(fileName)
         
         guard let imageData = image.tiffRepresentation else {
-            print("Failed to get image data")
-            return
+            throw FileManagerError.cantGetData
         }
-        print(fileURL)
         
         try imageData.write(to: fileURL)
+        
+        return fileURL
     }
 }

@@ -60,7 +60,7 @@ actor Database {
     }()
     
     static let schema = SwiftData.Schema([
-        Item.self,
+
     ])
     
     @MainActor

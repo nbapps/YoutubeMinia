@@ -141,6 +141,16 @@
         }
       }
     },
+    "!Save .yttm file" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save .yttm file"
+          }
+        }
+      }
+    },
     "!Save in Dowmloads" : {
       "localizations" : {
         "en" : {
@@ -282,6 +292,9 @@
       }
     },
     "https://www.youtube.com/watch?v=f7_CHu0ADhM" : {
+
+    },
+    "Youtube minia" : {
 
     }
   },

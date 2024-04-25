@@ -2,20 +2,85 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Youtube thumbnail maker file</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.nbapps.youtubeMinia.fileIentifier</string>
+			</array>
+		</dict>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
-        <string>Ressources/font/Roboto-Black.ttf</string>
-        <string>Ressources/font/Roboto-BlackItalic.ttf</string>
-        <string>Ressources/font/Roboto-Bold.ttf</string>
-        <string>Ressources/font/Roboto-BoldItalic.ttf</string>
-        <string>Ressources/font/Roboto-Italic.ttf</string>
-        <string>Ressources/font/Roboto-Light.ttf</string>
-        <string>Ressources/font/Roboto-LightItalic.ttf</string>
-        <string>Ressources/font/Roboto-Medium.ttf</string>
-        <string>Ressources/font/Roboto-MediumItalic.ttf</string>
-        <string>Ressources/font/Roboto-Regular.ttf</string>
-        <string>Ressources/font/Roboto-Thin.ttf</string>
-        <string>Ressources/font/Roboto-ThinItalic.ttf</string>
+		<string>Ressources/font/Roboto-Black.ttf</string>
+		<string>Ressources/font/Roboto-BlackItalic.ttf</string>
+		<string>Ressources/font/Roboto-Bold.ttf</string>
+		<string>Ressources/font/Roboto-BoldItalic.ttf</string>
+		<string>Ressources/font/Roboto-Italic.ttf</string>
+		<string>Ressources/font/Roboto-Light.ttf</string>
+		<string>Ressources/font/Roboto-LightItalic.ttf</string>
+		<string>Ressources/font/Roboto-Medium.ttf</string>
+		<string>Ressources/font/Roboto-MediumItalic.ttf</string>
+		<string>Ressources/font/Roboto-Regular.ttf</string>
+		<string>Ressources/font/Roboto-Thin.ttf</string>
+		<string>Ressources/font/Roboto-ThinItalic.ttf</string>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.json</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Youtube thumbnail maker file</string>
+			<key>UTTypeIcons</key>
+			<dict>
+				<key>UTTypeIconBadgeName</key>
+				<string>yttm_icon</string>
+			</dict>
+			<key>UTTypeIdentifier</key>
+			<string>com.nbapps.youtubeMinia.fileIentifier</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>yttm</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.json</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Youtube thumbnail maker file</string>
+			<key>UTTypeIcons</key>
+			<dict>
+				<key>UTTypeIconBadgeName</key>
+				<string>yttm_icon</string>
+			</dict>
+			<key>UTTypeIdentifier</key>
+			<string>com.nbapps.youtubeMinia.fileIentifier</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>yttm</string>
+				</array>
+			</dict>
+		</dict>
 	</array>
 	<key>YT_API_KEY</key>
 	<string>$YT_API_KEY</string>

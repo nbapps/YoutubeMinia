@@ -1,5 +1,5 @@
 //
-//  YMViewModel.swift
+//  ThumbnailMakerViewModel.swift
 //  YoutubeMinia
 //
 //  Created by Nicolas Bachur on 25/04/2024.
@@ -16,16 +16,18 @@ enum YMViewModelError: Error {
     case missingChannelId
     
     case missingResponse
+    case noImage
 }
 
-final class YMViewModel: ObservableObject {
+final class ThumbnailMakerViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private let networkService = NetworkService()
     
-    static let shared = YMViewModel(fetchOnLaunch: true)
-    static let preview = YMViewModel(fetchOnLaunch: false)
+    static let shared = ThumbnailMakerViewModel(fetchOnLaunch: true)
+    static let preview = ThumbnailMakerViewModel(fetchOnLaunch: false)
     
-    @Published var lastVideoURlStr: String = UserDefaults.standard.lastVideoURlStr
+    @Published var lastVideoURlStr: String?
+    @Published var videoURlStr: String = UserDefaults.standard.videoURlStr
     @Published var showDuration: Bool = UserDefaults.standard.showDuration
     @Published var showChannelIcon: Bool = UserDefaults.standard.showChannelIcon
     @Published var showChannelName: Bool = UserDefaults.standard.showChannelName
@@ -48,7 +50,7 @@ final class YMViewModel: ObservableObject {
         udObservers()
         
         if fetchOnLaunch {
-            if lastVideoURlStr.isNotEmpty {
+            if videoURlStr.isNotEmpty {
                 Task { @MainActor in
                     try await fetch()
                 }
@@ -61,19 +63,33 @@ final class YMViewModel: ObservableObject {
                 try? await fetchThumbnails(videoThumbnailUrl: ymThumbnailData!.videoThumbnailUrl, channelThumbnailUrl: ymThumbnailData!.channelThumbnailUrl)
             }
         }
+        
+        $videoURlStr
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .compactMap { $0.isNotEmpty ? $0 : nil }
+            .sink { [weak self] newValue in
+                guard let self else { return }
+                Task { @MainActor in
+                    try await self.fetch()
+                }
+            }
+            .store(in: &cancellables)
     }
 
     @MainActor
     func fetch() async throws {
         defer { isFetching = false }
-        guard lastVideoURlStr.isNotEmpty else { return }
-        guard let videoId = try extractVideoId(from: lastVideoURlStr),
+        guard videoURlStr.isNotEmpty else { return }
+        
+        guard lastVideoURlStr != videoURlStr else { return }
+        
+        guard let videoId = try extractVideoId(from: videoURlStr),
               let ytVideoUrl = Config.videoURL(for: videoId)
         else { return }
-        
         ymThumbnailData = nil
         isFetching = true
-        
+        self.lastVideoURlStr = videoURlStr
+        print("start fetch")
         let videoReponse: YTDecodable = try await networkService.fetch(url: ytVideoUrl)
         guard let videoItem = videoReponse.items.first,
               let videoSnippet = videoItem.snippet,
@@ -142,8 +158,78 @@ final class YMViewModel: ObservableObject {
         pb.writeObjects([image])
     }
     
-    func extractVideoId(from urlStr: String) throws -> String? {
+    @MainActor
+    func exportThumbnail(image: NSImage?, fileName: String) throws {
+        guard let image else {
+            throw YMViewModelError.noImage
+        }
+        try FileManager.default.saveImageToDownloads(
+            image: image,
+            fileName: fileName,
+            fileExt: "png"
+        )
+    }
+
+    @MainActor
+    func configurationFile() -> SharableFile? {
+        guard let ymThumbnailData else { return nil }
+        return SharableFile(
+            videoURlStr: videoURlStr,
+            videoTitle: ymThumbnailData.videoTitle,
+            showDuration: showDuration,
+            showChannelIcon: showChannelIcon,
+            showChannelName: showChannelName,
+            showChannelCount: showChannelCount,
+            showViewCount: showViewCount,
+            showPublishDate: showPublishDate,
+            showProgress: showProgress,
+            lastProgress: lastProgress,
+            isDarkTheme: isDarkTheme,
+            thumbnailCornerRadius: thumbnailCornerRadius,
+            thumbnailPadding: thumbnailPadding
+        )
+    }
+    
+    @MainActor
+    func importeConfigurationFile(_ importedConfiguration: SharableFile) {
+        videoURlStr = importedConfiguration.videoURlStr
+        showDuration = importedConfiguration.showDuration
+        showChannelIcon = importedConfiguration.showChannelIcon
+        showChannelName = importedConfiguration.showChannelName
+        showChannelCount = importedConfiguration.showChannelCount
+        showViewCount = importedConfiguration.showViewCount
+        showPublishDate = importedConfiguration.showPublishDate
+        showProgress = importedConfiguration.showProgress
+        lastProgress = importedConfiguration.lastProgress
+        isDarkTheme = importedConfiguration.isDarkTheme
+        thumbnailCornerRadius = importedConfiguration.thumbnailCornerRadius
+        thumbnailPadding = importedConfiguration.thumbnailPadding
+    }
+    
+    func mapValue(_ value: Double, fromRange: ClosedRange<Double>, toRange: ClosedRange<Double>) -> Double {
+        let fromMin = fromRange.lowerBound
+        let fromMax = fromRange.upperBound
+        let toMin = toRange.lowerBound
+        let toMax = toRange.upperBound
+        
+        let result = (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin
+        return result.rounded(.up)
+    }
+    
+    func checkIfURLIsValid(urlStr: String?) -> String? {
+        guard let urlStr else { return nil }
         guard let comp = URLComponents(string: urlStr) else { return nil }
+        guard let host = comp.host else { return nil }
+        guard host == "youtu.be" || host.contains("youtube.com") else { return nil }
+        return urlStr
+    }
+}
+
+private extension ThumbnailMakerViewModel {
+
+    func extractVideoId(from urlStr: String) throws -> String? {
+        guard let valideURL = checkIfURLIsValid(urlStr: urlStr) else { throw YMViewModelError.notAYoutubeVideoURL }
+        guard let comp = URLComponents(string: valideURL) else { return nil }
         guard let host = comp.host else { throw YMViewModelError.missingHost}
         if host == "youtu.be" {
             return comp.path.replacingOccurrences(of: "/", with: "")
@@ -160,24 +246,14 @@ final class YMViewModel: ObservableObject {
             throw YMViewModelError.notAYoutubeVideoURL
         }
     }
-    
-    func mapValue(_ value: Double, fromRange: ClosedRange<Double>, toRange: ClosedRange<Double>) -> Double {
-        let fromMin = fromRange.lowerBound
-        let fromMax = fromRange.upperBound
-        let toMin = toRange.lowerBound
-        let toMax = toRange.upperBound
-        
-        let result = (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin
-        return result.rounded(.up)
-    }
 }
 
-private extension YMViewModel {
+private extension ThumbnailMakerViewModel {
     func udObservers() {
-        $lastVideoURlStr
+        $videoURlStr
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.lastVideoURlStr = newValue
+                UserDefaults.standard.videoURlStr = newValue
             }
             .store(in: &cancellables)
         

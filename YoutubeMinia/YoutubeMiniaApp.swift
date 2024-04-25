@@ -7,19 +7,14 @@
 
 import SwiftUI
 import SwiftData
-import FirebaseCore
 
 @main
 struct YoutubeMiniaApp: App {
-    init() {
-        FirebaseApp.configure()
-    }
-    
     var body: some Scene {
-        WindowGroup {
+        Window("Youtube minia", id: "Main") {
             ContentView()
                 .dataContainer()
-                .environmentObject(YMViewModel.shared)
+                .environmentObject(ThumbnailMakerViewModel.shared)
                 .frame(width: 800, height: 500)
                 .navigationTitle("!Youtube Thumbnail Maker")
         }
