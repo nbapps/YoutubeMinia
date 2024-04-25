@@ -32,6 +32,12 @@ extension UserDefaults {
         set { set(newValue, forKey: Self.showChannelNameKey) }
     }
     
+    static let showChannelCountKey = "showChannelCountKey"
+    var showChannelCount: Bool {
+        get { bool(forKey: Self.showChannelCountKey) }
+        set { set(newValue, forKey: Self.showChannelCountKey) }
+    }
+    
     static let showViewCountKey = "showViewCountKey"
     var showViewCount: Bool {
         get { bool(forKey: Self.showViewCountKey) }
@@ -66,5 +72,19 @@ extension UserDefaults {
     var thumbnailCornerRadius: Double {
         get { double(forKey: Self.thumbnailCornerRadiusKey) }
         set { set(newValue, forKey: Self.thumbnailCornerRadiusKey) }
+    }
+    
+    static let thumbnailPaddingKey = "thumbnailPaddingKey"
+    var thumbnailPadding: Double {
+        get {
+            let val = double(forKey: Self.thumbnailPaddingKey)
+            return val < 8 ? 8: val
+        }
+        set { 
+            set(
+                newValue >= 8 ? newValue : 8,
+                forKey: Self.thumbnailPaddingKey
+            )
+        }
     }
 }

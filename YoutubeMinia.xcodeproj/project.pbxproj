@@ -29,7 +29,6 @@
 		377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300A2BD99F4900135B48 /* Double+Extensions.swift */; };
 		377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300C2BD9A11000135B48 /* ProgressBar.swift */; };
 		377E300F2BD9AC2700135B48 /* devVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 377E300E2BD9AC2700135B48 /* devVideo.json */; };
-		377E30122BD9AC6500135B48 /* FoundationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 377E30112BD9AC6500135B48 /* FoundationKit */; };
 		377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30142BD9ADB200135B48 /* YTDecodable.swift */; };
 		377E30192BD9B00F00135B48 /* devChannel.json in Resources */ = {isa = PBXBuildFile; fileRef = 377E30182BD9B00F00135B48 /* devChannel.json */; };
 		377E30282BD9BABE00135B48 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */; };
@@ -45,6 +44,18 @@
 		377E30322BD9BABE00135B48 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */; };
 		377E30332BD9BABE00135B48 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */; };
 		377E30352BD9BDF900135B48 /* YMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30342BD9BDF900135B48 /* YMViewModel.swift */; };
+		377E30372BDA2D0C00135B48 /* YMOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30362BDA2D0C00135B48 /* YMOptionsView.swift */; };
+		377E30432BDA38A900135B48 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30422BDA38A900135B48 /* FileManager+Extensions.swift */; };
+		377E30462BDA3CFF00135B48 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30452BDA3CFF00135B48 /* String+Extensions.swift */; };
+		377E30482BDA3F7300135B48 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30472BDA3F7300135B48 /* Font+Extensions.swift */; };
+		377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E304B2BDA455700135B48 /* View+Extensions.swift */; };
+		377E304E2BDA4A3600135B48 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E304D2BDA4A3600135B48 /* Date+Extensions.swift */; };
+		377E30502BDA4A6600135B48 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 377E304F2BDA4A6600135B48 /* Localizable.xcstrings */; };
+		377E30522BDA508800135B48 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30512BDA508800135B48 /* Collection+Extensions.swift */; };
+		377E30542BDA514500135B48 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30532BDA514500135B48 /* Bundle+Extensions.swift */; };
+		377E30562BDA518300135B48 /* YMThumbnailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30552BDA518300135B48 /* YMThumbnailData.swift */; };
+		377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30572BDA51BD00135B48 /* NetworkService.swift */; };
+		377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30592BDA524500135B48 /* ThumbnailMakerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +112,18 @@
 		377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		377E30342BD9BDF900135B48 /* YMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMViewModel.swift; sourceTree = "<group>"; };
+		377E30362BDA2D0C00135B48 /* YMOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMOptionsView.swift; sourceTree = "<group>"; };
+		377E30422BDA38A900135B48 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		377E30452BDA3CFF00135B48 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		377E30472BDA3F7300135B48 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		377E304B2BDA455700135B48 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		377E304D2BDA4A3600135B48 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		377E304F2BDA4A6600135B48 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		377E30512BDA508800135B48 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		377E30532BDA514500135B48 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		377E30552BDA518300135B48 /* YMThumbnailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMThumbnailData.swift; sourceTree = "<group>"; };
+		377E30572BDA51BD00135B48 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		377E30592BDA524500135B48 /* ThumbnailMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailMakerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +135,6 @@
 				377E2FFA2BD997E600135B48 /* FirebaseCrashlytics in Frameworks */,
 				377E30002BD997E600135B48 /* FirebaseRemoteConfigSwift in Frameworks */,
 				377E2FFE2BD997E600135B48 /* FirebaseRemoteConfig in Frameworks */,
-				377E30122BD9AC6500135B48 /* FoundationKit in Frameworks */,
 				377E2FF82BD997E600135B48 /* FirebaseAppCheck in Frameworks */,
 				377E2FF42BD997E600135B48 /* FirebaseAnalytics in Frameworks */,
 			);
@@ -169,6 +191,10 @@
 				377E30012BD9981900135B48 /* Database.swift */,
 				377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */,
 				377E2FC52BD9943A00135B48 /* ContentView.swift */,
+				377E30592BDA524500135B48 /* ThumbnailMakerView.swift */,
+				377E30442BDA3CF500135B48 /* Extensions */,
+				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
+				377E305B2BDA550D00135B48 /* Services */,
 				377E30342BD9BDF900135B48 /* YMViewModel.swift */,
 				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
 				377E30062BD99A6B00135B48 /* Config.swift */,
@@ -209,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				377E30142BD9ADB200135B48 /* YTDecodable.swift */,
+				377E30552BDA518300135B48 /* YMThumbnailData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +245,7 @@
 			children = (
 				377E301B2BD9BAAF00135B48 /* font */,
 				377E2FC92BD9943B00135B48 /* Assets.xcassets */,
+				377E304F2BDA4A6600135B48 /* Localizable.xcstrings */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -239,6 +267,28 @@
 				377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		377E30442BDA3CF500135B48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				377E30422BDA38A900135B48 /* FileManager+Extensions.swift */,
+				377E30532BDA514500135B48 /* Bundle+Extensions.swift */,
+				377E30452BDA3CFF00135B48 /* String+Extensions.swift */,
+				377E30512BDA508800135B48 /* Collection+Extensions.swift */,
+				377E304D2BDA4A3600135B48 /* Date+Extensions.swift */,
+				377E30472BDA3F7300135B48 /* Font+Extensions.swift */,
+				377E304B2BDA455700135B48 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		377E305B2BDA550D00135B48 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				377E30572BDA51BD00135B48 /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +314,6 @@
 				377E2FF92BD997E600135B48 /* FirebaseCrashlytics */,
 				377E2FFD2BD997E600135B48 /* FirebaseRemoteConfig */,
 				377E2FFF2BD997E600135B48 /* FirebaseRemoteConfigSwift */,
-				377E30112BD9AC6500135B48 /* FoundationKit */,
 			);
 			productName = YoutubeMinia;
 			productReference = 377E2FC02BD9943A00135B48 /* YoutubeMinia.app */;
@@ -340,7 +389,6 @@
 			mainGroup = 377E2FB72BD9943A00135B48;
 			packageReferences = (
 				377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				377E30102BD9AC6500135B48 /* XCRemoteSwiftPackageReference "FoundationKit" */,
 			);
 			productRefGroup = 377E2FC12BD9943A00135B48 /* Products */;
 			projectDirPath = "";
@@ -373,6 +421,7 @@
 				377E30292BD9BABE00135B48 /* Roboto-Italic.ttf in Resources */,
 				377E302B2BD9BABE00135B48 /* Roboto-BlackItalic.ttf in Resources */,
 				377E302C2BD9BABE00135B48 /* Roboto-Medium.ttf in Resources */,
+				377E30502BDA4A6600135B48 /* Localizable.xcstrings in Resources */,
 				377E300F2BD9AC2700135B48 /* devVideo.json in Resources */,
 				377E302E2BD9BABE00135B48 /* Roboto-Thin.ttf in Resources */,
 				377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */,
@@ -401,14 +450,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */,
+				377E30462BDA3CFF00135B48 /* String+Extensions.swift in Sources */,
+				377E30372BDA2D0C00135B48 /* YMOptionsView.swift in Sources */,
+				377E30542BDA514500135B48 /* Bundle+Extensions.swift in Sources */,
 				377E2FC82BD9943A00135B48 /* Item.swift in Sources */,
+				377E30562BDA518300135B48 /* YMThumbnailData.swift in Sources */,
 				377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */,
 				377E30072BD99A6B00135B48 /* Config.swift in Sources */,
+				377E30432BDA38A900135B48 /* FileManager+Extensions.swift in Sources */,
 				377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */,
+				377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */,
 				377E30022BD9981900135B48 /* Database.swift in Sources */,
+				377E304E2BDA4A3600135B48 /* Date+Extensions.swift in Sources */,
+				377E30522BDA508800135B48 /* Collection+Extensions.swift in Sources */,
 				377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */,
+				377E30482BDA3F7300135B48 /* Font+Extensions.swift in Sources */,
+				377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */,
 				377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */,
 				377E30352BD9BDF900135B48 /* YMViewModel.swift in Sources */,
+				377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */,
 				377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -746,14 +806,6 @@
 				minimumVersion = 10.24.0;
 			};
 		};
-		377E30102BD9AC6500135B48 /* XCRemoteSwiftPackageReference "FoundationKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nbapps/FoundationKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.7.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -786,11 +838,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 377E2FF22BD997E600135B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfigSwift;
-		};
-		377E30112BD9AC6500135B48 /* FoundationKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 377E30102BD9AC6500135B48 /* XCRemoteSwiftPackageReference "FoundationKit" */;
-			productName = FoundationKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -19,6 +19,11 @@ struct YoutubeMiniaApp: App {
         WindowGroup {
             ContentView()
                 .dataContainer()
+                .environmentObject(YMViewModel.shared)
+                .frame(width: 800, height: 500)
+                .navigationTitle("!Youtube Thumbnail Maker")
         }
+        .defaultSize(width: 800, height: 500)
+        .windowResizability(.contentSize)
     }
 }

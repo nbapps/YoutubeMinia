@@ -1,6 +1,6 @@
 {
     "kind": "youtube#channelListResponse",
-    "etag": "B7FE-Uy0Lkoze_HiRV5Hft6VSlg",
+    "etag": "-0tfidqeoxEuseNj_2oJMtpLwfs",
     "pageInfo": {
         "totalResults": 1,
         "resultsPerPage": 5
@@ -8,7 +8,7 @@
     "items": [
         {
             "kind": "youtube#channel",
-            "etag": "v2v0h8jT4-hwrPVI3hX3sjqhBfk",
+            "etag": "-HVOYOfDas4OLiJxU5P4BGe9nRQ",
             "id": "UCLOAPb7ATQUs_nDs9ViLcMw",
             "snippet": {
                 "title": "Benjamin Code",
@@ -37,6 +37,12 @@
                     "description": "Benjamin Code est une chaine dans laquelle je tente de vous montrer les bons cotés de la vie d'un développeur freelance.\nJ'essaie de ne montrer que peu de code et de privilégier une approche grand public pour faire découvrir à plus de monde cet univers pas si inaccessible qu'on ne le croît. \n\nAbonnez-vous à la chaine pour ne rien louper et si vous voulez me suivre ailleurs, vous pouvez le faire ici :\nTwitter : https://twitter.com/benjamincode\nTwitch : https://www.twitch.tv/benjamincode\nInstagram : https://www.instagram.com/benjamincode/\nMail : b1jam1code@gmail.com\n\nN'hésitez pas à participer dans les commentaires : suggérer des choses, poser des questions...  c'est comme ça qu'on pourra créer un contenu encore plus intéressant !"
                 },
                 "country": "FR"
+            },
+            "statistics": {
+                "viewCount": "10405422",
+                "subscriberCount": "131000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "321"
             }
         }
     ]

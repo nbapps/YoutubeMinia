@@ -1,0 +1,290 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "!%lld k subscribers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld k subscribers"
+          }
+        }
+      }
+    },
+    "!%lld k views" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld k views"
+          }
+        }
+      }
+    },
+    "!%lld m subscribers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m subscribers"
+          }
+        }
+      }
+    },
+    "!%lld m views" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m views"
+          }
+        }
+      }
+    },
+    "!%lld subscribers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld subscribers"
+          }
+        }
+      }
+    },
+    "!%lld views" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld views"
+          }
+        }
+      }
+    },
+    "!Any Youtube URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Any YouTube URL"
+          }
+        }
+      }
+    },
+    "!Copy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy"
+          }
+        }
+      }
+    },
+    "!Corner radius" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corner radius"
+          }
+        }
+      }
+    },
+    "!Dark theme" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark theme"
+          }
+        }
+      }
+    },
+    "!Fetch" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetch"
+          }
+        }
+      }
+    },
+    "!Invalid Number" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid number"
+          }
+        }
+      }
+    },
+    "!Options" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Options"
+          }
+        }
+      }
+    },
+    "!Progress" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress"
+          }
+        }
+      }
+    },
+    "!Save in Donwloads" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save in Downloads"
+          }
+        }
+      }
+    },
+    "!Show channel icon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show channel icon"
+          }
+        }
+      }
+    },
+    "!Show channel name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show channel name"
+          }
+        }
+      }
+    },
+    "!Show channel sub" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show channel sub"
+          }
+        }
+      }
+    },
+    "!Show progress bar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show progress bar"
+          }
+        }
+      }
+    },
+    "!Show publication date" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show publication date"
+          }
+        }
+      }
+    },
+    "!Show video duration" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show video duration"
+          }
+        }
+      }
+    },
+    "!Show views count" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show views count"
+          }
+        }
+      }
+    },
+    "!Since %lld day%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "since %1$lld day%2$@"
+          }
+        }
+      }
+    },
+    "!Since %lld month%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "since %1$lld month%2$@"
+          }
+        }
+      }
+    },
+    "!Since %lld week%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "since %1$lld week%2$@"
+          }
+        }
+      }
+    },
+    "!Since %lld year%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "since %1$lld year%2$@"
+          }
+        }
+      }
+    },
+    "!Thumbnail padding" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thumbnail padding"
+          }
+        }
+      }
+    },
+    "!Youtube Thumbnail Maker" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Youtube Thumbnail Maker"
+          }
+        }
+      }
+    },
+    "https://www.youtube.com/watch?v=f7_CHu0ADhM" : {
+
+    }
+  },
+  "version" : "1.0"
+}

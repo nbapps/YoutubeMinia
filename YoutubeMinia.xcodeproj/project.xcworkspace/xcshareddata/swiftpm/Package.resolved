@@ -1,5 +1,5 @@
 {
-  "originHash" : "d0026842f54c861e7e0f31cca2cfc030a15004890edf0146201e1e8b172c15d2",
+  "originHash" : "a1569f9895aa2be8e24832f98525d5da4eb90b5d158a82691c15b47eb72a13d7",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -26,15 +26,6 @@
       "state" : {
         "revision" : "42eae77a0af79e9c3f41df04a23c76f05cfdda77",
         "version" : "10.24.0"
-      }
-    },
-    {
-      "identity" : "foundationkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/nbapps/FoundationKit.git",
-      "state" : {
-        "revision" : "17990cc2d260271a8207d8a14ac89a6335b6f56c",
-        "version" : "1.7.1"
       }
     },
     {

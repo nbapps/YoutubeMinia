@@ -8,13 +8,13 @@
 import Foundation
 
 struct YTDecodable: Codable {
-    let items: [YItem]
+    let items: [YTItem]
     let kind, etag: String
     let pageInfo: PageInfo
 }
 
 // MARK: - Item
-struct YItem: Codable {
+struct YTItem: Codable {
     let etag, kind, id: String
     let snippet: Snippet?
     let contentDetails: ContentDetails?
@@ -24,8 +24,8 @@ struct YItem: Codable {
 // MARK: - Snippet
 struct Snippet: Codable {
     let title, description, channelId: String?
-    let publishedAt: String
-    let customUrl: String?
+    let publishedAt: String?
+    let customUrl: String??
     let tags: [String]?
     let liveBroadcastContent, defaultLanguage, defaultAudioLanguage: String?
     let channelTitle: String?
