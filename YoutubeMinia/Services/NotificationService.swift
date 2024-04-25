@@ -15,7 +15,7 @@ final class NotificationService {
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
-        content.title = "Youtube minia"
+        content.title = "Youtube Minia Maker"
         content.subtitle = message
         content.body = urlStr
         content.interruptionLevel = .active

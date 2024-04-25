@@ -21,7 +21,7 @@ struct PreferencesView: View {
                         .frame(width: 100)
                     
                     VStack(alignment: .leading) {
-                        Text("!Youtube minia")
+                        Text("!Youtube Minia Maker")
                             .font(.largeTitle)
                         
                         Text("!Get stylish YouTube thumbnails")

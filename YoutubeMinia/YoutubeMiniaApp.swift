@@ -16,12 +16,12 @@ struct YoutubeMiniaApp: App {
     @StateObject private var thumbnailMakerViewModel = ThumbnailMakerViewModel.shared
     
     var body: some Scene {
-        Window("!Youtube minia", id: WindowId.main.rawValue) {
+        Window("!Youtube Minia Maker", id: WindowId.main.rawValue) {
             ContentView()
                 .dataContainer()
                 .environmentObject(thumbnailMakerViewModel)
                 .frame(width: 800, height: 500)
-                .navigationTitle("!Youtube Thumbnail Maker")
+                .navigationTitle("!Youtube Minia Maker")
         }
         .defaultSize(width: 800, height: 500)
         .windowResizability(.contentSize)
@@ -34,7 +34,7 @@ struct YoutubeMiniaApp: App {
         }
         .windowResizability(.contentSize)
         
-        MenuBarExtra("!Youtube minia", systemImage: "photo.badge.arrow.down") {
+        MenuBarExtra("!Youtube Minia Maker", systemImage: "photo.badge.arrow.down") {
             MenuBarExtraView()
                 .environmentObject(thumbnailMakerViewModel)
         }
