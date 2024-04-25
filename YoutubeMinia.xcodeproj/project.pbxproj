@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FC82BD9943A00135B48 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC72BD9943A00135B48 /* Item.swift */; };
@@ -76,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extensions.swift"; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YoutubeMinia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeMinia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				377E30422BDA38A900135B48 /* FileManager+Extensions.swift */,
+				3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */,
 				377E30532BDA514500135B48 /* Bundle+Extensions.swift */,
 				377E30452BDA3CFF00135B48 /* String+Extensions.swift */,
 				377E30512BDA508800135B48 /* Collection+Extensions.swift */,
@@ -468,6 +471,7 @@
 				377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */,
 				377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */,
 				377E30352BD9BDF900135B48 /* YMViewModel.swift in Sources */,
+				3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */,
 				377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */,
 				377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */,
 			);

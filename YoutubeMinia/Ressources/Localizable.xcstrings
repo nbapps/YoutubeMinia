@@ -101,13 +101,12 @@
         }
       }
     },
-    "!Fetch" : {
-      "extractionState" : "stale",
+    "!Enter YouTube video URL to generate sharable thumbnail" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fetch"
+            "value" : "Enter YouTube video URL to generate sharable thumbnail"
           }
         }
       }
@@ -142,7 +141,7 @@
         }
       }
     },
-    "!Save in Donwloads" : {
+    "!Save in Dowmloads" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -227,7 +226,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "since %1$lld day%2$@"
+            "value" : "%1$lld day%2$@ ago"
           }
         }
       }
@@ -237,7 +236,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "since %1$lld month%2$@"
+            "value" : "%1$lld month%2$@ ago"
           }
         }
       }
@@ -247,7 +246,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "since %1$lld week%2$@"
+            "value" : "%1$lld week%2$@ ago"
           }
         }
       }
@@ -257,7 +256,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "since %1$lld year%2$@"
+            "value" : "%1$lld year%2$@ ago"
           }
         }
       }

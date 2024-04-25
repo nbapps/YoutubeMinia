@@ -11,8 +11,9 @@ import SwiftUI
 
 enum YMViewModelError: Error {
     case missingHost
-    case notAYoutubeURL
+    case notAYoutubeVideoURL
     case missingVideoId
+    case missingChannelId
     
     case missingResponse
 }
@@ -21,7 +22,8 @@ final class YMViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private let networkService = NetworkService()
     
-    static let shared = YMViewModel()
+    static let shared = YMViewModel(fetchOnLaunch: true)
+    static let preview = YMViewModel(fetchOnLaunch: false)
     
     @Published var lastVideoURlStr: String = UserDefaults.standard.lastVideoURlStr
     @Published var showDuration: Bool = UserDefaults.standard.showDuration
@@ -36,57 +38,31 @@ final class YMViewModel: ObservableObject {
     @Published var thumbnailCornerRadius: Double = UserDefaults.standard.thumbnailCornerRadius
     @Published var thumbnailPadding: Double = UserDefaults.standard.thumbnailPadding
     
-    @Published var ytVideoInfos: YTDecodable?
-    @Published var ytChannelInfos: YTDecodable?
-    
-    @Published var ymThumbnailData: YMThumbnailData? = .moc
+    @Published var ymThumbnailData: YMThumbnailData?
     @Published var videoThumbnail: Image?
     @Published var channelThumbnail: Image?
     
     @Published var isFetching = false
     
-    init() {
+    init(fetchOnLaunch: Bool) {
         udObservers()
         
-        $ymThumbnailData
-            .compactMap { $0 }
-            .sink { [weak self] data in
-                guard let self else { return }
+        if fetchOnLaunch {
+            if lastVideoURlStr.isNotEmpty {
                 Task { @MainActor in
-                    await self.processImages(data: data)
+                    try await fetch()
                 }
-            }
-            .store(in: &cancellables)
-    }
-    
-    @MainActor
-    func processImages(data: YMThumbnailData) async {
-        Task(priority: .userInitiated) { @MainActor in
-            do {
-                let video: Data = try await networkService.fetch(url: data.videoThumbnailUrl)
-                
-                if let img = NSImage(data: video) {
-                    self.videoThumbnail = Image(nsImage: img)
-                }
-                print("video done")
-            } catch {
-                print(error)
             }
         }
-        Task(priority: .userInitiated) { @MainActor in
-            do {
-                let channel: Data = try await networkService.fetch(url: data.channelThumbnailUrl)
-                
-                if let img = NSImage(data: channel) {
-                    self.channelThumbnail = Image(nsImage: img)
-                }
-                print("channel done")
-            } catch {
-                print(error)
+        
+        if ProcessInfo.runForPreview && !fetchOnLaunch {
+            ymThumbnailData = .moc
+            Task { @MainActor in
+                try? await fetchThumbnails(videoThumbnailUrl: ymThumbnailData!.videoThumbnailUrl, channelThumbnailUrl: ymThumbnailData!.channelThumbnailUrl)
             }
         }
     }
-    
+
     @MainActor
     func fetch() async throws {
         defer { isFetching = false }
@@ -95,6 +71,7 @@ final class YMViewModel: ObservableObject {
               let ytVideoUrl = Config.videoURL(for: videoId)
         else { return }
         
+        ymThumbnailData = nil
         isFetching = true
         
         let videoReponse: YTDecodable = try await networkService.fetch(url: ytVideoUrl)
@@ -106,14 +83,14 @@ final class YMViewModel: ObservableObject {
               let channelId = videoSnippet.channelId
         else { throw YMViewModelError.missingResponse }
         
-            let ytChannelUrl = Config.channelURL(for: channelId)
-            let channelResponse: YTDecodable = try await networkService.fetch(url: ytVideoUrl)
+        guard let ytChannelUrl = Config.channelURL(for: channelId)else { throw YMViewModelError.missingChannelId }
+        
+            let channelResponse: YTDecodable = try await networkService.fetch(url: ytChannelUrl)
         
         guard let channelItem = channelResponse.items.first,
               let channelSnippet = channelItem.snippet,
               let channelStatistics = channelItem.statistics,
-              let channelThumbnails = channelSnippet.thumbnails?.medium?.url,
-              let channelThumbnailUrl = URL(string: channelThumbnails)
+              let channelThumbnails = channelSnippet.thumbnails?.medium?.url
         else { throw YMViewModelError.missingResponse }
         
         guard let videoThumbnailUrl = URL(string: videoThumbnails),
@@ -127,7 +104,7 @@ final class YMViewModel: ObservableObject {
               let publicationDate = ISO8601DateFormatter().date(from: publicationDate)
         else { throw YMViewModelError.missingResponse }
         
-        YMThumbnailData(
+        self.ymThumbnailData = YMThumbnailData(
             videoURL: ytVideoUrl,
             videoThumbnailUrl: videoThumbnailUrl,
             channelThumbnailUrl: channelThumbnailUrl,
@@ -135,23 +112,26 @@ final class YMViewModel: ObservableObject {
             channelTitle: channelTitle,
             viewCount: viewCount,
             channelCount: channelCount,
-            videoDuration: <#T##String#>,
+            videoDuration: videoDuration.formattedVideoDuration(),
             publicationDate: publicationDate
         )
         
-//        do {
-//            let videoData = try Bundle.main.loadJSONData(from: "devVideo.json")
-//            let videoDecoded = try JSONDecoder().decode(YTDecodable.self, from: videoData)
-//            ytVideoInfos = videoDecoded
-//            //            print("https://www.googleapis.com/youtube/v3/channels?part=snippet&id=\(videoDecoded.items.first!.snippet.channelId)&key=\(viewModel.apiKey)")
-//            
-//            let channelData = try Bundle.main.loadJSONData(from: "devChannel.json")
-//            let channelDecoded = try JSONDecoder().decode(YTDecodable.self, from: channelData)
-//            ytChannelInfos = channelDecoded
-//            //            print(channelDecoded)
-//        } catch {
-//            print(error)
-//        }
+        try await fetchThumbnails(
+            videoThumbnailUrl: videoThumbnailUrl,
+            channelThumbnailUrl: channelThumbnailUrl
+        )
+    }
+    
+    @MainActor
+    func fetchThumbnails(videoThumbnailUrl: URL, channelThumbnailUrl: URL) async throws {
+        let videoThumbnailData: Data = try await networkService.fetch(url: videoThumbnailUrl)
+        if let img = NSImage(data: videoThumbnailData) {
+            self.videoThumbnail = Image(nsImage: img)
+        }
+        let channelThumbnailData: Data = try await networkService.fetch(url: channelThumbnailUrl)
+        if let img = NSImage(data: channelThumbnailData) {
+            self.channelThumbnail = Image(nsImage: img)
+        }
     }
     
     @MainActor
@@ -167,14 +147,17 @@ final class YMViewModel: ObservableObject {
         guard let host = comp.host else { throw YMViewModelError.missingHost}
         if host == "youtu.be" {
             return comp.path.replacingOccurrences(of: "/", with: "")
-        } else if host.contains("youtube.com"), comp.path == "/watch" {
-            if let videoId = comp.queryItems?.first(where: { $0.name == "v"})?.value {
+        } else if host.contains("youtube.com") {
+            if comp.path == "/watch", let videoId = comp.queryItems?.first(where: { $0.name == "v"})?.value {
                 return videoId
-            } else {
+            } else if comp.path.starts(with: "/shorts/") {
+                return comp.path.replacingOccurrences(of: "/shorts/", with: "")
+            }
+            else {
                 throw YMViewModelError.missingVideoId
             }
         } else {
-            throw YMViewModelError.notAYoutubeURL
+            throw YMViewModelError.notAYoutubeVideoURL
         }
     }
     

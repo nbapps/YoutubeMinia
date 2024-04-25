@@ -12,55 +12,68 @@ struct ThumbnailMakerView: View {
     @State private var showInspector = true
     let width: CGFloat = 350
     var body: some View {
-        ScrollView {
-            Section {
-                VStack(alignment: .leading, spacing: 0) {
-                    HStack {
-                        TextField("https://www.youtube.com/watch?v=f7_CHu0ADhM", text: $viewModel.lastVideoURlStr)
-                            .textFieldStyle(.roundedBorder)
-                            .onSubmit(fetch)
-                        Button {
-                            viewModel.lastVideoURlStr = ""
-                        } label: {
-                            Image(systemName: "xmark")
+        ZStack {
+            ScrollView {
+                Section {
+                    VStack(alignment: .leading, spacing: 0) {
+                        HStack {
+                            TextField("https://www.youtube.com/watch?v=f7_CHu0ADhM", text: $viewModel.lastVideoURlStr)
+                                .textFieldStyle(.roundedBorder)
+                                .onSubmit(fetch)
+                            Button {
+                                viewModel.lastVideoURlStr = ""
+                            } label: {
+                                Image(systemName: "xmark")
+                            }
+                            .buttonStyle(.plain)
+                            .disabled(viewModel.lastVideoURlStr.isEmpty)
+                            
+                            Button(action: fetch) {
+                                Image(systemName: "photo")
+                            }
+                            .buttonStyle(.borderedProminent)
+                            .disabled(viewModel.lastVideoURlStr.isEmpty)
                         }
-                        .buttonStyle(.plain)
-                        .disabled(viewModel.lastVideoURlStr.isEmpty)
-                        
-                        Button(action: fetch) {
-                            Image(systemName: "arrow.down")
+                        Text("!Any Youtube URL")
+                            .padding(.horizontal, 12)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(8)
+                }
+                .listRowSeparator(.hidden)
+                
+                Section {
+                    if let thumbnailData = viewModel.ymThumbnailData {
+                        VStack {
+                            makeThumbnail(thumbnailData)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding()
+                            
+                            HStack {
+                                saveInDownloadsButton(padding: 8)
+                                copyButton(padding: 8)
+                            }
+                            .buttonStyle(.borderedProminent)
                         }
-                        .disabled(viewModel.lastVideoURlStr.isEmpty)
-                    }
-                    Text("!Any Youtube URL")
-                        .padding(.horizontal, 12)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-                .padding(8)
-            }
-            .listRowSeparator(.hidden)
-            
-            Section {
-                if let thumbnailData = viewModel.ymThumbnailData {
-                    makeThumbnail(thumbnailData)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding()
-                    
-                    HStack {
-                        saveInDownloadsButton
-                        copyButton
+                    } else {
+                        Text("!Enter YouTube video URL to generate sharable thumbnail")
                     }
                 }
+                .listRowSeparator(.hidden)
             }
-            .listRowSeparator(.hidden)
+            if viewModel.isFetching {
+                ProgressView()
+            }
         }
         .inspector(isPresented: $showInspector) {
             YMOptionsView()
+                .disabled(viewModel.ymThumbnailData == nil)
         }
         .toolbar {
-            saveInDownloadsButton
-            copyButton
+            saveInDownloadsButton()
+            copyButton()
+            
             Button {
                 showInspector.toggle()
             } label: {
@@ -72,18 +85,21 @@ struct ThumbnailMakerView: View {
 }
 
 private extension ThumbnailMakerView {
-    var copyButton: some View {
+    @ViewBuilder
+    func copyButton(padding: CGFloat = 0) -> some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
             let rendered = makeThumbnail(thumbnailData).getScaledImage()
             viewModel.copy(rendered.nsImage)
         } label: {
             Label("!Copy", systemImage: "doc.on.doc")
+                .padding(padding)
         }
         .disabled(viewModel.ymThumbnailData == nil)
     }
     
-    var saveInDownloadsButton: some View {
+    @ViewBuilder
+    func saveInDownloadsButton(padding: CGFloat = 0) -> some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
             let rendered = makeThumbnail(thumbnailData).getScaledImage()
@@ -97,7 +113,8 @@ private extension ThumbnailMakerView {
                 print(error)
             }
         } label: {
-            Label("!Save in Donwloads", systemImage: "photo.badge.arrow.down")
+            Label("!Save in Dowmloads", systemImage: "photo.badge.arrow.down")
+                .padding(padding)
         }
         .disabled(viewModel.ymThumbnailData == nil)
     }
@@ -106,6 +123,8 @@ private extension ThumbnailMakerView {
         Task {
             do {
                 try await viewModel.fetch()
+            } catch {
+                print(error)
             }
         }
     }
@@ -235,5 +254,5 @@ private extension ThumbnailMakerView {
     ThumbnailMakerView()
         .frame(width: 800, height: 500)
         .dataContainer(inMemory: true)
-        .environmentObject(YMViewModel.shared)
+        .environmentObject(YMViewModel.preview)
 }
