@@ -20,10 +20,10 @@ struct YoutubeMiniaApp: App {
             ContentView()
                 .dataContainer()
                 .environmentObject(thumbnailMakerViewModel)
-                .frame(width: 800, height: 500)
+                .frame(width: 850, height: 600)
                 .navigationTitle("!Youtube Minia Maker")
         }
-        .defaultSize(width: 800, height: 500)
+        .defaultSize(width: 850, height: 600)
         .windowResizability(.contentSize)
         
         Settings {

@@ -74,9 +74,11 @@ struct ThumbnailMakerView: View {
                                     showError: $showError,
                                     errorMessage: $errorMessage
                                 )
-                                shareFileButton(padding: 8)
                             }
                             .buttonStyle(.borderedProminent)
+                            
+                            shareFileButton(padding: 8)
+                                .buttonStyle(.borderedProminent)
                         }
                     } else {
                         Text("!Enter YouTube video URL to generate sharable thumbnail")

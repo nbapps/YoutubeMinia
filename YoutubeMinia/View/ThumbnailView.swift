@@ -117,7 +117,6 @@ struct ThumbnailView: View {
             .padding([.horizontal, .top], viewModel.thumbnailPadding)
             .padding(.bottom, bottomPadding)
             .background(viewModel.isDarkTheme ? .black.opacity(0.88) : .white, in: RoundedRectangle(cornerRadius: outerCornerRadius))
-            .background(.white, in: RoundedRectangle(cornerRadius: outerCornerRadius))
             .shadow(color: .clear, radius: 10)
             .thumbnailShadow(radius: 8)
             .padding(16)
