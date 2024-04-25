@@ -97,7 +97,7 @@
 		374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcuts+Extensions.swift"; sourceTree = "<group>"; };
 		3744004B2BDAA656005E432B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		377E2FC02BD9943A00135B48 /* Youtube Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		377E2FC92BD9943B00135B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		377E2FC12BD9943A00135B48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				377E2FC02BD9943A00135B48 /* Youtube Minia Maker.app */,
+				377E2FC02BD9943A00135B48 /* YT Minia Maker.app */,
 				377E2FD32BD9943B00135B48 /* YoutubeMiniaTests.xctest */,
 				377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */,
 			);
@@ -355,7 +355,7 @@
 				374400452BDAA109005E432B /* KeyboardShortcuts */,
 			);
 			productName = YoutubeMinia;
-			productReference = 377E2FC02BD9943A00135B48 /* Youtube Minia Maker.app */;
+			productReference = 377E2FC02BD9943A00135B48 /* YT Minia Maker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		377E2FD22BD9943B00135B48 /* YoutubeMiniaTests */ = {
@@ -694,7 +694,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoutubeMinia/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Minia Maker";
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
 				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
@@ -706,7 +706,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = $APP_VERSION;
 				PRODUCT_BUNDLE_IDENTIFIER = $BUNDLE_IDENTIFIER;
-				PRODUCT_NAME = "Youtube Minia Maker";
+				PRODUCT_NAME = "YT Minia Maker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -728,7 +728,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoutubeMinia/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Minia Maker";
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
 				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
@@ -740,7 +740,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = $APP_VERSION;
 				PRODUCT_BUNDLE_IDENTIFIER = $BUNDLE_IDENTIFIER;
-				PRODUCT_NAME = "Youtube Minia Maker";
+				PRODUCT_NAME = "YT Minia Maker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

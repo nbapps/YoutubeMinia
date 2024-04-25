@@ -11,6 +11,7 @@ import ServiceManagement
 
 struct PreferencesView: View {
     @State private var startAppWithSession = SMAppService.mainApp.status == .enabled ? true : false
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -99,6 +100,13 @@ struct PreferencesView: View {
         .frame(width: 420)
         .frame(height: 550)
         .navigationTitle("!Preferences")
+        .onChange(of: startAppWithSession) { _, startAppWithSession in
+            if startAppWithSession {
+                try? SMAppService.mainApp.register()
+            } else {
+                try? SMAppService.mainApp.unregister()
+            }
+        }
     }
 }
 

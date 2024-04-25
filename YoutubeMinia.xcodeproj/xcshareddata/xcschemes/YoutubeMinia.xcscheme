@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "377E2FBF2BD9943A00135B48"
-               BuildableName = "YoutubeMinia.app"
+               BuildableName = "Youtube Minia Maker.app"
                BlueprintName = "YoutubeMinia"
                ReferencedContainer = "container:YoutubeMinia.xcodeproj">
             </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "377E2FBF2BD9943A00135B48"
-            BuildableName = "YoutubeMinia.app"
+            BuildableName = "Youtube Minia Maker.app"
             BlueprintName = "YoutubeMinia"
             ReferencedContainer = "container:YoutubeMinia.xcodeproj">
          </BuildableReference>
@@ -87,7 +87,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "377E2FBF2BD9943A00135B48"
-            BuildableName = "YoutubeMinia.app"
+            BuildableName = "Youtube Minia Maker.app"
             BlueprintName = "YoutubeMinia"
             ReferencedContainer = "container:YoutubeMinia.xcodeproj">
          </BuildableReference>
