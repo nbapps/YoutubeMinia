@@ -96,6 +96,7 @@
 		374400472BDAA135005E432B /* WindowId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowId.swift; sourceTree = "<group>"; };
 		374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcuts+Extensions.swift"; sourceTree = "<group>"; };
 		3744004B2BDAA656005E432B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* Youtube Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 			children = (
 				374400302BDA7BB8005E432B /* README.md */,
 				377E2FF02BD9974000135B48 /* GoogleService-Info.plist */,
+				3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */,
 				377E30032BD99A0600135B48 /* Config.xcconfig */,
 				377E2FC22BD9943A00135B48 /* YoutubeMinia */,
 				377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */,
@@ -692,6 +694,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoutubeMinia/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Minia Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
 				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
@@ -725,6 +728,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoutubeMinia/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Minia Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
 				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
