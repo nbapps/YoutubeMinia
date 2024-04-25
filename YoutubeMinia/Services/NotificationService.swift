@@ -9,20 +9,22 @@ import Foundation
 import UserNotifications
 
 final class NotificationService {
-    func sendInstatNotification(body: String) async throws {
+    func sendInstantNotification(urlStr: String, message: String) async throws {
         try await requestAutorizationIfNeeded()
         
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
         content.title = "Youtube minia"
-        content.body = body
-
+        content.subtitle = message
+        content.body = urlStr
+        content.interruptionLevel = .active
+        content.sound = .default
+        
         let identifier = UUID().uuidString
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: nil)
         
-        // Ajouter la demande de notification au centre de notification
         try await center.add(request)
     }
     

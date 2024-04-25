@@ -12,7 +12,7 @@ struct MenuBarExtraView: View {
     @Environment(\.openWindow) private var openWindow
     var body: some View {
         VStack {
-            Text(viewModel.videoURlStr)
+            Text(viewModel.videoURlStr.isEmpty ? "!No YouTube URL found" : viewModel.videoURlStr)
             
             SaveInDownloadButton(showError: .constant(false), errorMessage: .constant(""))
             CopyImageButtonView(showError: .constant(false), errorMessage: .constant(""))
@@ -22,7 +22,7 @@ struct MenuBarExtraView: View {
             Button("!Open app") {
                 openWindow(id: WindowId.main.rawValue)
             }
-            .keyboardShortcut("0")
+            .keyboardShortcut("o")
             
             SettingsLink {
                 Text("!Open preferences")

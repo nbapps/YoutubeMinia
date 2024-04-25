@@ -8,6 +8,27 @@
 import Foundation
 
 extension Bundle {
+    var appVersion: String {
+        guard let appVersion = object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return "n/a"}
+        return appVersion
+    }
+    
+    var buildNumber: String {
+        guard let buildNumber = object(forInfoDictionaryKey: "CFBundleVersion") as? String else { return "n/a"}
+        return buildNumber
+    }
+    
+    var appVersionAndBuild: String {
+        "\(appVersion) - \(buildNumber)"
+    }
+    var appName: String {
+        guard let appName = object(forInfoDictionaryKey: "CFBundleDisplayName") as? String else { return "n/a" }
+        return appName
+    }
+}
+
+
+extension Bundle {
     func loadJSONData(from file: String) throws -> Data {
         guard let url = self.url(forResource: file, withExtension: nil) else {
             throw JSONDataError.fileNotFound(file)

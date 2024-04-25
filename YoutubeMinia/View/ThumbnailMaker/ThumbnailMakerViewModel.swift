@@ -195,7 +195,10 @@ final class ThumbnailMakerViewModel: ObservableObject {
         pb.clearContents()
         pb.writeObjects([image])
         Task {
-            try? await notificationService.sendInstatNotification(body: "!The thumbnail is in your clipboard")
+            try? await notificationService.sendInstantNotification(
+                urlStr: videoURlStr,
+                message: String(localized: "!The thumbnail is in your clipboard")
+            )
         }
     }
     
@@ -210,7 +213,10 @@ final class ThumbnailMakerViewModel: ObservableObject {
             fileExt: "png"
         )
         Task {
-            try? await notificationService.sendInstatNotification(body: "!The thumbnail has been saved in Downloads folder")
+            try? await notificationService.sendInstantNotification(
+                urlStr: videoURlStr,
+                message: String(localized: "!The thumbnail has been saved in Downloads folder")
+            )
         }
     }
 

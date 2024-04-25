@@ -71,6 +71,16 @@
         }
       }
     },
+    "!Context" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Little context"
+          }
+        }
+      }
+    },
     "!Copy" : {
       "localizations" : {
         "en" : {
@@ -131,6 +141,16 @@
         }
       }
     },
+    "!Get stylish YouTube thumbnails" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get stylish YouTube thumbnails"
+          }
+        }
+      }
+    },
     "!Invalid Number" : {
       "localizations" : {
         "en" : {
@@ -171,8 +191,25 @@
         }
       }
     },
+    "!Our other apps" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Our other apps"
+          }
+        }
+      }
+    },
     "!Preferences" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferences"
+          }
+        }
+      }
     },
     "!Progress" : {
       "localizations" : {
@@ -324,6 +361,66 @@
         }
       }
     },
+    "!Source code" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source code"
+          }
+        }
+      }
+    },
+    "!Start with session" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start with session"
+          }
+        }
+      }
+    },
+    "!Thanks to this app, you can create a thumbnail of an already published YouTube video for use in your montages or for sharing on the networks. Works with long videos and shorts." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thanks to this app, you can create a thumbnail of an already published YouTube video for use in your montages or for sharing on the networks. Works with long videos and shorts."
+          }
+        }
+      }
+    },
+    "!The thumbnail has been saved in Downloads folder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The thumbnail has been saved in Downloads folder"
+          }
+        }
+      }
+    },
+    "!The thumbnail is in your clipboard" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The thumbnail is in your clipboard"
+          }
+        }
+      }
+    },
+    "!This app was created following Basti Ui and Benjamin Code's network challenge. This app is open source. The Github link is below." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app was created following Basti Ui and Benjamin Code's network challenge. This app is open source. The Github link is below."
+          }
+        }
+      }
+    },
     "!Thumbnail padding" : {
       "localizations" : {
         "en" : {
@@ -334,8 +431,45 @@
         }
       }
     },
+    "!To create a thumbnail, you can either copy and paste the Youtube url into the app, or drag and drop it into the app, or configure a keyboard shortcut to automatically generate the thumbnail after copying the URL." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To create a thumbnail, you can either copy and paste the Youtube url into the app, or drag and drop it into the app, or configure a keyboard shortcut to automatically generate the thumbnail after copying the URL."
+          }
+        }
+      }
+    },
+    "!You can share a configuration file with your editor so that he can use exactly the same configuration as you had created." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can share a configuration file with your editor so that he can use exactly the same configuration as you had created."
+          }
+        }
+      }
+    },
+    "!You can then share the image by saving it in the download folder, copying it to the clipboard or directly dragging and dropping it into your editing or graphics software." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can then share the image by saving it in the download folder, copying it to the clipboard or directly dragging and dropping it into your editing or graphics software."
+          }
+        }
+      }
+    },
     "!Youtube minia" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Youtube Minia Maker"
+          }
+        }
+      }
     },
     "!Youtube Thumbnail Maker" : {
       "localizations" : {
@@ -346,6 +480,12 @@
           }
         }
       }
+    },
+    "@BastiUi" : {
+
+    },
+    "@BenjaminCode" : {
+
     },
     "https://www.youtube.com/watch?v=f7_CHu0ADhM" : {
 
