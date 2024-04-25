@@ -21,7 +21,7 @@ struct PreferencesView: View {
                         .frame(width: 100)
                     
                     VStack(alignment: .leading) {
-                        Text(verbatim: Bundle.main.appName)
+                        Text("!Youtube minia")
                             .font(.largeTitle)
                         
                         Text("!Get stylish YouTube thumbnails")
