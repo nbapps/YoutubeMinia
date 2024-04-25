@@ -14,7 +14,7 @@ struct PreferencesView: View {
     var body: some View {
         ScrollView {
             VStack {
-                HStack {
+                HStack(spacing: 16) {
                     Image("yttm_icon")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -30,6 +30,11 @@ struct PreferencesView: View {
                         Text(verbatim: "\(Bundle.main.appVersion) - \(Bundle.main.buildNumber)")
                             .font(.caption)
                             .foregroundStyle(.secondary)
+                        
+                        Text(verbatim: "2024 © NBApps")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+
                     }
                 }
                 
@@ -76,17 +81,24 @@ struct PreferencesView: View {
                     Text("!You can then share the image by saving it in the download folder, copying it to the clipboard or directly dragging and dropping it into your editing or graphics software.")
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Link("@BenjaminCode", destination: URL(string: "https://www.youtube.com/@BenjaminCode/videos")!)
-                    Link("@BastiUi", destination: URL(string: "https://www.youtube.com/@BastiUi/videos")!)
-                    Link("!Source code", destination: URL(string: "https://github.com/nbapps/YoutubeMinia")!)
-                    Link("!Our other apps", destination: URL(string: "https://nbapps.fr")!)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Link("!Source code", destination: URL(string: "https://github.com/nbapps/YoutubeMinia")!)
+                            Link("!Our other apps", destination: URL(string: "https://nbapps.fr")!)
+                        }
+                        Spacer()
+                        VStack(alignment: .trailing) {
+                            Link("@BastiUi", destination: URL(string: "https://www.youtube.com/@BastiUi/videos")!)
+                            Link("@BenjaminCode", destination: URL(string: "https://www.youtube.com/@BenjaminCode/videos")!)
+                        }
+                    }
                 }
             }
             .padding()
         }
-            .frame(width: 400)
-            .frame(height: 550)
-            .navigationTitle("!Preferences")
+        .frame(width: 420)
+        .frame(height: 550)
+        .navigationTitle("!Preferences")
     }
 }
 
