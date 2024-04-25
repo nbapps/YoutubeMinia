@@ -9,6 +9,8 @@ import Foundation
 import Combine
 import SwiftUI
 
+import KeyboardShortcuts
+
 enum YMViewModelError: Error {
     case missingHost
     case notAYoutubeVideoURL
@@ -22,6 +24,7 @@ enum YMViewModelError: Error {
 final class ThumbnailMakerViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private let networkService = NetworkService()
+    private let notificationService = NotificationService()
     
     static let shared = ThumbnailMakerViewModel(fetchOnLaunch: true)
     static let preview = ThumbnailMakerViewModel(fetchOnLaunch: false)
@@ -74,8 +77,43 @@ final class ThumbnailMakerViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellables)
+        
+        KeyboardShortcuts.onKeyUp(for: .fetchThumbnail) { [weak self] in
+            self?.pastUrlAndFetchIfPossible()
+        }
+        
+        KeyboardShortcuts.onKeyUp(for: .copyLastFetch) { [weak self] in
+            self?.copyPreviousThumbnailIfExisting()
+        }
     }
 
+    func pastUrlAndFetchIfPossible() {
+        Task { @MainActor in
+            guard let clipboardString = NSPasteboard.general.string(forType: .string) else { return }
+            guard let urlStr = checkIfURLIsValid(urlStr: clipboardString) else { return }
+            self.videoURlStr = urlStr
+            try? await self.fetch()
+            
+            guard let thumbnailData = ymThumbnailData else { return }
+            let rendered = ThumbnailView(thumbnailData: thumbnailData)
+                .environmentObject(self)
+                .getScaledImage()
+
+                copy(rendered.nsImage)
+        }
+    }
+    
+    func copyPreviousThumbnailIfExisting() {
+        Task { @MainActor in
+            guard let thumbnailData = ymThumbnailData else { return }
+            let rendered = ThumbnailView(thumbnailData: thumbnailData)
+                .environmentObject(self)
+                .getScaledImage()
+            
+            copy(rendered.nsImage)
+        }
+    }
+    
     @MainActor
     func fetch() async throws {
         defer { isFetching = false }
@@ -156,6 +194,9 @@ final class ThumbnailMakerViewModel: ObservableObject {
         let pb = NSPasteboard.general
         pb.clearContents()
         pb.writeObjects([image])
+        Task {
+            try? await notificationService.sendInstatNotification(body: "!The thumbnail is in your clipboard")
+        }
     }
     
     @MainActor
@@ -168,6 +209,9 @@ final class ThumbnailMakerViewModel: ObservableObject {
             fileName: fileName,
             fileExt: "png"
         )
+        Task {
+            try? await notificationService.sendInstatNotification(body: "!The thumbnail has been saved in Downloads folder")
+        }
     }
 
     @MainActor
@@ -226,7 +270,6 @@ final class ThumbnailMakerViewModel: ObservableObject {
 }
 
 private extension ThumbnailMakerViewModel {
-
     func extractVideoId(from urlStr: String) throws -> String? {
         guard let valideURL = checkIfURLIsValid(urlStr: urlStr) else { throw YMViewModelError.notAYoutubeVideoURL }
         guard let comp = URLComponents(string: valideURL) else { return nil }

@@ -12,6 +12,15 @@
 		374400332BDA7EF5005E432B /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
 		374400352BDA92CE005E432B /* yttm_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 374400342BDA92CE005E432B /* yttm_icon.png */; };
 		374400372BDA9982005E432B /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400362BDA9982005E432B /* Draggable.swift */; };
+		3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */; };
+		3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003C2BDA9BFF005E432B /* ThumbnailView.swift */; };
+		3744003F2BDA9E5F005E432B /* SaveInDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */; };
+		374400412BDA9F33005E432B /* CopyImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400402BDA9F33005E432B /* CopyImageButtonView.swift */; };
+		374400432BDAA04A005E432B /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400422BDAA04A005E432B /* PreferencesView.swift */; };
+		374400462BDAA109005E432B /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 374400452BDAA109005E432B /* KeyboardShortcuts */; };
+		374400482BDAA136005E432B /* WindowId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400472BDAA135005E432B /* WindowId.swift */; };
+		3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */; };
+		3744004C2BDAA656005E432B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004B2BDAA656005E432B /* NotificationService.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
@@ -79,6 +88,14 @@
 		374400322BDA7EF5005E432B /* SharableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharableFile.swift; sourceTree = "<group>"; };
 		374400342BDA92CE005E432B /* yttm_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yttm_icon.png; sourceTree = "<group>"; };
 		374400362BDA9982005E432B /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
+		3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
+		3744003C2BDA9BFF005E432B /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInDownloadButton.swift; sourceTree = "<group>"; };
+		374400402BDA9F33005E432B /* CopyImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyImageButtonView.swift; sourceTree = "<group>"; };
+		374400422BDAA04A005E432B /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		374400472BDAA135005E432B /* WindowId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowId.swift; sourceTree = "<group>"; };
+		374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcuts+Extensions.swift"; sourceTree = "<group>"; };
+		3744004B2BDAA656005E432B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YoutubeMinia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeMinia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374400462BDAA109005E432B /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +177,12 @@
 				377E2FC52BD9943A00135B48 /* ContentView.swift */,
 				374400392BDA99EF005E432B /* ThumbnailMaker */,
 				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
+				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
 				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
+				3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */,
+				374400402BDA9F33005E432B /* CopyImageButtonView.swift */,
+				3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */,
+				374400422BDAA04A005E432B /* PreferencesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,7 +202,6 @@
 				374400302BDA7BB8005E432B /* README.md */,
 				377E2FF02BD9974000135B48 /* GoogleService-Info.plist */,
 				377E30032BD99A0600135B48 /* Config.xcconfig */,
-				374400322BDA7EF5005E432B /* SharableFile.swift */,
 				377E2FC22BD9943A00135B48 /* YoutubeMinia */,
 				377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */,
 				377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */,
@@ -242,9 +264,11 @@
 		377E30132BD9ADAC00135B48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				374400322BDA7EF5005E432B /* SharableFile.swift */,
 				377E30012BD9981900135B48 /* Database.swift */,
 				377E30142BD9ADB200135B48 /* YTDecodable.swift */,
 				377E30552BDA518300135B48 /* YMThumbnailData.swift */,
+				374400472BDAA135005E432B /* WindowId.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +319,7 @@
 				377E304D2BDA4A3600135B48 /* Date+Extensions.swift */,
 				377E30472BDA3F7300135B48 /* Font+Extensions.swift */,
 				377E304B2BDA455700135B48 /* View+Extensions.swift */,
+				374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				377E30572BDA51BD00135B48 /* NetworkService.swift */,
+				3744004B2BDAA656005E432B /* NotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -324,6 +350,7 @@
 			);
 			name = YoutubeMinia;
 			packageProductDependencies = (
+				374400452BDAA109005E432B /* KeyboardShortcuts */,
 			);
 			productName = YoutubeMinia;
 			productReference = 377E2FC02BD9943A00135B48 /* YoutubeMinia.app */;
@@ -398,6 +425,7 @@
 			);
 			mainGroup = 377E2FB72BD9943A00135B48;
 			packageReferences = (
+				374400442BDAA109005E432B /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 			);
 			productRefGroup = 377E2FC12BD9943A00135B48 /* Products */;
 			projectDirPath = "";
@@ -467,20 +495,28 @@
 				377E30542BDA514500135B48 /* Bundle+Extensions.swift in Sources */,
 				377E30562BDA518300135B48 /* YMThumbnailData.swift in Sources */,
 				377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */,
+				3744004C2BDAA656005E432B /* NotificationService.swift in Sources */,
 				377E30072BD99A6B00135B48 /* Config.swift in Sources */,
 				377E30432BDA38A900135B48 /* FileManager+Extensions.swift in Sources */,
 				374400332BDA7EF5005E432B /* SharableFile.swift in Sources */,
+				374400412BDA9F33005E432B /* CopyImageButtonView.swift in Sources */,
+				3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */,
 				377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */,
+				374400432BDAA04A005E432B /* PreferencesView.swift in Sources */,
 				377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */,
 				377E30022BD9981900135B48 /* Database.swift in Sources */,
 				377E304E2BDA4A3600135B48 /* Date+Extensions.swift in Sources */,
+				374400482BDAA136005E432B /* WindowId.swift in Sources */,
 				377E30522BDA508800135B48 /* Collection+Extensions.swift in Sources */,
 				377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */,
 				377E30482BDA3F7300135B48 /* Font+Extensions.swift in Sources */,
+				3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */,
 				377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */,
+				3744003F2BDA9E5F005E432B /* SaveInDownloadButton.swift in Sources */,
 				377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */,
 				377E30352BD9BDF900135B48 /* ThumbnailMakerViewModel.swift in Sources */,
 				3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */,
+				3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */,
 				377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */,
 				377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */,
 			);
@@ -817,6 +853,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		374400442BDAA109005E432B /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		374400452BDAA109005E432B /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 374400442BDAA109005E432B /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 377E2FB82BD9943A00135B48 /* Project object */;
 }

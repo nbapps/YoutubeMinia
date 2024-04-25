@@ -10,15 +10,33 @@ import SwiftData
 
 @main
 struct YoutubeMiniaApp: App {
+    
+    @StateObject private var thumbnailMakerViewModel = ThumbnailMakerViewModel.shared
+    
     var body: some Scene {
-        Window("Youtube minia", id: "Main") {
+        Window("!Youtube minia", id: WindowId.main.rawValue) {
             ContentView()
                 .dataContainer()
-                .environmentObject(ThumbnailMakerViewModel.shared)
+                .environmentObject(thumbnailMakerViewModel)
                 .frame(width: 800, height: 500)
                 .navigationTitle("!Youtube Thumbnail Maker")
         }
         .defaultSize(width: 800, height: 500)
         .windowResizability(.contentSize)
+        
+        Settings {
+            NavigationStack {
+                PreferencesView()
+            }
+            .environmentObject(thumbnailMakerViewModel)
+        }
+        .windowResizability(.contentSize)
+        
+        MenuBarExtra("!Youtube minia", systemImage: "photo.badge.arrow.down") {
+            MenuBarExtraView()
+                .environmentObject(thumbnailMakerViewModel)
+        }
+        .menuBarExtraStyle(.menu)
+//        .menuBarExtraAccess(isPresented: $appState.isMenuPresented)
     }
 }

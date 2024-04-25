@@ -81,6 +81,16 @@
         }
       }
     },
+    "!Copy last thumbnail:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy last thumbnail:"
+          }
+        }
+      }
+    },
     "!Corner radius" : {
       "localizations" : {
         "en" : {
@@ -111,12 +121,42 @@
         }
       }
     },
+    "!Fetch thumbnail from clipboard:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetch thumbnail from clipboard:"
+          }
+        }
+      }
+    },
     "!Invalid Number" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Invalid number"
+          }
+        }
+      }
+    },
+    "!Open app" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open app"
+          }
+        }
+      }
+    },
+    "!Open preferences" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open preferences"
           }
         }
       }
@@ -131,12 +171,25 @@
         }
       }
     },
+    "!Preferences" : {
+
+    },
     "!Progress" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Progress"
+          }
+        }
+      }
+    },
+    "!Quit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit"
           }
         }
       }
@@ -281,6 +334,9 @@
         }
       }
     },
+    "!Youtube minia" : {
+
+    },
     "!Youtube Thumbnail Maker" : {
       "localizations" : {
         "en" : {
@@ -292,9 +348,6 @@
       }
     },
     "https://www.youtube.com/watch?v=f7_CHu0ADhM" : {
-
-    },
-    "Youtube minia" : {
 
     }
   },
