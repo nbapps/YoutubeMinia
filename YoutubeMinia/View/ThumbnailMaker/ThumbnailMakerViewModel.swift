@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
-
+import UniformTypeIdentifiers
 import KeyboardShortcuts
 
 enum YMViewModelError: Error {
@@ -272,6 +272,47 @@ final class ThumbnailMakerViewModel: ObservableObject {
         guard let host = comp.host else { return nil }
         guard host == "youtu.be" || host.contains("youtube.com") else { return nil }
         return urlStr
+    }
+    
+    func decodeURLFromBinaryPlist(_ data: Data) -> URL? {
+        guard let decoded = try? PropertyListDecoder().decode([[String]].self, from: data),
+              decoded.isNotEmpty, let plistData = decoded.first else { return nil }
+        return plistData
+            .compactMap {
+                checkIfURLIsValid(urlStr: $0)
+            }
+            .compactMap { URL(string: $0) }
+            .first
+    }
+    
+    func processOnDrop(_ providers: [NSItemProvider]) -> Bool {
+        providers.first?.loadFileRepresentation(forTypeIdentifier: UTType.item.identifier) { [weak self] url, _ in
+            guard let self else { return }
+            guard let url else { return }
+            DispatchQueue.main.async {
+                if url.pathExtension == "yttm", let data = try? Data(contentsOf: url), let decoded = try? JSONDecoder().decode(SharableFile.self, from: data) {
+                    self.importeConfigurationFile(decoded)
+                    return
+                }
+                
+                if let data = try? Data(contentsOf: url) {
+                    if self.ymThumbnailData == nil, let nsImage = NSImage(data: data) {
+                        self.videoThumbnail = Image(nsImage: nsImage)
+                        return
+                    } else if let validURL = self.decodeURLFromBinaryPlist(data) {
+                        self.videoURlStr = validURL.absoluteString
+                        return
+                    }
+                }
+                
+                if let possibleYTUrl = try? String(contentsOf: url, encoding: .utf8),
+                   let validURL = self.checkIfURLIsValid(urlStr: possibleYTUrl) {
+                    self.videoURlStr = validURL
+                    return
+                }
+            }
+        }
+        return true
     }
 }
 

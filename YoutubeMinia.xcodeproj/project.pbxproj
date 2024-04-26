@@ -21,6 +21,7 @@
 		374400482BDAA136005E432B /* WindowId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400472BDAA135005E432B /* WindowId.swift */; };
 		3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */; };
 		3744004C2BDAA656005E432B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004B2BDAA656005E432B /* NotificationService.swift */; };
+		3744004F2BDB8ABE005E432B /* EmptyThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcuts+Extensions.swift"; sourceTree = "<group>"; };
 		3744004B2BDAA656005E432B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyThumbnailView.swift; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				377E2FC52BD9943A00135B48 /* ContentView.swift */,
 				374400392BDA99EF005E432B /* ThumbnailMaker */,
 				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
+				3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */,
 				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
 				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
 				3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */,
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */,
+				3744004F2BDB8ABE005E432B /* EmptyThumbnailView.swift in Sources */,
 				377E30462BDA3CFF00135B48 /* String+Extensions.swift in Sources */,
 				377E30372BDA2D0C00135B48 /* YMOptionsView.swift in Sources */,
 				374400372BDA9982005E432B /* Draggable.swift in Sources */,

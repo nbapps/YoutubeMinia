@@ -11,7 +11,6 @@ import UniformTypeIdentifiers
 struct ThumbnailMakerView: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
     @State private var showInspector = true
-    let width: CGFloat = 350
     
     @State private var showError = false
     @State private var errorMessage = ""
@@ -81,7 +80,10 @@ struct ThumbnailMakerView: View {
                                 .buttonStyle(.borderedProminent)
                         }
                     } else {
-                        Text("!Enter YouTube video URL to generate sharable thumbnail")
+                        VStack {
+                            EmptyThumbnailView()
+                            Text("!Enter YouTube video URL to generate sharable thumbnail")
+                        }
                     }
                 }
                 .listRowSeparator(.hidden)
@@ -92,7 +94,7 @@ struct ThumbnailMakerView: View {
         }
         .inspector(isPresented: $showInspector) {
             YMOptionsView()
-                .disabled(viewModel.ymThumbnailData == nil)
+                .disabled(viewModel.isFetching)
         }
         .toolbar {
             SaveInDownloadButton(
@@ -114,25 +116,7 @@ struct ThumbnailMakerView: View {
             
         }
         .disabled(viewModel.isFetching)
-        .onDrop(of: [.item], isTargeted: nil, perform: {
-            providers, _ in
-            providers.first!.loadFileRepresentation(forTypeIdentifier: UTType.item.identifier) {
-                url, _ in
-                guard let url else { return }
-                if url.pathExtension == "yttm", let data = try? Data(contentsOf: url), let decoded = try? JSONDecoder().decode(SharableFile.self, from: data) {
-                    viewModel.importeConfigurationFile(decoded)
-                } else {
-                    let possibleYTUrl = try? String(contentsOf: url, encoding: .utf8)
-                    if let validURL = viewModel.checkIfURLIsValid(urlStr: possibleYTUrl) {
-                        DispatchQueue.main.async {
-                            viewModel.videoURlStr = validURL
-                        }
-                    }
-                }
-            }
-            
-            return true
-        })
+        .onDrop(of: [.item], isTargeted: nil, perform: viewModel.processOnDrop)
         .onOpenURL(perform: { url in
             if url.pathExtension == "yttm", let data = try? Data(contentsOf: url), let decoded = try? JSONDecoder().decode(SharableFile.self, from: data) {
                 viewModel.importeConfigurationFile(decoded)
