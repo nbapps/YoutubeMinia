@@ -29,10 +29,16 @@ extension FileManager {
         let fileName = fileName.formatFileName() + Date().ISO8601Format() + ".\(fileExt)"
         let fileURL = downloadsDirectory.appendingPathComponent(fileName)
         
+#if os(macOS)
         guard let imageData = image.tiffRepresentation else {
             throw FileManagerError.cantGetData
         }
-        
+#else
+        guard let imageData = image.pngData() else {
+            throw FileManagerError.cantGetData
+        }
+#endif
+
         try imageData.write(to: fileURL)
         
         return fileURL

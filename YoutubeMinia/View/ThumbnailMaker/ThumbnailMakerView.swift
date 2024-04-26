@@ -10,7 +10,11 @@ import UniformTypeIdentifiers
 
 struct ThumbnailMakerView: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
+#if os(macOS)
     @State private var showInspector = true
+#else
+    @State private var showInspector = false
+#endif
     
     @State private var showError = false
     @State private var errorMessage = ""
@@ -19,99 +23,111 @@ struct ThumbnailMakerView: View {
     @State private var showImportFile = false
     
     var body: some View {
-        ZStack {
-            ScrollView {
-                if showError {
-                    Text(errorMessage.isEmpty ? "Error" : errorMessage)
-                }
-                
-                Section {
-                    VStack(alignment: .leading, spacing: 0) {
-                        HStack {
-                            TextField("https://www.youtube.com/watch?v=f7_CHu0ADhM", text: $viewModel.videoURlStr)
+        GeometryReader { proxy in
+            ZStack {
+                ScrollView {
+                    if showError {
+                        Text(errorMessage.isEmpty ? "Error" : errorMessage)
+                    }
+                    
+                    Section {
+                        VStack(alignment: .leading, spacing: 0) {
+                            HStack {
+                                TextField(text: $viewModel.videoURlStr) {
+                                    Text(verbatim: "https://www.youtube.com/watch?v=f7_CHu0ADhM")
+                                }
                                 .textFieldStyle(.roundedBorder)
                                 .onSubmit(fetch)
-                            Button {
-                                viewModel.videoURlStr = ""
-                            } label: {
-                                Image(systemName: "xmark")
-                            }
-                            .buttonStyle(.plain)
-                            .disabled(viewModel.videoURlStr.isEmpty)
-                        }
-                        Text("!Any Youtube URL")
-                            .padding(.horizontal, 12)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                    .padding(8)
-                }
-                .listRowSeparator(.hidden)
-                
-                Section {
-                    if let thumbnailData = viewModel.ymThumbnailData {
-                        VStack {
-                            ThumbnailView(thumbnailData: thumbnailData)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .padding()
-                                .draggableIfAllow(
-                                    image: ThumbnailView(thumbnailData: thumbnailData)
-                                        .environmentObject(viewModel)
-                                        .getScaledImage(scale: viewModel.exportSize.scale)
-                                        .nsImage
-                                )
-                            
-                            HStack {
-                                SaveInDownloadButton(
-                                    padding: 8,
-                                    showError: $showError,
-                                    errorMessage: $errorMessage
-                                )
                                 
-                                CopyImageButtonView(
-                                    padding: 8,
-                                    showError: $showError,
-                                    errorMessage: $errorMessage
-                                )
+                                Button {
+                                    viewModel.videoURlStr = ""
+                                } label: {
+                                    Image(systemName: "xmark")
+                                }
+                                .buttonStyle(.plain)
+                                .disabled(viewModel.videoURlStr.isEmpty)
                             }
-                            .buttonStyle(.borderedProminent)
                             
-                            shareFileButton(padding: 8)
-                                .buttonStyle(.borderedProminent)
+                            Text("!Any Youtube URL")
+                                .padding(.horizontal, 12)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
                         }
-                    } else {
-                        VStack {
-                            EmptyThumbnailView()
-                            Text("!Enter YouTube video URL to generate sharable thumbnail")
+                        .padding(8)
+                    }
+                    
+                    Section {
+                        if let thumbnailData = viewModel.ymThumbnailData {
+                            VStack {
+                                ThumbnailView(thumbnailData: thumbnailData, width: proxy.size.width * 0.8)
+                                //                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .padding()
+                                    .draggableIfAllow(
+                                        image: ThumbnailView(thumbnailData: thumbnailData)
+                                            .environmentObject(viewModel)
+                                            .getScaledImage(scale: viewModel.exportSize.scale)
+                                            .appImage
+                                    )
+                                
+                                HStack {
+                                    makeSaveButton(padding: 8)
+                                    
+                                    CopyImageButtonView(
+                                        padding: 8,
+                                        showError: $showError,
+                                        errorMessage: $errorMessage
+                                    )
+                                }
+                                .buttonStyle(.borderedProminent)
+                                
+#if os(macOS)
+                                shareFileButton(padding: 8)
+                                    .buttonStyle(.borderedProminent)
+#endif
+                            }
+                        } else {
+                            VStack {
+                                EmptyThumbnailView(width: proxy.size.width * 0.8)
+                                Text("!Enter YouTube video URL to generate sharable thumbnail")
+                            }
                         }
                     }
+                    
                 }
-                .listRowSeparator(.hidden)
-            }
-            if viewModel.isFetching {
-                ProgressView()
+                if viewModel.isFetching {
+                    ProgressView()
+                }
             }
         }
+        .frame(minWidth: 300)
+#if os(macOS)
         .inspector(isPresented: $showInspector) {
             YMOptionsView()
                 .disabled(viewModel.isFetching)
         }
+#else
+        .sheet(isPresented: $showInspector) {
+            YMOptionsView()
+                .disabled(viewModel.isFetching)
+        }
+#endif
+        .scrollDismissesKeyboard(.interactively)
         .toolbar {
-            SaveInDownloadButton(
-                showError: $showError,
-                errorMessage: $errorMessage
-            )
+            makeSaveButton()
             
             CopyImageButtonView(
                 showError: $showError,
                 errorMessage: $errorMessage
             )
+
+#if os(macOS)
             shareFileButton()
+#endif
             
             Button {
                 showInspector.toggle()
             } label: {
-                Image(systemName: "rectangle.righthalf.inset.filled")
+                Image(systemName: "switch.2")
             }
             
         }
@@ -140,6 +156,24 @@ struct ThumbnailMakerView: View {
 
 private extension ThumbnailMakerView {
     @ViewBuilder
+    func makeSaveButton(padding: CGFloat = 0) -> some View {
+#if os(macOS)
+        SaveInDownloadButton(
+            padding: padding,
+            showError: $showError,
+            errorMessage: $errorMessage
+        )
+#else
+        SaveToPhotoLibraryButtonView(
+            padding: padding,
+            showError: $showError,
+            errorMessage: $errorMessage
+        )
+#endif
+    }
+}
+private extension ThumbnailMakerView {
+    @ViewBuilder
     func shareFileButton(padding: CGFloat = 0) -> some View {
         Button {
             saveConfigFile.toggle()
@@ -165,7 +199,9 @@ private extension ThumbnailMakerView {
 
 #Preview {
     ThumbnailMakerView()
+#if os(macOS)
         .frame(width: 800, height: 500)
+#endif
         .dataContainer(inMemory: true)
         .environmentObject(ThumbnailMakerViewModel.preview)
 }

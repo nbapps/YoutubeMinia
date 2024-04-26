@@ -1,39 +1,45 @@
 //
-//  CopyImageButtonView.swift
+//  SaveToPhotoLibraryButtonView.swift
 //  YoutubeMinia
 //
-//  Created by Nicolas Bachur on 25/04/2024.
+//  Created by Nicolas Bachur on 26/04/2024.
 //
 
 import SwiftUI
 
-struct CopyImageButtonView: View {
+#if os(iOS)
+struct SaveToPhotoLibraryButtonView: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
     
     var padding: CGFloat = 0
     @Binding var showError: Bool
     @Binding var errorMessage: String
+    
     var body: some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
-            let rendered = ThumbnailView(thumbnailData: thumbnailData)
-                .environmentObject(viewModel)
-                .getScaledImage(scale: viewModel.exportSize.scale)
-            viewModel.copy(rendered.appImage)
+            
+            do {
+                try viewModel.saveInPhotoLibrary(thumbnailData: thumbnailData)
+            } catch {
+                errorMessage = error.localizedDescription
+                showError = true
+            }
         } label: {
-            Label("!Copy", systemImage: "doc.on.doc")
+            Label("!Save in Photo library", systemImage: "photo.badge.arrow.down")
                 .padding(padding)
         }
-        .keyboardShortcut("2")
+        .keyboardShortcut("1")
         .disabled(viewModel.ymThumbnailData == nil)
         .disabled(viewModel.isFetching)
     }
 }
 
 #Preview {
-    CopyImageButtonView(
+    SaveToPhotoLibraryButtonView(
         showError: .constant(false),
         errorMessage: .constant("")
     )
     .environmentObject(ThumbnailMakerViewModel.preview)
 }
+#endif

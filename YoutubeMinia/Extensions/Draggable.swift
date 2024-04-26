@@ -8,18 +8,18 @@
 import SwiftUI
 
 extension View {
-    func draggableIfAllow(image: NSImage?) -> some View {
+    func draggableIfAllow(image: AppImage?) -> some View {
         modifier(DraggableAllow(image: image))
     }
 }
 
 struct DraggableAllow: ViewModifier {
-    let image: NSImage?
+    let image: AppImage?
     
     func body(content: Content) -> some View {
         if let image {
             content
-                .draggable(image)
+                .draggable(Image(appImage: image))
         } else {
             content
         }

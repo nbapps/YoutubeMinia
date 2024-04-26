@@ -417,6 +417,9 @@
         }
       }
     },
+    "!Save in Photo library" : {
+
+    },
     "!Show channel icon" : {
       "localizations" : {
         "en" : {

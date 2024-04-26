@@ -13,10 +13,17 @@ struct YMOptionsView: View {
     var body: some View {
         List {
             Text("!Options")
+#if os(macOS)
                 .font(.footnote)
                 .fontWeight(.bold)
                 .foregroundStyle(.secondary)
-            
+#else
+                .font(.title)
+                .fontWeight(.bold)
+                .listRowInsets(.init())
+                .listRowBackground(Color.clear)
+#endif
+
                 Section {
                     Toggle("!Show video duration", isOn: $viewModel.showDuration.animation())
                     Toggle("!Show views count", isOn: $viewModel.showViewCount.animation())

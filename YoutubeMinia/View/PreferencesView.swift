@@ -5,6 +5,7 @@
 //  Created by Nicolas Bachur on 25/04/2024.
 //
 
+#if os(macOS)
 import SwiftUI
 import KeyboardShortcuts
 import ServiceManagement
@@ -113,3 +114,4 @@ struct PreferencesView: View {
 #Preview {
     PreferencesView()
 }
+#endif

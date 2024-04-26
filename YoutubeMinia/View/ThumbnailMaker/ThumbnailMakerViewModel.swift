@@ -9,7 +9,9 @@ import Foundation
 import Combine
 import SwiftUI
 import UniformTypeIdentifiers
+#if canImport(KeyboardShortcuts)
 import KeyboardShortcuts
+#endif
 
 enum YMViewModelError: Error {
     case missingHost
@@ -52,6 +54,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
     @Published var isFetching = false
     @Published var exportAfterOnDrop = false
     
+    private let referenceWidth: CGFloat = 350
+    
     init(fetchOnLaunch: Bool) {
         udObservers()
         
@@ -81,6 +85,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
+#if os(macOS)
         KeyboardShortcuts.onKeyUp(for: .fetchThumbnail) { [weak self] in
             self?.pastUrlAndFetchIfPossible()
         }
@@ -88,11 +93,12 @@ final class ThumbnailMakerViewModel: ObservableObject {
         KeyboardShortcuts.onKeyUp(for: .copyLastFetch) { [weak self] in
             self?.copyPreviousThumbnailIfExisting()
         }
+#endif
     }
     
     func pastUrlAndFetchIfPossible() {
         Task { @MainActor in
-            guard let clipboardString = NSPasteboard.general.string(forType: .string) else { return }
+            guard let clipboardString = Clipboard.general.getString() else { return }
             guard let urlStr = checkIfURLIsValid(urlStr: clipboardString) else { return }
             self.videoURlStr = urlStr
             try? await self.fetch()
@@ -102,7 +108,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
                 .environmentObject(self)
                 .getScaledImage(scale: exportSize.scale)
 
-            copy(rendered.nsImage)
+            copy(rendered.appImage)
         }
     }
     
@@ -113,7 +119,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
                 .environmentObject(self)
                 .getScaledImage(scale: exportSize.scale)
             
-            copy(rendered.nsImage)
+            copy(rendered.appImage)
         }
     }
     
@@ -188,21 +194,19 @@ final class ThumbnailMakerViewModel: ObservableObject {
     @MainActor
     func fetchThumbnails(videoThumbnailUrl: URL, channelThumbnailUrl: URL) async throws {
         let videoThumbnailData: Data = try await networkService.fetch(url: videoThumbnailUrl)
-        if let img = NSImage(data: videoThumbnailData) {
-            self.videoThumbnail = Image(nsImage: img)
+        if let img = AppImage(data: videoThumbnailData) {
+            self.videoThumbnail = Image(appImage: img)
         }
         let channelThumbnailData: Data = try await networkService.fetch(url: channelThumbnailUrl)
-        if let img = NSImage(data: channelThumbnailData) {
-            self.channelThumbnail = Image(nsImage: img)
+        if let img = AppImage(data: channelThumbnailData) {
+            self.channelThumbnail = Image(appImage: img)
         }
     }
     
     @MainActor
-    func copy(_ image: NSImage?) {
+    func copy(_ image: AppImage?) {
         guard let image else { return }
-        let pb = NSPasteboard.general
-        pb.clearContents()
-        pb.writeObjects([image])
+        image.copyImage()
         Task {
             try? await notificationService.sendInstantNotification(
                 urlStr: videoURlStr,
@@ -211,6 +215,23 @@ final class ThumbnailMakerViewModel: ObservableObject {
         }
     }
     
+#if os(iOS)
+    @MainActor
+    func saveInPhotoLibrary(thumbnailData: YMThumbnailData) throws {
+        let rendered = ThumbnailView(thumbnailData: thumbnailData)
+            .environmentObject(self)
+            .background(Color.clear)
+            .getScaledImage(scale: exportSize.scale)
+
+        // Mandatory to convert to png and re convert to image for keep transparency...
+        guard let image = rendered.appImage, let data = image.pngData(), let final = UIImage(data: data) else {
+            throw YMViewModelError.noImage
+        }
+        
+        UIImageWriteToSavedPhotosAlbum(final, nil, nil, nil)
+    }
+#endif
+    
     @MainActor
     func exportToDownloads(thumbnailData: YMThumbnailData) throws {
         let rendered = ThumbnailView(thumbnailData: thumbnailData)
@@ -218,13 +239,13 @@ final class ThumbnailMakerViewModel: ObservableObject {
             .getScaledImage(scale: exportSize.scale)
         
         try exportThumbnail(
-            image: rendered.nsImage,
+            image: rendered.appImage,
             fileName: thumbnailData.videoTitle.formatFileName()
         )
     }
     
     @MainActor
-    func exportThumbnail(image: NSImage?, fileName: String) throws {
+    func exportThumbnail(image: AppImage?, fileName: String) throws {
         guard let image else {
             throw YMViewModelError.noImage
         }
@@ -318,8 +339,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
                 }
                 
                 if let data = try? Data(contentsOf: url) {
-                    if self.ymThumbnailData == nil, let nsImage = NSImage(data: data) {
-                        self.videoThumbnail = Image(nsImage: nsImage)
+                    if self.ymThumbnailData == nil, let appImage = AppImage(data: data) {
+                        self.videoThumbnail = Image(appImage: appImage)
                         return
                     } else if let validURL = self.decodeURLFromBinaryPlist(data) {
                         self.videoURlStr = validURL.absoluteString
@@ -337,6 +358,24 @@ final class ThumbnailMakerViewModel: ObservableObject {
             }
         }
         return true
+    }
+}
+
+extension ThumbnailMakerViewModel {
+    func responsiveFontSize(currentWidth: CGFloat, referenceSize: CGFloat) -> CGFloat {
+        let scaleFactor = currentWidth / referenceWidth
+        return round(referenceSize * scaleFactor)
+    }
+    
+    var innerCornerRadius: Double {
+        mapValue(thumbnailCornerRadius, fromRange: 0...1, toRange: 8...20)
+    }
+    var outerCornerRadius: Double {
+        (innerCornerRadius + thumbnailPadding).rounded(.up)
+    }
+    
+    var bottomPadding: Double {
+        mapValue(thumbnailPadding, fromRange: 8...20, toRange: 8...16)
     }
 }
 

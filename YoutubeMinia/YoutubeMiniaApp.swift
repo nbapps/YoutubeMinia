@@ -11,16 +11,21 @@ import UserNotifications
 
 @main
 struct YoutubeMiniaApp: App {
+#if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+#else
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+#endif
     
     @StateObject private var thumbnailMakerViewModel = ThumbnailMakerViewModel.shared
     
     var body: some Scene {
+#if os(macOS)
         Window("!Youtube Minia Maker", id: WindowId.main.rawValue) {
             ContentView()
                 .dataContainer()
                 .environmentObject(thumbnailMakerViewModel)
-                .frame(minHeight: 400)
+                .frame(minWidth: 700, minHeight: 400)
                 .navigationTitle("!Youtube Minia Maker")
         }
         .defaultSize(width: 850, height: 600)
@@ -39,9 +44,18 @@ struct YoutubeMiniaApp: App {
                 .environmentObject(thumbnailMakerViewModel)
         }
         .menuBarExtraStyle(.menu)
+        #else
+        
+        WindowGroup {
+            ContentView()
+                .dataContainer()
+                .environmentObject(thumbnailMakerViewModel)
+        }
+#endif
     }
 }
 
+#if os(macOS)
 class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -57,3 +71,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         
     }
 }
+#else
+class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        UNUserNotificationCenter.current().delegate = self
+        return true
+    }
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        completionHandler(.banner)
+        
+    }
+}
+#endif

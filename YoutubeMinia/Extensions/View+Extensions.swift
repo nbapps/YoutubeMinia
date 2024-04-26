@@ -22,3 +22,13 @@ extension View {
     }
 }
 
+extension ImageRenderer {
+    @MainActor
+    var appImage: AppImage? {
+#if os(macOS)
+        nsImage
+#else
+        uiImage
+#endif
+    }
+}

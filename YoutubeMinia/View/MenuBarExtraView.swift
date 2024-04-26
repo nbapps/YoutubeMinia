@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#if os(macOS)
 struct MenuBarExtraView: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
     @Environment(\.openWindow) private var openWindow
@@ -43,3 +43,4 @@ struct MenuBarExtraView: View {
     MenuBarExtraView()
         .environmentObject(ThumbnailMakerViewModel.preview)
 }
+#endif

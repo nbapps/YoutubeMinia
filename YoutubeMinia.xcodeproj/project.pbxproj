@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3700A45E2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */; };
 		3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
 		374400312BDA7BB8005E432B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 374400302BDA7BB8005E432B /* README.md */; };
 		374400332BDA7EF5005E432B /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
@@ -23,13 +24,12 @@
 		3744004C2BDAA656005E432B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004B2BDAA656005E432B /* NotificationService.swift */; };
 		3744004F2BDB8ABE005E432B /* EmptyThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */; };
 		374400512BDBD268005E432B /* ExportScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400502BDBD268005E432B /* ExportScale.swift */; };
+		374400822BDBE3B8005E432B /* Pastboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */; };
+		374400842BDBE50D005E432B /* AppImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400832BDBE50D005E432B /* AppImage+Extensions.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
 		377E2FCD2BD9943B00135B48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */; };
-		377E2FD82BD9943B00135B48 /* YoutubeMiniaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */; };
-		377E2FE22BD9943B00135B48 /* YoutubeMiniaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */; };
-		377E2FE42BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */; };
 		377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FF02BD9974000135B48 /* GoogleService-Info.plist */; };
 		377E30022BD9981900135B48 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30012BD9981900135B48 /* Database.swift */; };
 		377E30042BD99A1300135B48 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 377E30032BD99A0600135B48 /* Config.xcconfig */; };
@@ -67,24 +67,8 @@
 		377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30592BDA524500135B48 /* ThumbnailMakerView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		377E2FD42BD9943B00135B48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 377E2FB82BD9943A00135B48 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 377E2FBF2BD9943A00135B48;
-			remoteInfo = YoutubeMinia;
-		};
-		377E2FDE2BD9943B00135B48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 377E2FB82BD9943A00135B48 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 377E2FBF2BD9943A00135B48;
-			remoteInfo = YoutubeMinia;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToPhotoLibraryButtonView.swift; sourceTree = "<group>"; };
 		3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extensions.swift"; sourceTree = "<group>"; };
 		374400302BDA7BB8005E432B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		374400322BDA7EF5005E432B /* SharableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharableFile.swift; sourceTree = "<group>"; };
@@ -101,15 +85,15 @@
 		3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyThumbnailView.swift; sourceTree = "<group>"; };
 		374400502BDBD268005E432B /* ExportScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportScale.swift; sourceTree = "<group>"; };
+		374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pastboard+Extensions.swift"; sourceTree = "<group>"; };
+		374400832BDBE50D005E432B /* AppImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppImage+Extensions.swift"; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		377E2FC92BD9943B00135B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoutubeMinia.entitlements; sourceTree = "<group>"; };
-		377E2FD32BD9943B00135B48 /* YoutubeMiniaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeMiniaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaTests.swift; sourceTree = "<group>"; };
-		377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeMiniaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITests.swift; sourceTree = "<group>"; };
 		377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		377E2FF02BD9974000135B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -159,20 +143,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		377E2FD02BD9943B00135B48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		377E2FDA2BD9943B00135B48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -187,6 +157,7 @@
 				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
 				3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */,
 				374400402BDA9F33005E432B /* CopyImageButtonView.swift */,
+				3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */,
 				3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */,
 				374400422BDAA04A005E432B /* PreferencesView.swift */,
 			);
@@ -220,8 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				377E2FC02BD9943A00135B48 /* YT Minia Maker.app */,
-				377E2FD32BD9943B00135B48 /* YoutubeMiniaTests.xctest */,
-				377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,8 +286,10 @@
 			isa = PBXGroup;
 			children = (
 				374400362BDA9982005E432B /* Draggable.swift */,
+				374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */,
 				377E300A2BD99F4900135B48 /* Double+Extensions.swift */,
 				377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */,
+				374400832BDBE50D005E432B /* AppImage+Extensions.swift */,
 				377E30422BDA38A900135B48 /* FileManager+Extensions.swift */,
 				3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */,
 				377E30532BDA514500135B48 /* Bundle+Extensions.swift */,
@@ -364,42 +335,6 @@
 			productReference = 377E2FC02BD9943A00135B48 /* YT Minia Maker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		377E2FD22BD9943B00135B48 /* YoutubeMiniaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 377E2FEA2BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMiniaTests" */;
-			buildPhases = (
-				377E2FCF2BD9943B00135B48 /* Sources */,
-				377E2FD02BD9943B00135B48 /* Frameworks */,
-				377E2FD12BD9943B00135B48 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				377E2FD52BD9943B00135B48 /* PBXTargetDependency */,
-			);
-			name = YoutubeMiniaTests;
-			productName = YoutubeMiniaTests;
-			productReference = 377E2FD32BD9943B00135B48 /* YoutubeMiniaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		377E2FDC2BD9943B00135B48 /* YoutubeMiniaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 377E2FED2BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMiniaUITests" */;
-			buildPhases = (
-				377E2FD92BD9943B00135B48 /* Sources */,
-				377E2FDA2BD9943B00135B48 /* Frameworks */,
-				377E2FDB2BD9943B00135B48 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				377E2FDF2BD9943B00135B48 /* PBXTargetDependency */,
-			);
-			name = YoutubeMiniaUITests;
-			productName = YoutubeMiniaUITests;
-			productReference = 377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -412,14 +347,6 @@
 				TargetAttributes = {
 					377E2FBF2BD9943A00135B48 = {
 						CreatedOnToolsVersion = 15.3;
-					};
-					377E2FD22BD9943B00135B48 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 377E2FBF2BD9943A00135B48;
-					};
-					377E2FDC2BD9943B00135B48 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 377E2FBF2BD9943A00135B48;
 					};
 				};
 			};
@@ -441,8 +368,6 @@
 			projectRoot = "";
 			targets = (
 				377E2FBF2BD9943A00135B48 /* YoutubeMinia */,
-				377E2FD22BD9943B00135B48 /* YoutubeMiniaTests */,
-				377E2FDC2BD9943B00135B48 /* YoutubeMiniaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -476,20 +401,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		377E2FD12BD9943B00135B48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		377E2FDB2BD9943B00135B48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -514,7 +425,9 @@
 				3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */,
 				377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */,
 				374400432BDAA04A005E432B /* PreferencesView.swift in Sources */,
+				3700A45E2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */,
 				377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */,
+				374400822BDBE3B8005E432B /* Pastboard+Extensions.swift in Sources */,
 				377E30022BD9981900135B48 /* Database.swift in Sources */,
 				377E304E2BDA4A3600135B48 /* Date+Extensions.swift in Sources */,
 				374400482BDAA136005E432B /* WindowId.swift in Sources */,
@@ -527,43 +440,14 @@
 				377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */,
 				377E30352BD9BDF900135B48 /* ThumbnailMakerViewModel.swift in Sources */,
 				3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */,
+				374400842BDBE50D005E432B /* AppImage+Extensions.swift in Sources */,
 				3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */,
 				377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */,
 				377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		377E2FCF2BD9943B00135B48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				377E2FD82BD9943B00135B48 /* YoutubeMiniaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		377E2FD92BD9943B00135B48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				377E2FE22BD9943B00135B48 /* YoutubeMiniaUITests.swift in Sources */,
-				377E2FE42BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		377E2FD52BD9943B00135B48 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 377E2FBF2BD9943A00135B48 /* YoutubeMinia */;
-			targetProxy = 377E2FD42BD9943B00135B48 /* PBXContainerItemProxy */;
-		};
-		377E2FDF2BD9943B00135B48 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 377E2FBF2BD9943A00135B48 /* YoutubeMinia */;
-			targetProxy = 377E2FDE2BD9943B00135B48 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		377E2FE52BD9943B00135B48 /* Debug */ = {
@@ -703,9 +587,13 @@
 				INFOPLIST_FILE = YoutubeMinia/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
 				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow acces to save image";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -714,8 +602,11 @@
 				MARKETING_VERSION = $APP_VERSION;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeThumbnailMaker;
 				PRODUCT_NAME = "YT Minia Maker";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -736,9 +627,13 @@
 				INFOPLIST_FILE = YoutubeMinia/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
 				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow acces to save image";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -747,80 +642,11 @@
 				MARKETING_VERSION = $APP_VERSION;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeThumbnailMaker;
 				PRODUCT_NAME = "YT Minia Maker";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		377E2FEB2BD9943B00135B48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V4U726YWM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMiniaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoutubeMinia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YoutubeMinia";
-			};
-			name = Debug;
-		};
-		377E2FEC2BD9943B00135B48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V4U726YWM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMiniaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoutubeMinia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YoutubeMinia";
-			};
-			name = Release;
-		};
-		377E2FEE2BD9943B00135B48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V4U726YWM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMiniaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = YoutubeMinia;
-			};
-			name = Debug;
-		};
-		377E2FEF2BD9943B00135B48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V4U726YWM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMiniaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = YoutubeMinia;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -841,24 +667,6 @@
 			buildConfigurations = (
 				377E2FE82BD9943B00135B48 /* Debug */,
 				377E2FE92BD9943B00135B48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		377E2FEA2BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMiniaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				377E2FEB2BD9943B00135B48 /* Debug */,
-				377E2FEC2BD9943B00135B48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		377E2FED2BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMiniaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				377E2FEE2BD9943B00135B48 /* Debug */,
-				377E2FEF2BD9943B00135B48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

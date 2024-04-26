@@ -21,19 +21,24 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Ressources/font/Roboto-Black.ttf</string>
-		<string>Ressources/font/Roboto-BlackItalic.ttf</string>
-		<string>Ressources/font/Roboto-Bold.ttf</string>
-		<string>Ressources/font/Roboto-BoldItalic.ttf</string>
-		<string>Ressources/font/Roboto-Italic.ttf</string>
-		<string>Ressources/font/Roboto-Light.ttf</string>
-		<string>Ressources/font/Roboto-LightItalic.ttf</string>
-		<string>Ressources/font/Roboto-Medium.ttf</string>
-		<string>Ressources/font/Roboto-MediumItalic.ttf</string>
-		<string>Ressources/font/Roboto-Regular.ttf</string>
-		<string>Ressources/font/Roboto-Thin.ttf</string>
-		<string>Ressources/font/Roboto-ThinItalic.ttf</string>
+		<string>Roboto-Black.ttf</string>
+		<string>Roboto-BlackItalic.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-BoldItalic.ttf</string>
+		<string>Roboto-Italic.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-LightItalic.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-MediumItalic.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Thin.ttf</string>
+		<string>Roboto-ThinItalic.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string></string>
+	</dict>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
