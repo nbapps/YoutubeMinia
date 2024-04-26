@@ -198,6 +198,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             try exportToDownloads(thumbnailData: thumbnailData)
             exportAfterOnDrop = false
         }
+        print("fetch done")
     }
     
     @MainActor

@@ -18,8 +18,8 @@ struct LastUrlsRowView: View {
     @State private var image: Image?
     
     var body: some View {
-        Button(action: onSelect) {
-            Section {
+        Section {
+            Button(action: onSelect) {
                 HStack(alignment: .top, spacing: 16) {
                     makeThumbnail()
                         .frame(width: 50)
@@ -37,11 +37,11 @@ struct LastUrlsRowView: View {
                         
                     }
                 }
-            } footer: {
-                Text(previousURL.timestamp, style: .offset)
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
             }
+        } footer: {
+            Text(previousURL.timestamp, style: .offset)
+                .font(.caption2)
+                .foregroundStyle(.secondary)
         }
         .task {
             do {
