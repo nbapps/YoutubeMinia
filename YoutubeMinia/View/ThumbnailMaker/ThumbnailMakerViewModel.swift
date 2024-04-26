@@ -54,6 +54,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
     @Published var isFetching = false
     @Published var exportAfterOnDrop = false
     
+    @Published var selectedTab = Tabs.maker
+    
     private let referenceWidth: CGFloat = 350
     
     init(fetchOnLaunch: Bool) {
@@ -137,7 +139,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
         isFetching = true
         self.lastVideoURlStr = videoURlStr
         print("start fetch")
-        let videoReponse: YTDecodable = try await networkService.fetch(url: ytVideoUrl)
+        let videoReponse: YTDecodable = try await networkService.fetch(from: ytVideoUrl)
         guard let videoItem = videoReponse.items.first,
               let videoSnippet = videoItem.snippet,
               let videoStatistics = videoItem.statistics,
@@ -148,7 +150,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
         
         guard let ytChannelUrl = Config.channelURL(for: channelId)else { throw YMViewModelError.missingChannelId }
         
-            let channelResponse: YTDecodable = try await networkService.fetch(url: ytChannelUrl)
+        let channelResponse: YTDecodable = try await networkService.fetch(from: ytChannelUrl)
         
         guard let channelItem = channelResponse.items.first,
               let channelSnippet = channelItem.snippet,
@@ -183,6 +185,13 @@ final class ThumbnailMakerViewModel: ObservableObject {
         try await fetchThumbnails(
             videoThumbnailUrl: videoThumbnailUrl,
             channelThumbnailUrl: channelThumbnailUrl
+        )
+        
+        _ = try PreviousURL.add(
+            videoURlStr,
+            videoId: videoId,
+            title: videoTitle,
+            thumbnailUrlStr: videoThumbnailUrl.absoluteString
         )
         
         if exportAfterOnDrop {

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3700A45E2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */; };
+		3700A4602BDC012100FB9E81 /* PreviousURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A45F2BDC012100FB9E81 /* PreviousURLs.swift */; };
+		3700A4622BDC039800FB9E81 /* LastUrlsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4612BDC039800FB9E81 /* LastUrlsListView.swift */; };
+		3700A4642BDC11E300FB9E81 /* LastUrlsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4632BDC11E300FB9E81 /* LastUrlsRowView.swift */; };
 		3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
 		374400312BDA7BB8005E432B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 374400302BDA7BB8005E432B /* README.md */; };
 		374400332BDA7EF5005E432B /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
@@ -69,6 +72,9 @@
 
 /* Begin PBXFileReference section */
 		3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToPhotoLibraryButtonView.swift; sourceTree = "<group>"; };
+		3700A45F2BDC012100FB9E81 /* PreviousURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousURLs.swift; sourceTree = "<group>"; };
+		3700A4612BDC039800FB9E81 /* LastUrlsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUrlsListView.swift; sourceTree = "<group>"; };
+		3700A4632BDC11E300FB9E81 /* LastUrlsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUrlsRowView.swift; sourceTree = "<group>"; };
 		3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extensions.swift"; sourceTree = "<group>"; };
 		374400302BDA7BB8005E432B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		374400322BDA7EF5005E432B /* SharableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharableFile.swift; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
 				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
 				3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */,
+				3700A4612BDC039800FB9E81 /* LastUrlsListView.swift */,
+				3700A4632BDC11E300FB9E81 /* LastUrlsRowView.swift */,
 				374400402BDA9F33005E432B /* CopyImageButtonView.swift */,
 				3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */,
 				3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */,
@@ -240,9 +248,10 @@
 		377E30132BD9ADAC00135B48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				377E30012BD9981900135B48 /* Database.swift */,
+				3700A45F2BDC012100FB9E81 /* PreviousURLs.swift */,
 				374400322BDA7EF5005E432B /* SharableFile.swift */,
 				374400502BDBD268005E432B /* ExportScale.swift */,
-				377E30012BD9981900135B48 /* Database.swift */,
 				377E30142BD9ADB200135B48 /* YTDecodable.swift */,
 				377E30552BDA518300135B48 /* YMThumbnailData.swift */,
 				374400472BDAA135005E432B /* WindowId.swift */,
@@ -425,7 +434,9 @@
 				3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */,
 				377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */,
 				374400432BDAA04A005E432B /* PreferencesView.swift in Sources */,
+				3700A4642BDC11E300FB9E81 /* LastUrlsRowView.swift in Sources */,
 				3700A45E2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */,
+				3700A4602BDC012100FB9E81 /* PreviousURLs.swift in Sources */,
 				377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */,
 				374400822BDBE3B8005E432B /* Pastboard+Extensions.swift in Sources */,
 				377E30022BD9981900135B48 /* Database.swift in Sources */,
@@ -443,6 +454,7 @@
 				374400842BDBE50D005E432B /* AppImage+Extensions.swift in Sources */,
 				3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */,
 				377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */,
+				3700A4622BDC039800FB9E81 /* LastUrlsListView.swift in Sources */,
 				377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

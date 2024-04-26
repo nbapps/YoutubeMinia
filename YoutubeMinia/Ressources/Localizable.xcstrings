@@ -273,6 +273,9 @@
         }
       }
     },
+    "!Make" : {
+
+    },
     "!Open app" : {
       "localizations" : {
         "en" : {
@@ -384,6 +387,9 @@
           }
         }
       }
+    },
+    "!Remove" : {
+
     },
     "!Save .yttm file" : {
       "localizations" : {
@@ -811,6 +817,12 @@
           }
         }
       }
+    },
+    "Last" : {
+
+    },
+    "Maker" : {
+
     },
     "My channel" : {
       "localizations" : {

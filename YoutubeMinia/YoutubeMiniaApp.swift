@@ -9,6 +9,10 @@ import SwiftUI
 import SwiftData
 import UserNotifications
 
+enum Tabs {
+    case maker, last
+}
+
 @main
 struct YoutubeMiniaApp: App {
 #if os(macOS)
@@ -47,9 +51,16 @@ struct YoutubeMiniaApp: App {
         #else
         
         WindowGroup {
-            ContentView()
-                .dataContainer()
-                .environmentObject(thumbnailMakerViewModel)
+            TabView(selection: $thumbnailMakerViewModel.selectedTab) {
+                ContentView()
+                    .tabItem { Label("Maker", systemImage: "photo") }
+                    .tag(Tabs.maker)
+                LastUrlsListView()
+                    .tabItem { Label("Last", systemImage: "externaldrive.fill.badge.icloud") }
+                    .tag(Tabs.last)
+            }
+            .dataContainer()
+            .environmentObject(thumbnailMakerViewModel)
         }
 #endif
     }
