@@ -22,6 +22,7 @@
 		3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */; };
 		3744004C2BDAA656005E432B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004B2BDAA656005E432B /* NotificationService.swift */; };
 		3744004F2BDB8ABE005E432B /* EmptyThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */; };
+		374400512BDBD268005E432B /* ExportScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400502BDBD268005E432B /* ExportScale.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		3744004B2BDAA656005E432B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyThumbnailView.swift; sourceTree = "<group>"; };
+		374400502BDBD268005E432B /* ExportScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportScale.swift; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				374400322BDA7EF5005E432B /* SharableFile.swift */,
+				374400502BDBD268005E432B /* ExportScale.swift */,
 				377E30012BD9981900135B48 /* Database.swift */,
 				377E30142BD9ADB200135B48 /* YTDecodable.swift */,
 				377E30552BDA518300135B48 /* YMThumbnailData.swift */,
@@ -504,6 +507,7 @@
 				377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */,
 				3744004C2BDAA656005E432B /* NotificationService.swift in Sources */,
 				377E30072BD99A6B00135B48 /* Config.swift in Sources */,
+				374400512BDBD268005E432B /* ExportScale.swift in Sources */,
 				377E30432BDA38A900135B48 /* FileManager+Extensions.swift in Sources */,
 				374400332BDA7EF5005E432B /* SharableFile.swift in Sources */,
 				374400412BDA9F33005E432B /* CopyImageButtonView.swift in Sources */,

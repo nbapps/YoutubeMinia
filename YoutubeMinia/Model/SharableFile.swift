@@ -27,7 +27,7 @@ extension SharableFile: Transferable {
     
     public static var transferRepresentation: some TransferRepresentation {
         CodableRepresentation(contentType: .ymSharableFileExportType)
-            .suggestedFileName { "\($0.videoTitle)_" + Date().formatted(.iso8601) }
+            .suggestedFileName { "\($0.videoTitle.formatFileName())_" + Date().formatted(.iso8601) }
     }
 }
 

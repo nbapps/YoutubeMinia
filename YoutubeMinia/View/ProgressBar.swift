@@ -18,7 +18,7 @@ struct ProgressBar: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(displayableTitle)
-                .padding(.leading, 8)
+                
             Slider(value: $progress, in: range, step: step)
         }
     }

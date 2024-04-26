@@ -18,7 +18,7 @@ struct CopyImageButtonView: View {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
             let rendered = ThumbnailView(thumbnailData: thumbnailData)
                 .environmentObject(viewModel)
-                .getScaledImage()
+                .getScaledImage(scale: viewModel.exportSize.scale)
             viewModel.copy(rendered.nsImage)
         } label: {
             Label("!Copy", systemImage: "doc.on.doc")

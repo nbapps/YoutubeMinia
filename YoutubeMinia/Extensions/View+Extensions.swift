@@ -15,7 +15,7 @@ extension View {
     }
     
     @MainActor
-    func getScaledImage(scale: CGFloat = 2) -> ImageRenderer<Self> {
+    func getScaledImage(scale: CGFloat) -> ImageRenderer<Self> {
         let rendered = ImageRenderer(content: self)
         rendered.scale = scale
         return rendered

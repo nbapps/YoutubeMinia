@@ -17,11 +17,9 @@ struct SaveInDownloadButton: View {
     var body: some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
-            let rendered = ThumbnailView(thumbnailData: thumbnailData)
-                .environmentObject(viewModel)
-                .getScaledImage()
+
             do {
-                try viewModel.exportThumbnail(image: rendered.nsImage, fileName: "\(thumbnailData.videoTitle)")
+                try viewModel.exportToDownloads(thumbnailData: thumbnailData)
             } catch {
                 errorMessage = error.localizedDescription
                 showError = true
