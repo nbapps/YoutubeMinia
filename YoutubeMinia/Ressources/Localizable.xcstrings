@@ -108,7 +108,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "N'importe quel URL Youtube / Shorts"
+            "value" : "N'importe quelle URL Youtube / Shorts"
           }
         }
       }
@@ -204,7 +204,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saisissez l'URL de la vidéo YouTube pour générer une vignette partageable."
+            "value" : "Saisissez l'URL de la vidéo YouTube pour générer une vignette partageable"
           }
         }
       }
@@ -614,13 +614,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thanks to this app, you can create a thumbnail of an already published YouTube video for use in your montages or for sharing on the networks. Works with long videos and shorts."
+            "value" : "Thanks to this app, you can create a thumbnail of an already published YouTube video for use in your montages or for sharing on the networks. Works with long videos and Shorts."
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grâce à cette application, vous pouvez créer une vignette d'une vidéo YouTube déjà publiée pour l'utiliser dans vos montages ou pour la partager sur les réseaux. Fonctionne avec les vidéos longues et les courts métrages."
+            "state" : "needs_review",
+            "value" : "Grâce à cette application, vous pouvez créer une vignette d'une vidéo YouTube déjà publiée pour l'utiliser dans vos montages ou pour la partager sur les réseaux. Fonctionne avec les vidéos longues et les Shorts."
           }
         }
       }
@@ -742,13 +742,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Youtube Minia Maker"
+            "value" : "YT Minia Maker"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Youtube Minia Maker"
+            "state" : "needs_review",
+            "value" : "YT Minia Maker"
           }
         }
       }
