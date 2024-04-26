@@ -12,7 +12,7 @@ import SwiftData
 final class PreviousURL {
     init(
         urlStr: String,
-    videoId: String,
+        videoId: String,
         title: String,
         thumbnailUrlStr: String?,
         timestamp: Date
@@ -29,6 +29,20 @@ final class PreviousURL {
     var title: String
     var thumbnailUrlStr: String?
     var timestamp: Date
+    
+    // TODO: save conf for recrate preview
+    var videoURlStr: String = UserDefaults.standard.videoURlStr
+    var showDuration: Bool = UserDefaults.standard.showDuration
+    var showChannelIcon: Bool = UserDefaults.standard.showChannelIcon
+    var showChannelName: Bool = UserDefaults.standard.showChannelName
+    var showChannelCount: Bool = UserDefaults.standard.showChannelCount
+    var showViewCount: Bool = UserDefaults.standard.showViewCount
+    var showPublishDate: Bool = UserDefaults.standard.showPublishDate
+    var showProgress: Bool = UserDefaults.standard.showProgress
+    var lastProgress: Double = UserDefaults.standard.lastProgress
+    var isDarkTheme: Bool = UserDefaults.standard.isDarkTheme
+    var thumbnailCornerRadius: Double = UserDefaults.standard.thumbnailCornerRadius
+    var thumbnailPadding: Double = UserDefaults.standard.thumbnailPadding
 }
 
 extension PreviousURL {

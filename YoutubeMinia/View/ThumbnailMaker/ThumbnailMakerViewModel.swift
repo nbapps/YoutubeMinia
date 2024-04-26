@@ -271,6 +271,23 @@ final class ThumbnailMakerViewModel: ObservableObject {
         }
     }
 
+    func applySettings(from previousURL: PreviousURL) {
+        videoURlStr = previousURL.urlStr
+        
+        videoURlStr = previousURL.videoURlStr
+        showDuration = previousURL.showDuration
+        showChannelIcon = previousURL.showChannelIcon
+        showChannelName = previousURL.showChannelName
+        showChannelCount = previousURL.showChannelCount
+        showViewCount = previousURL.showViewCount
+        showPublishDate = previousURL.showPublishDate
+        showProgress = previousURL.showProgress
+        lastProgress = previousURL.lastProgress
+        isDarkTheme = previousURL.isDarkTheme
+        thumbnailCornerRadius = previousURL.thumbnailCornerRadius
+        thumbnailPadding = previousURL.thumbnailPadding
+    }
+    
     @MainActor
     func configurationFile() -> SharableFile? {
         guard let ymThumbnailData else { return nil }

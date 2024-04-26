@@ -34,6 +34,9 @@ struct YoutubeMiniaApp: App {
         }
         .defaultSize(width: 850, height: 600)
         .windowResizability(.contentSize)
+        .commands {
+            SidebarCommands()
+        }
         
         Settings {
             NavigationStack {
@@ -48,13 +51,14 @@ struct YoutubeMiniaApp: App {
                 .environmentObject(thumbnailMakerViewModel)
         }
         .menuBarExtraStyle(.menu)
-        #else
+#else
         
         WindowGroup {
             TabView(selection: $thumbnailMakerViewModel.selectedTab) {
                 ContentView()
                     .tabItem { Label("Maker", systemImage: "photo") }
                     .tag(Tabs.maker)
+                
                 LastUrlsListView()
                     .tabItem { Label("Last", systemImage: "externaldrive.fill.badge.icloud") }
                     .tag(Tabs.last)

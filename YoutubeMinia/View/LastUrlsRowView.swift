@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LastUrlsRowView: View {
+    @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
+    @Environment(\.modelContext) private var modelContext
+    
     let previousURL: PreviousURL
     
     let networkService = NetworkService()
@@ -15,28 +18,30 @@ struct LastUrlsRowView: View {
     @State private var image: Image?
     
     var body: some View {
-        Section {
-            HStack(alignment: .top, spacing: 16) {
-                makeThumbnail()
-                    .frame(width: 50)
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(verbatim: previousURL.title)
-                        .lineLimit(2)
-                        .font(.headline)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+        Button(action: onSelect) {
+            Section {
+                HStack(alignment: .top, spacing: 16) {
+                    makeThumbnail()
+                        .frame(width: 50)
                     
-                    
-                    Text(previousURL.urlStr)
-                        .font(.caption2)
-                        .foregroundStyle(.secondary)
-                    
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(verbatim: previousURL.title)
+                            .lineLimit(2)
+                            .font(.headline)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        
+                        Text(previousURL.urlStr)
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                        
+                    }
                 }
+            } footer: {
+                Text(previousURL.timestamp, style: .offset)
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
             }
-        } footer: {
-            Text(previousURL.timestamp, style: .offset)
-                .font(.caption2)
-                .foregroundStyle(.secondary)
         }
         .task {
             do {
@@ -47,6 +52,23 @@ struct LastUrlsRowView: View {
                 print(error)
             }
         }
+        .buttonStyle(.plain)
+        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+            Button(role: .destructive) {
+                modelContext.delete(previousURL)
+            } label: {
+                Label("!Remove", systemImage: "trash")
+            }
+        }
+        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+            Button(action: onSelect) {
+                Label("!Make", systemImage: "photo")
+            }
+            .tint(.accentColor)
+        }
+#if os(iOS)
+        .listSectionSpacing(8)
+#endif
     }
     
     @ViewBuilder
@@ -57,6 +79,14 @@ struct LastUrlsRowView: View {
                 .scaledToFit()
         } else {
             ProgressView()
+        }
+    }
+    
+    func onSelect() {
+        viewModel.applySettings(from: previousURL)
+        
+        withAnimation {
+            viewModel.selectedTab = .maker
         }
     }
 }
