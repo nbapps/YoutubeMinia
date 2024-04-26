@@ -7,26 +7,54 @@
 
 import SwiftUI
 import SwiftData
+import UserNotifications
 
 @main
 struct YoutubeMiniaApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    @StateObject private var thumbnailMakerViewModel = ThumbnailMakerViewModel.shared
+    
     var body: some Scene {
-        WindowGroup {
+        Window("!Youtube Minia Maker", id: WindowId.main.rawValue) {
             ContentView()
+                .dataContainer()
+                .environmentObject(thumbnailMakerViewModel)
+                .frame(width: 850, height: 600)
+                .navigationTitle("!Youtube Minia Maker")
         }
-        .modelContainer(sharedModelContainer)
+        .defaultSize(width: 850, height: 600)
+        .windowResizability(.contentSize)
+        
+        Settings {
+            NavigationStack {
+                PreferencesView()
+            }
+            .environmentObject(thumbnailMakerViewModel)
+        }
+        .windowResizability(.contentSize)
+        
+        MenuBarExtra("!Youtube Minia Maker", systemImage: "photo.badge.arrow.down") {
+            MenuBarExtraView()
+                .environmentObject(thumbnailMakerViewModel)
+        }
+        .menuBarExtraStyle(.menu)
+//        .menuBarExtraAccess(isPresented: $appState.isMenuPresented)
+    }
+}
+
+class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
+
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        UNUserNotificationCenter.current().delegate = self
+    }
+    
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        completionHandler(.banner)
+        
     }
 }

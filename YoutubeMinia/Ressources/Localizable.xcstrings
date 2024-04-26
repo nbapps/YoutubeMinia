@@ -1,0 +1,797 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "!%lld k subscribers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld k subscribers"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld k abonnés"
+          }
+        }
+      }
+    },
+    "!%lld k views" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld k views"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld k vues"
+          }
+        }
+      }
+    },
+    "!%lld m subscribers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m subscribers"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m abonnés"
+          }
+        }
+      }
+    },
+    "!%lld m views" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m views"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m vues"
+          }
+        }
+      }
+    },
+    "!%lld subscribers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld subscribers"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld abonnés"
+          }
+        }
+      }
+    },
+    "!%lld views" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld views"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld vues"
+          }
+        }
+      }
+    },
+    "!Any Youtube URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Any YouTube URL Youtube / Shorts"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N'importe quelle URL Youtube / Shorts"
+          }
+        }
+      }
+    },
+    "!Context" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Little background"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un peu de contexte"
+          }
+        }
+      }
+    },
+    "!Copy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier"
+          }
+        }
+      }
+    },
+    "!Copy last thumbnail:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy last thumbnail:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier la dernière vignette"
+          }
+        }
+      }
+    },
+    "!Corner radius" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corner radius"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rayon de courbure"
+          }
+        }
+      }
+    },
+    "!Dark theme" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark theme"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thème sombre"
+          }
+        }
+      }
+    },
+    "!Enter YouTube video URL to generate sharable thumbnail" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter YouTube video URL to generate sharable thumbnail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez l'URL de la vidéo YouTube pour générer une vignette partageable"
+          }
+        }
+      }
+    },
+    "!Fetch thumbnail from clipboard:" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetch thumbnail from clipboard:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Récupérer une vignette dans le presse-papiers :"
+          }
+        }
+      }
+    },
+    "!Get stylish YouTube thumbnails" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get stylish YouTube thumbnails"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtenir des vignettes YouTube élégantes"
+          }
+        }
+      }
+    },
+    "!Invalid Number" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid number"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numéro non valide"
+          }
+        }
+      }
+    },
+    "!Open app" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open app"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir l'app"
+          }
+        }
+      }
+    },
+    "!Open preferences" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open preferences"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir les préférences"
+          }
+        }
+      }
+    },
+    "!Options" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Options"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Options"
+          }
+        }
+      }
+    },
+    "!Our other apps" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Our other apps"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nos autres apps"
+          }
+        }
+      }
+    },
+    "!Preferences" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preferences"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Préférences"
+          }
+        }
+      }
+    },
+    "!Progress" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tête de lecture"
+          }
+        }
+      }
+    },
+    "!Quit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quitter"
+          }
+        }
+      }
+    },
+    "!Save .yttm file" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save .yttm file"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegarder le fichier .yttm"
+          }
+        }
+      }
+    },
+    "!Save in Dowmloads" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save in Downloads"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegarder dans les téléchargements"
+          }
+        }
+      }
+    },
+    "!Show channel icon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show channel icon"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher l'icône de la chaine"
+          }
+        }
+      }
+    },
+    "!Show channel name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show channel name"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher le nom de la chaine"
+          }
+        }
+      }
+    },
+    "!Show channel sub" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show channel sub"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher le nombre d'abonnés"
+          }
+        }
+      }
+    },
+    "!Show progress bar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show progress bar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher la tête de lecture"
+          }
+        }
+      }
+    },
+    "!Show publication date" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show publication date"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher la date de publication"
+          }
+        }
+      }
+    },
+    "!Show video duration" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show video duration"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher la durée de la vidéo"
+          }
+        }
+      }
+    },
+    "!Show views count" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show views count"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher le nombre de vues"
+          }
+        }
+      }
+    },
+    "!Since %lld day%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld day%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld jour%2$@"
+          }
+        }
+      }
+    },
+    "!Since %lld month%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld month%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld moi%2$@"
+          }
+        }
+      }
+    },
+    "!Since %lld week%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld week%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld semaine%2$@"
+          }
+        }
+      }
+    },
+    "!Since %lld year%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld year%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld an%2$@"
+          }
+        }
+      }
+    },
+    "!Source code" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source code"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code source"
+          }
+        }
+      }
+    },
+    "!Start with session" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start with session"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démarrer avec la sessions"
+          }
+        }
+      }
+    },
+    "!Thanks to this app, you can create a thumbnail of an already published YouTube video for use in your montages or for sharing on the networks. Works with long videos and shorts." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thanks to this app, you can create a thumbnail of an already published YouTube video for use in your montages or for sharing on the networks. Works with long videos and Shorts."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Grâce à cette application, vous pouvez créer une vignette d'une vidéo YouTube déjà publiée pour l'utiliser dans vos montages ou pour la partager sur les réseaux. Fonctionne avec les vidéos longues et les Shorts."
+          }
+        }
+      }
+    },
+    "!The thumbnail has been saved in Downloads folder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The thumbnail has been saved in Downloads folder"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La vignette a été enregistrée dans le dossier Téléchargements"
+          }
+        }
+      }
+    },
+    "!The thumbnail is in your clipboard" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The thumbnail is in your clipboard"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La vignette se trouve dans le presse-papiers"
+          }
+        }
+      }
+    },
+    "!This app was created following Basti Ui and Benjamin Code's network challenge. This app is open source. The Github link is below." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app was created following Basti Ui and Benjamin Code's network challenge. This app is open source. The Github link is below."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette application a été créée suite au défi réseau de Basti Ui et Benjamin Code. Cette application est open source. Le lien Github est ci-dessous."
+          }
+        }
+      }
+    },
+    "!Thumbnail padding" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thumbnail padding"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marge de la vignette"
+          }
+        }
+      }
+    },
+    "!To create a thumbnail, you can either copy and paste the Youtube url into the app, or drag and drop it into the app, or configure a keyboard shortcut to automatically generate the thumbnail after copying the URL." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To create a thumbnail, you can either copy and paste the Youtube url into the app, or drag and drop it into the app, or configure a keyboard shortcut to automatically generate the thumbnail after copying the URL."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour créer une vignette, vous pouvez soit copier et coller l'URL de Youtube dans l'application, soit la faire glisser et la déposer dans l'application, soit configurer un raccourci clavier pour générer automatiquement la vignette après avoir copié l'URL."
+          }
+        }
+      }
+    },
+    "!You can share a configuration file with your editor so that he can use exactly the same configuration as you had created." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can share a configuration file with your editor so that he can use exactly the same configuration as you had created."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous pouvez partager un fichier de configuration avec votre éditeur afin qu'il puisse utiliser exactement la même configuration que vous avez créée."
+          }
+        }
+      }
+    },
+    "!You can then share the image by saving it in the download folder, copying it to the clipboard or directly dragging and dropping it into your editing or graphics software." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can then share the image by saving it in the download folder, copying it to the clipboard or directly dragging and dropping it into your editing or graphics software."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous pouvez ensuite partager l'image en l'enregistrant dans le dossier de téléchargement, en la copiant dans le presse-papiers ou en la glissant directement dans votre logiciel d'édition ou de graphisme."
+          }
+        }
+      }
+    },
+    "!Youtube Minia Maker" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "YT Minia Maker"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "YT Minia Maker"
+          }
+        }
+      }
+    },
+    "@BastiUi" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "@BastiUi"
+          }
+        }
+      }
+    },
+    "@BenjaminCode" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "@BenjaminCode"
+          }
+        }
+      }
+    },
+    "10:10" : {
+
+    },
+    "https://www.youtube.com/watch?v=f7_CHu0ADhM" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://www.youtube.com/watch?v=f7_CHu0ADhM"
+          }
+        }
+      }
+    },
+    "My channel" : {
+
+    },
+    "This is a video title" : {
+
+    }
+  },
+  "version" : "1.0"
+}

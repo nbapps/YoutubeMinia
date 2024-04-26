@@ -7,14 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
+		374400312BDA7BB8005E432B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 374400302BDA7BB8005E432B /* README.md */; };
+		374400332BDA7EF5005E432B /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
+		374400352BDA92CE005E432B /* yttm_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 374400342BDA92CE005E432B /* yttm_icon.png */; };
+		374400372BDA9982005E432B /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400362BDA9982005E432B /* Draggable.swift */; };
+		3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */; };
+		3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003C2BDA9BFF005E432B /* ThumbnailView.swift */; };
+		3744003F2BDA9E5F005E432B /* SaveInDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */; };
+		374400412BDA9F33005E432B /* CopyImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400402BDA9F33005E432B /* CopyImageButtonView.swift */; };
+		374400432BDAA04A005E432B /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400422BDAA04A005E432B /* PreferencesView.swift */; };
+		374400462BDAA109005E432B /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 374400452BDAA109005E432B /* KeyboardShortcuts */; };
+		374400482BDAA136005E432B /* WindowId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400472BDAA135005E432B /* WindowId.swift */; };
+		3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */; };
+		3744004C2BDAA656005E432B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004B2BDAA656005E432B /* NotificationService.swift */; };
+		3744004F2BDB8ABE005E432B /* EmptyThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
-		377E2FC82BD9943A00135B48 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC72BD9943A00135B48 /* Item.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
 		377E2FCD2BD9943B00135B48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */; };
 		377E2FD82BD9943B00135B48 /* YoutubeMiniaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */; };
 		377E2FE22BD9943B00135B48 /* YoutubeMiniaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */; };
 		377E2FE42BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */; };
+		377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FF02BD9974000135B48 /* GoogleService-Info.plist */; };
+		377E30022BD9981900135B48 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30012BD9981900135B48 /* Database.swift */; };
+		377E30042BD99A1300135B48 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 377E30032BD99A0600135B48 /* Config.xcconfig */; };
+		377E30072BD99A6B00135B48 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30062BD99A6B00135B48 /* Config.swift */; };
+		377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */; };
+		377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300A2BD99F4900135B48 /* Double+Extensions.swift */; };
+		377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300C2BD9A11000135B48 /* ProgressBar.swift */; };
+		377E300F2BD9AC2700135B48 /* devVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 377E300E2BD9AC2700135B48 /* devVideo.json */; };
+		377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30142BD9ADB200135B48 /* YTDecodable.swift */; };
+		377E30192BD9B00F00135B48 /* devChannel.json in Resources */ = {isa = PBXBuildFile; fileRef = 377E30182BD9B00F00135B48 /* devChannel.json */; };
+		377E30282BD9BABE00135B48 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */; };
+		377E30292BD9BABE00135B48 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301D2BD9BABE00135B48 /* Roboto-Italic.ttf */; };
+		377E302A2BD9BABE00135B48 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301E2BD9BABE00135B48 /* Roboto-Black.ttf */; };
+		377E302B2BD9BABE00135B48 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301F2BD9BABE00135B48 /* Roboto-BlackItalic.ttf */; };
+		377E302C2BD9BABE00135B48 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30202BD9BABE00135B48 /* Roboto-Medium.ttf */; };
+		377E302D2BD9BABE00135B48 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30212BD9BABE00135B48 /* Roboto-BoldItalic.ttf */; };
+		377E302E2BD9BABE00135B48 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30222BD9BABE00135B48 /* Roboto-Thin.ttf */; };
+		377E302F2BD9BABE00135B48 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30232BD9BABE00135B48 /* Roboto-Light.ttf */; };
+		377E30302BD9BABE00135B48 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */; };
+		377E30312BD9BABE00135B48 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30252BD9BABE00135B48 /* Roboto-LightItalic.ttf */; };
+		377E30322BD9BABE00135B48 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */; };
+		377E30332BD9BABE00135B48 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */; };
+		377E30352BD9BDF900135B48 /* ThumbnailMakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30342BD9BDF900135B48 /* ThumbnailMakerViewModel.swift */; };
+		377E30372BDA2D0C00135B48 /* YMOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30362BDA2D0C00135B48 /* YMOptionsView.swift */; };
+		377E30432BDA38A900135B48 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30422BDA38A900135B48 /* FileManager+Extensions.swift */; };
+		377E30462BDA3CFF00135B48 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30452BDA3CFF00135B48 /* String+Extensions.swift */; };
+		377E30482BDA3F7300135B48 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30472BDA3F7300135B48 /* Font+Extensions.swift */; };
+		377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E304B2BDA455700135B48 /* View+Extensions.swift */; };
+		377E304E2BDA4A3600135B48 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E304D2BDA4A3600135B48 /* Date+Extensions.swift */; };
+		377E30502BDA4A6600135B48 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 377E304F2BDA4A6600135B48 /* Localizable.xcstrings */; };
+		377E30522BDA508800135B48 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30512BDA508800135B48 /* Collection+Extensions.swift */; };
+		377E30542BDA514500135B48 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30532BDA514500135B48 /* Bundle+Extensions.swift */; };
+		377E30562BDA518300135B48 /* YMThumbnailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30552BDA518300135B48 /* YMThumbnailData.swift */; };
+		377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30572BDA51BD00135B48 /* NetworkService.swift */; };
+		377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30592BDA524500135B48 /* ThumbnailMakerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +84,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		377E2FC02BD9943A00135B48 /* YoutubeMinia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeMinia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extensions.swift"; sourceTree = "<group>"; };
+		374400302BDA7BB8005E432B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		374400322BDA7EF5005E432B /* SharableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharableFile.swift; sourceTree = "<group>"; };
+		374400342BDA92CE005E432B /* yttm_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yttm_icon.png; sourceTree = "<group>"; };
+		374400362BDA9982005E432B /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
+		3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
+		3744003C2BDA9BFF005E432B /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInDownloadButton.swift; sourceTree = "<group>"; };
+		374400402BDA9F33005E432B /* CopyImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyImageButtonView.swift; sourceTree = "<group>"; };
+		374400422BDAA04A005E432B /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		374400472BDAA135005E432B /* WindowId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowId.swift; sourceTree = "<group>"; };
+		374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcuts+Extensions.swift"; sourceTree = "<group>"; };
+		3744004B2BDAA656005E432B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyThumbnailView.swift; sourceTree = "<group>"; };
+		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		377E2FC72BD9943A00135B48 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		377E2FC92BD9943B00135B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoutubeMinia.entitlements; sourceTree = "<group>"; };
@@ -47,6 +110,42 @@
 		377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeMiniaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITests.swift; sourceTree = "<group>"; };
 		377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		377E2FF02BD9974000135B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		377E30012BD9981900135B48 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		377E30032BD99A0600135B48 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		377E30052BD99A2200135B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		377E30062BD99A6B00135B48 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		377E300A2BD99F4900135B48 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		377E300C2BD9A11000135B48 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		377E300E2BD9AC2700135B48 /* devVideo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = devVideo.json; sourceTree = "<group>"; };
+		377E30142BD9ADB200135B48 /* YTDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTDecodable.swift; sourceTree = "<group>"; };
+		377E30182BD9B00F00135B48 /* devChannel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = devChannel.json; sourceTree = "<group>"; };
+		377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		377E301D2BD9BABE00135B48 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		377E301E2BD9BABE00135B48 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		377E301F2BD9BABE00135B48 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		377E30202BD9BABE00135B48 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		377E30212BD9BABE00135B48 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		377E30222BD9BABE00135B48 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		377E30232BD9BABE00135B48 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		377E30252BD9BABE00135B48 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		377E30342BD9BDF900135B48 /* ThumbnailMakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailMakerViewModel.swift; sourceTree = "<group>"; };
+		377E30362BDA2D0C00135B48 /* YMOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMOptionsView.swift; sourceTree = "<group>"; };
+		377E30422BDA38A900135B48 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		377E30452BDA3CFF00135B48 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		377E30472BDA3F7300135B48 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		377E304B2BDA455700135B48 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		377E304D2BDA4A3600135B48 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		377E304F2BDA4A6600135B48 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		377E30512BDA508800135B48 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		377E30532BDA514500135B48 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		377E30552BDA518300135B48 /* YMThumbnailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMThumbnailData.swift; sourceTree = "<group>"; };
+		377E30572BDA51BD00135B48 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		377E30592BDA524500135B48 /* ThumbnailMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailMakerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374400462BDAA109005E432B /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +174,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374400382BDA99B5005E432B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				377E2FC52BD9943A00135B48 /* ContentView.swift */,
+				374400392BDA99EF005E432B /* ThumbnailMaker */,
+				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
+				3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */,
+				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
+				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
+				3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */,
+				374400402BDA9F33005E432B /* CopyImageButtonView.swift */,
+				3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */,
+				374400422BDAA04A005E432B /* PreferencesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		374400392BDA99EF005E432B /* ThumbnailMaker */ = {
+			isa = PBXGroup;
+			children = (
+				377E30592BDA524500135B48 /* ThumbnailMakerView.swift */,
+				377E30342BD9BDF900135B48 /* ThumbnailMakerViewModel.swift */,
+			);
+			path = ThumbnailMaker;
+			sourceTree = "<group>";
+		};
 		377E2FB72BD9943A00135B48 = {
 			isa = PBXGroup;
 			children = (
+				374400302BDA7BB8005E432B /* README.md */,
+				377E2FF02BD9974000135B48 /* GoogleService-Info.plist */,
+				3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */,
+				377E30032BD99A0600135B48 /* Config.xcconfig */,
 				377E2FC22BD9943A00135B48 /* YoutubeMinia */,
 				377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */,
 				377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */,
@@ -87,7 +217,7 @@
 		377E2FC12BD9943A00135B48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				377E2FC02BD9943A00135B48 /* YoutubeMinia.app */,
+				377E2FC02BD9943A00135B48 /* YT Minia Maker.app */,
 				377E2FD32BD9943B00135B48 /* YoutubeMiniaTests.xctest */,
 				377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */,
 			);
@@ -97,10 +227,14 @@
 		377E2FC22BD9943A00135B48 /* YoutubeMinia */ = {
 			isa = PBXGroup;
 			children = (
+				377E30052BD99A2200135B48 /* Info.plist */,
 				377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */,
-				377E2FC52BD9943A00135B48 /* ContentView.swift */,
-				377E2FC72BD9943A00135B48 /* Item.swift */,
-				377E2FC92BD9943B00135B48 /* Assets.xcassets */,
+				377E30062BD99A6B00135B48 /* Config.swift */,
+				377E30132BD9ADAC00135B48 /* Model */,
+				374400382BDA99B5005E432B /* View */,
+				377E30442BDA3CF500135B48 /* Extensions */,
+				377E305B2BDA550D00135B48 /* Services */,
+				377E301A2BD9BA9400135B48 /* Ressources */,
 				377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */,
 				377E2FCB2BD9943B00135B48 /* Preview Content */,
 			);
@@ -132,6 +266,78 @@
 			path = YoutubeMiniaUITests;
 			sourceTree = "<group>";
 		};
+		377E30132BD9ADAC00135B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				374400322BDA7EF5005E432B /* SharableFile.swift */,
+				377E30012BD9981900135B48 /* Database.swift */,
+				377E30142BD9ADB200135B48 /* YTDecodable.swift */,
+				377E30552BDA518300135B48 /* YMThumbnailData.swift */,
+				374400472BDAA135005E432B /* WindowId.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		377E301A2BD9BA9400135B48 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				377E300E2BD9AC2700135B48 /* devVideo.json */,
+				377E30182BD9B00F00135B48 /* devChannel.json */,
+				374400342BDA92CE005E432B /* yttm_icon.png */,
+				377E301B2BD9BAAF00135B48 /* font */,
+				377E2FC92BD9943B00135B48 /* Assets.xcassets */,
+				377E304F2BDA4A6600135B48 /* Localizable.xcstrings */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		377E301B2BD9BAAF00135B48 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				377E301E2BD9BABE00135B48 /* Roboto-Black.ttf */,
+				377E301F2BD9BABE00135B48 /* Roboto-BlackItalic.ttf */,
+				377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */,
+				377E30212BD9BABE00135B48 /* Roboto-BoldItalic.ttf */,
+				377E301D2BD9BABE00135B48 /* Roboto-Italic.ttf */,
+				377E30232BD9BABE00135B48 /* Roboto-Light.ttf */,
+				377E30252BD9BABE00135B48 /* Roboto-LightItalic.ttf */,
+				377E30202BD9BABE00135B48 /* Roboto-Medium.ttf */,
+				377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */,
+				377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */,
+				377E30222BD9BABE00135B48 /* Roboto-Thin.ttf */,
+				377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		377E30442BDA3CF500135B48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				374400362BDA9982005E432B /* Draggable.swift */,
+				377E300A2BD99F4900135B48 /* Double+Extensions.swift */,
+				377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */,
+				377E30422BDA38A900135B48 /* FileManager+Extensions.swift */,
+				3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */,
+				377E30532BDA514500135B48 /* Bundle+Extensions.swift */,
+				377E30452BDA3CFF00135B48 /* String+Extensions.swift */,
+				377E30512BDA508800135B48 /* Collection+Extensions.swift */,
+				377E304D2BDA4A3600135B48 /* Date+Extensions.swift */,
+				377E30472BDA3F7300135B48 /* Font+Extensions.swift */,
+				377E304B2BDA455700135B48 /* View+Extensions.swift */,
+				374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		377E305B2BDA550D00135B48 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				377E30572BDA51BD00135B48 /* NetworkService.swift */,
+				3744004B2BDAA656005E432B /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,8 +354,11 @@
 			dependencies = (
 			);
 			name = YoutubeMinia;
+			packageProductDependencies = (
+				374400452BDAA109005E432B /* KeyboardShortcuts */,
+			);
 			productName = YoutubeMinia;
-			productReference = 377E2FC02BD9943A00135B48 /* YoutubeMinia.app */;
+			productReference = 377E2FC02BD9943A00135B48 /* YT Minia Maker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		377E2FD22BD9943B00135B48 /* YoutubeMiniaTests */ = {
@@ -218,8 +427,12 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 377E2FB72BD9943A00135B48;
+			packageReferences = (
+				374400442BDAA109005E432B /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
 			productRefGroup = 377E2FC12BD9943A00135B48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,7 +449,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377E30322BD9BABE00135B48 /* Roboto-MediumItalic.ttf in Resources */,
+				377E30302BD9BABE00135B48 /* Roboto-ThinItalic.ttf in Resources */,
+				374400312BDA7BB8005E432B /* README.md in Resources */,
+				377E30282BD9BABE00135B48 /* Roboto-Bold.ttf in Resources */,
+				377E30312BD9BABE00135B48 /* Roboto-LightItalic.ttf in Resources */,
+				377E30042BD99A1300135B48 /* Config.xcconfig in Resources */,
+				377E30192BD9B00F00135B48 /* devChannel.json in Resources */,
+				377E30332BD9BABE00135B48 /* Roboto-Regular.ttf in Resources */,
 				377E2FCD2BD9943B00135B48 /* Preview Assets.xcassets in Resources */,
+				377E302F2BD9BABE00135B48 /* Roboto-Light.ttf in Resources */,
+				377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */,
+				377E302A2BD9BABE00135B48 /* Roboto-Black.ttf in Resources */,
+				377E302D2BD9BABE00135B48 /* Roboto-BoldItalic.ttf in Resources */,
+				377E30292BD9BABE00135B48 /* Roboto-Italic.ttf in Resources */,
+				377E302B2BD9BABE00135B48 /* Roboto-BlackItalic.ttf in Resources */,
+				377E302C2BD9BABE00135B48 /* Roboto-Medium.ttf in Resources */,
+				377E30502BDA4A6600135B48 /* Localizable.xcstrings in Resources */,
+				374400352BDA92CE005E432B /* yttm_icon.png in Resources */,
+				377E300F2BD9AC2700135B48 /* devVideo.json in Resources */,
+				377E302E2BD9BABE00135B48 /* Roboto-Thin.ttf in Resources */,
 				377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +495,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */,
-				377E2FC82BD9943A00135B48 /* Item.swift in Sources */,
+				3744004F2BDB8ABE005E432B /* EmptyThumbnailView.swift in Sources */,
+				377E30462BDA3CFF00135B48 /* String+Extensions.swift in Sources */,
+				377E30372BDA2D0C00135B48 /* YMOptionsView.swift in Sources */,
+				374400372BDA9982005E432B /* Draggable.swift in Sources */,
+				377E30542BDA514500135B48 /* Bundle+Extensions.swift in Sources */,
+				377E30562BDA518300135B48 /* YMThumbnailData.swift in Sources */,
+				377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */,
+				3744004C2BDAA656005E432B /* NotificationService.swift in Sources */,
+				377E30072BD99A6B00135B48 /* Config.swift in Sources */,
+				377E30432BDA38A900135B48 /* FileManager+Extensions.swift in Sources */,
+				374400332BDA7EF5005E432B /* SharableFile.swift in Sources */,
+				374400412BDA9F33005E432B /* CopyImageButtonView.swift in Sources */,
+				3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */,
+				377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */,
+				374400432BDAA04A005E432B /* PreferencesView.swift in Sources */,
+				377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */,
+				377E30022BD9981900135B48 /* Database.swift in Sources */,
+				377E304E2BDA4A3600135B48 /* Date+Extensions.swift in Sources */,
+				374400482BDAA136005E432B /* WindowId.swift in Sources */,
+				377E30522BDA508800135B48 /* Collection+Extensions.swift in Sources */,
+				377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */,
+				377E30482BDA3F7300135B48 /* Font+Extensions.swift in Sources */,
+				3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */,
+				377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */,
+				3744003F2BDA9E5F005E432B /* SaveInDownloadButton.swift in Sources */,
+				377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */,
+				377E30352BD9BDF900135B48 /* ThumbnailMakerViewModel.swift in Sources */,
+				3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */,
+				3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */,
+				377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */,
 				377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +564,7 @@
 /* Begin XCBuildConfiguration section */
 		377E2FE52BD9943B00135B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 377E30032BD99A0600135B48 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -366,6 +628,7 @@
 		};
 		377E2FE62BD9943B00135B48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 377E30032BD99A0600135B48 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -427,21 +690,26 @@
 				CODE_SIGN_ENTITLEMENTS = YoutubeMinia/YoutubeMinia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $BUILD_VERSION;
 				DEVELOPMENT_ASSET_PATHS = "\"YoutubeMinia/Preview Content\"";
 				DEVELOPMENT_TEAM = V4U726YWM5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YoutubeMinia/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
+				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMinia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = $APP_VERSION;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeThumbnailMaker;
+				PRODUCT_NAME = "YT Minia Maker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -455,21 +723,26 @@
 				CODE_SIGN_ENTITLEMENTS = YoutubeMinia/YoutubeMinia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $BUILD_VERSION;
 				DEVELOPMENT_ASSET_PATHS = "\"YoutubeMinia/Preview Content\"";
 				DEVELOPMENT_TEAM = V4U726YWM5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YoutubeMinia/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
+				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMinia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = $APP_VERSION;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeThumbnailMaker;
+				PRODUCT_NAME = "YT Minia Maker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -587,6 +860,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		374400442BDAA109005E432B /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		374400452BDAA109005E432B /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 374400442BDAA109005E432B /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 377E2FB82BD9943A00135B48 /* Project object */;
 }
