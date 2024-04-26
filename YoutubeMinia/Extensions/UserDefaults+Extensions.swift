@@ -87,4 +87,13 @@ extension UserDefaults {
             )
         }
     }
+    
+    static let exportScaleKey = "exportScaleKey"
+    var exportSize: ExportScale {
+        get {
+            guard let val = string(forKey: Self.exportScaleKey) else { return .x2}
+            return ExportScale(rawValue: val) ?? .x2
+        }
+        set { set(newValue.rawValue, forKey: Self.exportScaleKey) }
+    }
 }

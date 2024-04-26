@@ -57,7 +57,7 @@ struct ThumbnailMakerView: View {
                                 .draggableIfAllow(
                                     image: ThumbnailView(thumbnailData: thumbnailData)
                                         .environmentObject(viewModel)
-                                        .getScaledImage()
+                                        .getScaledImage(scale: viewModel.exportSize.scale)
                                         .nsImage
                                 )
                             

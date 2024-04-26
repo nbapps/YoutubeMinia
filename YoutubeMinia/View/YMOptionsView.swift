@@ -12,38 +12,50 @@ struct YMOptionsView: View {
     
     var body: some View {
         List {
+            Text("!Options")
+                .font(.footnote)
+                .fontWeight(.bold)
+                .foregroundStyle(.secondary)
+            
+                Section {
+                    Toggle("!Show video duration", isOn: $viewModel.showDuration.animation())
+                    Toggle("!Show views count", isOn: $viewModel.showViewCount.animation())
+                    Toggle("!Show publication date", isOn: $viewModel.showPublishDate.animation())
+                }
+                
+                
+                Section {
+                    Toggle("!Show channel icon", isOn: $viewModel.showChannelIcon.animation())
+                    Toggle("!Show channel name", isOn: $viewModel.showChannelName.animation())
+                    Toggle("!Show channel sub", isOn: $viewModel.showChannelCount.animation())
+                }
+                
             Section {
-                Toggle("!Show video duration", isOn: $viewModel.showDuration.animation())
-                Toggle("!Show views count", isOn: $viewModel.showViewCount.animation())
-                Toggle("!Show publication date", isOn: $viewModel.showPublishDate.animation())
-                
-                Divider()
-                
-                Toggle("!Show channel icon", isOn: $viewModel.showChannelIcon.animation())
-                Toggle("!Show channel name", isOn: $viewModel.showChannelName.animation())
-                Toggle("!Show channel sub", isOn: $viewModel.showChannelCount.animation())
-                
-                Divider()
-                
                 Toggle("!Dark theme", isOn: $viewModel.isDarkTheme.animation())
+            }
                 
-                Divider()
-                
+            Section {
                 Toggle("!Show progress bar", isOn: $viewModel.showProgress.animation())
                 ProgressBar(title: String(localized: "!Progress"), progress: $viewModel.lastProgress.animation())
                     .onChange(of: viewModel.lastProgress) { _, newValue in
                         viewModel.showProgress = newValue != 0
                     }
+            }
                 
-                Divider()
-                
+            Section {
                 ProgressBar(title: String(localized: "!Corner radius"), progress: $viewModel.thumbnailCornerRadius)
                 ProgressBar(title: String(localized: "!Thumbnail padding"), progress: $viewModel.thumbnailPadding, showValue: false, range: 8...20, step: 1)
-            } header: {
-                Text("!Options")
             }
-            .toggleStyle(.switch)
+            
+            Section {
+                Picker("!Export scale", selection: $viewModel.exportSize) {
+                    ForEach(ExportScale.allCases) {
+                        Text($0.rawValue)
+                    }
+                }
+            }
         }
+        .toggleStyle(.switch)
     }
 }
 

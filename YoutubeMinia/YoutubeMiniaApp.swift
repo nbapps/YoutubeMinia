@@ -20,7 +20,7 @@ struct YoutubeMiniaApp: App {
             ContentView()
                 .dataContainer()
                 .environmentObject(thumbnailMakerViewModel)
-                .frame(width: 850, height: 600)
+                .frame(minHeight: 400)
                 .navigationTitle("!Youtube Minia Maker")
         }
         .defaultSize(width: 850, height: 600)
@@ -39,7 +39,6 @@ struct YoutubeMiniaApp: App {
                 .environmentObject(thumbnailMakerViewModel)
         }
         .menuBarExtraStyle(.menu)
-//        .menuBarExtraAccess(isPresented: $appState.isMenuPresented)
     }
 }
 

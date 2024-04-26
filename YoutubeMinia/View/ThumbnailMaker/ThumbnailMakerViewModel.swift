@@ -43,11 +43,14 @@ final class ThumbnailMakerViewModel: ObservableObject {
     @Published var thumbnailCornerRadius: Double = UserDefaults.standard.thumbnailCornerRadius
     @Published var thumbnailPadding: Double = UserDefaults.standard.thumbnailPadding
     
+    @Published var exportSize: ExportScale = UserDefaults.standard.exportSize
+    
     @Published var ymThumbnailData: YMThumbnailData?
     @Published var videoThumbnail: Image?
     @Published var channelThumbnail: Image?
     
     @Published var isFetching = false
+    @Published var exportAfterOnDrop = false
     
     init(fetchOnLaunch: Bool) {
         udObservers()
@@ -86,7 +89,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             self?.copyPreviousThumbnailIfExisting()
         }
     }
-
+    
     func pastUrlAndFetchIfPossible() {
         Task { @MainActor in
             guard let clipboardString = NSPasteboard.general.string(forType: .string) else { return }
@@ -97,9 +100,9 @@ final class ThumbnailMakerViewModel: ObservableObject {
             guard let thumbnailData = ymThumbnailData else { return }
             let rendered = ThumbnailView(thumbnailData: thumbnailData)
                 .environmentObject(self)
-                .getScaledImage()
+                .getScaledImage(scale: exportSize.scale)
 
-                copy(rendered.nsImage)
+            copy(rendered.nsImage)
         }
     }
     
@@ -108,7 +111,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             guard let thumbnailData = ymThumbnailData else { return }
             let rendered = ThumbnailView(thumbnailData: thumbnailData)
                 .environmentObject(self)
-                .getScaledImage()
+                .getScaledImage(scale: exportSize.scale)
             
             copy(rendered.nsImage)
         }
@@ -158,7 +161,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
               let publicationDate = ISO8601DateFormatter().date(from: publicationDate)
         else { throw YMViewModelError.missingResponse }
         
-        self.ymThumbnailData = YMThumbnailData(
+        let thumbnailData = YMThumbnailData(
             videoURL: ytVideoUrl,
             videoThumbnailUrl: videoThumbnailUrl,
             channelThumbnailUrl: channelThumbnailUrl,
@@ -169,11 +172,17 @@ final class ThumbnailMakerViewModel: ObservableObject {
             videoDuration: videoDuration.formattedVideoDuration(),
             publicationDate: publicationDate
         )
+        self.ymThumbnailData = thumbnailData
         
         try await fetchThumbnails(
             videoThumbnailUrl: videoThumbnailUrl,
             channelThumbnailUrl: channelThumbnailUrl
         )
+        
+        if exportAfterOnDrop {
+            try exportToDownloads(thumbnailData: thumbnailData)
+            exportAfterOnDrop = false
+        }
     }
     
     @MainActor
@@ -200,6 +209,18 @@ final class ThumbnailMakerViewModel: ObservableObject {
                 message: String(localized: "!The thumbnail is in your clipboard")
             )
         }
+    }
+    
+    @MainActor
+    func exportToDownloads(thumbnailData: YMThumbnailData) throws {
+        let rendered = ThumbnailView(thumbnailData: thumbnailData)
+            .environmentObject(self)
+            .getScaledImage(scale: exportSize.scale)
+        
+        try exportThumbnail(
+            image: rendered.nsImage,
+            fileName: thumbnailData.videoTitle.formatFileName()
+        )
     }
     
     @MainActor
@@ -292,6 +313,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             DispatchQueue.main.async {
                 if url.pathExtension == "yttm", let data = try? Data(contentsOf: url), let decoded = try? JSONDecoder().decode(SharableFile.self, from: data) {
                     self.importeConfigurationFile(decoded)
+                    self.exportAfterOnDrop = true
                     return
                 }
                 
@@ -301,6 +323,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
                         return
                     } else if let validURL = self.decodeURLFromBinaryPlist(data) {
                         self.videoURlStr = validURL.absoluteString
+                        self.exportAfterOnDrop = true
                         return
                     }
                 }
@@ -308,6 +331,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
                 if let possibleYTUrl = try? String(contentsOf: url, encoding: .utf8),
                    let validURL = self.checkIfURLIsValid(urlStr: possibleYTUrl) {
                     self.videoURlStr = validURL
+                    self.exportAfterOnDrop = true
                     return
                 }
             }
@@ -421,6 +445,13 @@ private extension ThumbnailMakerViewModel {
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
             .sink { newValue in
                 UserDefaults.standard.thumbnailPadding = newValue
+            }
+            .store(in: &cancellables)
+        
+        $exportSize
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .sink { newValue in
+                UserDefaults.standard.exportSize = newValue
             }
             .store(in: &cancellables)
     }
