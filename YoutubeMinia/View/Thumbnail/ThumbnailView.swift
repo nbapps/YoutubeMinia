@@ -33,24 +33,30 @@ struct ThumbnailView: View {
                             }
                         }
                     }
+                    .clipShape(
+                        RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius))
+                    )
                     
-                    if viewModel.showDuration {
-                        VideoDurationView(
-                            value: thumbnailData.videoDuration,
-                            thumbnailWidth: width
-                        )
+                    VStack(alignment: .trailing, spacing: 0) {
+                        if viewModel.showDuration {
+                            VideoDurationView(
+                                value: thumbnailData.videoDuration,
+                                thumbnailWidth: width
+                            )
+                        }
+                        
+                        if viewModel.showProgress {
+                            VideoProgressView(
+                                value: viewModel.lastProgress,
+                                thumbnailWidth: width
+                            )
+                        }
                     }
-                    
-                    if viewModel.showProgress {
-                        VideoProgressView(
-                            value: viewModel.lastProgress,
-                            thumbnailWidth: width
-                        )
-                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .clipShape(
+                        RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius + 0.5))
+                    )
                 }
-                .clipShape(
-                    RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius))
-                )
                 .thumbnailShadow(
                     radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8)
                 )

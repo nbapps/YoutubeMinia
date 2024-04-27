@@ -33,26 +33,30 @@ struct EmptyThumbnailView: View {
                             .redacted(reason: .placeholder)
                     }
                 }
+                .clipShape(
+                    RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius))
+                )
                 
-                if viewModel.showDuration {
-                    VideoDurationView(
-                        value: "10:10",
-                        thumbnailWidth: width
-                    )
-                    .redacted(reason: .placeholder)
+                VStack(alignment: .trailing, spacing: 0) {
+                    if viewModel.showDuration {
+                        VideoDurationView(
+                            value: "10:10",
+                            thumbnailWidth: width
+                        )
+                    }
+                    
+                    if viewModel.showProgress {
+                        VideoProgressView(
+                            value: 0.5,
+                            thumbnailWidth: width
+                        )
+                    }
                 }
-                
-                if viewModel.showProgress {
-                    VideoProgressView(
-                        value: 0.5,
-                        thumbnailWidth: width
-                    )
-                    .redacted(reason: .placeholder)
-                }
+                .redacted(reason: .placeholder)
+                .clipShape(
+                    RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius + 0.5))
+                )
             }
-            .clipShape(
-                RoundedRectangle(cornerRadius: viewModel.innerCornerRadius)
-            )
             .thumbnailShadow(
                 radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8)
             )
