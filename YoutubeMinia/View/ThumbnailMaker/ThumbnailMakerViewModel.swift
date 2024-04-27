@@ -34,6 +34,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
     static let preview = ThumbnailMakerViewModel(fetchOnLaunch: false)
     
     @Published var lastVideoURlStr: String?
+    @Published var videoId: String?
     @Published var videoURlStr: String = UserDefaults.standard.videoURlStr
     @Published var showDuration: Bool = UserDefaults.standard.showDuration
     @Published var showChannelIcon: Bool = UserDefaults.standard.showChannelIcon
@@ -62,6 +63,9 @@ final class ThumbnailMakerViewModel: ObservableObject {
     
     private let referenceWidth: CGFloat = 350
     
+    var onExportSuccess: (() -> Void)?
+    var isValidURL = false
+    
     init(fetchOnLaunch: Bool) {
         udObservers()
         
@@ -83,6 +87,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
         $videoURlStr
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
             .compactMap { $0.isNotEmpty ? $0 : nil }
+            .compactMap { [weak self] url in self?.checkIfURLIsValid(urlStr: url) }
             .sink { [weak self] newValue in
                 guard let self else { return }
                 Task { @MainActor in
@@ -133,15 +138,20 @@ final class ThumbnailMakerViewModel: ObservableObject {
     func fetch() async throws {
         defer { isFetching = false }
         guard videoURlStr.isNotEmpty else { return }
+        guard let videoURlStr = checkIfURLIsValid(urlStr: videoURlStr) else { return }
         
         guard lastVideoURlStr != videoURlStr else { return }
         
         guard let videoId = try extractVideoId(from: videoURlStr),
               let ytVideoUrl = Config.videoURL(for: videoId)
         else { return }
+        
         ymThumbnailData = nil
         isFetching = true
+        
+        self.videoId = videoId
         self.lastVideoURlStr = videoURlStr
+        
         print("start fetch")
         let videoReponse: YTDecodable = try await networkService.fetch(from: ytVideoUrl)
         guard let videoItem = videoReponse.items.first,
@@ -221,6 +231,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
     func copy(_ image: AppImage?) {
         guard let image else { return }
         image.copyImage()
+        onExportSuccess?()
         Task {
             try? await notificationService.sendInstantNotification(
                 urlStr: videoURlStr,
@@ -242,7 +253,11 @@ final class ThumbnailMakerViewModel: ObservableObject {
             throw YMViewModelError.noImage
         }
         
-        imageSaverService.writeToPhotoAlbum(image: final, videoURlStr: videoURlStr)
+        imageSaverService.writeToPhotoAlbum(
+            image: final,
+            videoURlStr: videoURlStr,
+            onExportSuccess: onExportSuccess
+        )
     }
 #endif
     
@@ -268,6 +283,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             fileName: fileName,
             fileExt: "png"
         )
+        onExportSuccess?()
         Task {
             try? await notificationService.sendInstantNotification(
                 urlStr: videoURlStr,
@@ -279,6 +295,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
     func applySettings(from previousURL: PreviousURL) {
         guard previousURL.urlStr.isNotEmpty else  {return }
         videoURlStr = previousURL.urlStr
+        videoId = previousURL.videoId
         
         guard applySavedSettingsOnSelectFromHistory else { return }
         
@@ -343,11 +360,16 @@ final class ThumbnailMakerViewModel: ObservableObject {
     }
     
     func checkIfURLIsValid(urlStr: String?) -> String? {
+        var validURLStr: String?
+        
+        defer { isValidURL = validURLStr != nil }
+        
         guard let urlStr else { return nil }
         guard let comp = URLComponents(string: urlStr) else { return nil }
         guard let host = comp.host else { return nil }
         guard host == "youtu.be" || host.contains("youtube.com") else { return nil }
-        return urlStr
+        validURLStr = urlStr
+        return validURLStr
     }
     
     func decodeURLFromBinaryPlist(_ data: Data) -> URL? {

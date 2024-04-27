@@ -12,9 +12,11 @@ class ImageSaverService: NSObject {
     private let notificationService = NotificationService()
     
     private var videoURlStr: String?
+    var onExportSuccess: (() -> Void)?
     
-    func writeToPhotoAlbum(image: AppImage, videoURlStr: String) {
+    func writeToPhotoAlbum(image: AppImage, videoURlStr: String, onExportSuccess: (() -> Void)?) {
         self.videoURlStr = videoURlStr
+        self.onExportSuccess = onExportSuccess
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
     }
     
@@ -25,6 +27,7 @@ class ImageSaverService: NSObject {
                     urlStr: videoURlStr ?? "",
                     message: String(localized: "!The thumbnail has been saved in your Photo library")
                 )
+                onExportSuccess?()
                 videoURlStr = nil
             } catch {
                 videoURlStr = nil

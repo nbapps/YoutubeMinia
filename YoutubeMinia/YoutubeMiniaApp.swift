@@ -9,10 +9,6 @@ import SwiftUI
 import SwiftData
 import UserNotifications
 
-enum Tabs {
-    case maker, last
-}
-
 @main
 struct YoutubeMiniaApp: App {
 #if os(macOS)

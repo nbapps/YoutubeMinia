@@ -13,6 +13,7 @@ struct CopyImageButtonView: View {
     var padding: CGFloat = 0
     @Binding var showError: Bool
     @Binding var errorMessage: String
+    
     var body: some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
