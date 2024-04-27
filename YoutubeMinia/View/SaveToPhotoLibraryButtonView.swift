@@ -18,12 +18,13 @@ struct SaveToPhotoLibraryButtonView: View {
     var body: some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
-            
-            do {
-                try viewModel.saveInPhotoLibrary(thumbnailData: thumbnailData)
-            } catch {
-                errorMessage = error.localizedDescription
-                showError = true
+            Task { @MainActor in
+                do {
+                    try viewModel.saveInPhotoLibrary(thumbnailData: thumbnailData)
+                } catch {
+                    errorMessage = error.localizedDescription
+                    showError = true
+                }
             }
         } label: {
             Label("!Save in Photo library", systemImage: "photo.badge.arrow.down")

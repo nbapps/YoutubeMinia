@@ -17,10 +17,13 @@ struct CopyImageButtonView: View {
     var body: some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
-            let rendered = ThumbnailView(thumbnailData: thumbnailData)
-                .environmentObject(viewModel)
-                .getScaledImage(scale: viewModel.exportSize.scale)
-            viewModel.copy(rendered.appImage)
+            
+            Task { @MainActor in
+                let rendered = ThumbnailView(thumbnailData: thumbnailData)
+                    .environmentObject(viewModel)
+                    .getScaledImage(scale: viewModel.exportSize.scale)
+                viewModel.copy(rendered.appImage)
+            }
         } label: {
             Label("!Copy", systemImage: "doc.on.doc")
                 .padding(padding)

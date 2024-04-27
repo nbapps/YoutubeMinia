@@ -110,7 +110,11 @@ struct ThumbnailMakerView: View {
             )
 
 #if os(macOS)
-            shareFileButton()
+            ShareConfigFileButton(
+                saveConfigFile: $saveConfigFile,
+                showError: $showError,
+                errorMessage: $errorMessage
+            )
 #endif
             
             Button {
@@ -162,18 +166,6 @@ private extension ThumbnailMakerView {
     }
 }
 private extension ThumbnailMakerView {
-    @ViewBuilder
-    func shareFileButton(padding: CGFloat = 0) -> some View {
-        Button {
-            saveConfigFile.toggle()
-        } label: {
-            Label("!Save .yttm file", systemImage: "doc.badge.arrow.up")
-                .padding(padding)
-        }
-        .disabled(viewModel.ymThumbnailData == nil)
-        .disabled(viewModel.isFetching)
-    }
-    
     func fetch() {
         Task {
             do {

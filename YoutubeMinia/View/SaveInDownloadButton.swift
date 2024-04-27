@@ -18,11 +18,13 @@ struct SaveInDownloadButton: View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
 
-            do {
-                try viewModel.exportToDownloads(thumbnailData: thumbnailData)
-            } catch {
-                errorMessage = error.localizedDescription
-                showError = true
+            Task { @MainActor in
+                do {
+                    try viewModel.exportToDownloads(thumbnailData: thumbnailData)
+                } catch {
+                    errorMessage = error.localizedDescription
+                    showError = true
+                }
             }
         } label: {
             Label("!Save in Dowmloads", systemImage: "photo.badge.arrow.down")

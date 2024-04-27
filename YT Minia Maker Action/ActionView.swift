@@ -56,20 +56,8 @@ struct ActionView: View {
                             HiddenComponents(width: proxy.size.width * 0.8)
                                 .padding()
                         }
-                        
-                        Section {
-                            SaveToPhotoLibraryButtonView(
-                                padding: 8,
-                                showError: $showError,
-                                errorMessage: $errorMessage
-                            )
-                            CopyImageButtonView(
-                                padding: 8,
-                                showError: $showError,
-                                errorMessage: $errorMessage
-                            )
-                        }
                     }
+                    .contentMargins(.bottom, 100, for: .scrollContent)
                     .disabled(!actionViewModel.isValidYTURL)
                     .blur(radius: actionViewModel.isValidYTURL ? 0 : 10)
                     .opacity(actionViewModel.isValidYTURL ? 1 : 0.8)
@@ -87,20 +75,51 @@ struct ActionView: View {
                             .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20))
                             .thumbnailShadow(radius: 6)
                     }
+                    
+                    VStack {
+                        Spacer()
+                        SaveToPhotoLibraryButtonView(
+                            padding: 8,
+                            showError: $showError,
+                            errorMessage: $errorMessage
+                        )
+                        .buttonStyle(.borderedProminent)
+                        .padding()
+                        .padding(.bottom, 20)
+                    }
+                    .disabled(!actionViewModel.isValidYTURL)
+                    .blur(radius: actionViewModel.isValidYTURL ? 0 : 10)
+                    .opacity(actionViewModel.isValidYTURL ? 1 : 0.8)
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: onClose) {
-                        Text("!Close")
-                            .padding(.horizontal)
+                    if actionViewModel.isValidYTURL {
+                        Menu("!Close") {
+                            SaveToPhotoLibraryButtonView(
+                                padding: 8,
+                                showError: $showError,
+                                errorMessage: $errorMessage
+                            )
+                            
+                            Divider()
+                            Button(role: .destructive, action: onClose) {
+                                Label("!Close", systemImage: "xmark")
+                            }
+                        }
+                        .padding(.horizontal)
+                    } else {
+                        Button(action: onClose) {
+                            Text("!Close")
+                                .padding(.horizontal)
+                        }
                     }
                 }
             }
+            .padding(.horizontal)
             .navigationTitle("!Thumbnail")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .padding(.horizontal)
         .environmentObject(thumbnailMakerViewModel)
     }
 }
@@ -111,5 +130,4 @@ struct ActionView: View {
         thumbnailMakerViewModel: ThumbnailMakerViewModel.preview,
         onClose: {}
     )
-//    .environmentObject(ThumbnailMakerViewModel.preview)
 }
