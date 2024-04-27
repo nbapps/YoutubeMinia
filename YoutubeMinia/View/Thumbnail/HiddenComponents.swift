@@ -42,7 +42,7 @@ struct HiddenComponents: View {
             ) {
                 if !viewModel.showChannelIcon {
                     ChannelThumbnailView(
-                        value: viewModel.channelThumbnail ?? Image(systemName: "person"),
+                        value: viewModel.channelThumbnail,
                         thumbnailWidth: width
                     )
                 }
