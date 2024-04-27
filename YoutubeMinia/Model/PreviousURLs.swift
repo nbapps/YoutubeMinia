@@ -30,18 +30,18 @@ final class PreviousURL {
     var thumbnailUrlStr: String?
     var timestamp: Date = Date.now
     
-    var videoURlStr: String = UserDefaults.standard.videoURlStr
-    var showDuration: Bool = UserDefaults.standard.showDuration
-    var showChannelIcon: Bool = UserDefaults.standard.showChannelIcon
-    var showChannelName: Bool = UserDefaults.standard.showChannelName
-    var showChannelCount: Bool = UserDefaults.standard.showChannelCount
-    var showViewCount: Bool = UserDefaults.standard.showViewCount
-    var showPublishDate: Bool = UserDefaults.standard.showPublishDate
-    var showProgress: Bool = UserDefaults.standard.showProgress
-    var lastProgress: Double = UserDefaults.standard.lastProgress
-    var isDarkTheme: Bool = UserDefaults.standard.isDarkTheme
-    var thumbnailCornerRadius: Double = UserDefaults.standard.thumbnailCornerRadius
-    var thumbnailPadding: Double = UserDefaults.standard.thumbnailPadding
+    var videoURlStr: String = NSUbiquitousKeyValueStore.default.videoURlStr
+    var showDuration: Bool = NSUbiquitousKeyValueStore.default.showDuration
+    var showChannelIcon: Bool = NSUbiquitousKeyValueStore.default.showChannelIcon
+    var showChannelName: Bool = NSUbiquitousKeyValueStore.default.showChannelName
+    var showChannelCount: Bool = NSUbiquitousKeyValueStore.default.showChannelCount
+    var showViewCount: Bool = NSUbiquitousKeyValueStore.default.showViewCount
+    var showPublishDate: Bool = NSUbiquitousKeyValueStore.default.showPublishDate
+    var showProgress: Bool = NSUbiquitousKeyValueStore.default.showProgress
+    var lastProgress: Double = NSUbiquitousKeyValueStore.default.lastProgress
+    var isDarkTheme: Bool = NSUbiquitousKeyValueStore.default.isDarkTheme
+    var thumbnailCornerRadius: Double = NSUbiquitousKeyValueStore.default.thumbnailCornerRadius
+    var thumbnailPadding: Double = NSUbiquitousKeyValueStore.default.thumbnailPadding
 }
 
 extension PreviousURL {

@@ -1,5 +1,5 @@
 //
-//  UserDefaults+Extensions.swift
+//  NSUbiquitousKeyValueStore+Extensions.swift
 //  YoutubeMinia
 //
 //  Created by Nicolas Bachur on 24/04/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension UserDefaults {
+extension NSUbiquitousKeyValueStore {
     static let videoURlStrKey = "lastURlStrKey"
     var videoURlStr: String {
         get { string(forKey: Self.videoURlStrKey) ?? "" }
@@ -80,7 +80,7 @@ extension UserDefaults {
             let val = double(forKey: Self.thumbnailPaddingKey)
             return val < 8 ? 8: val
         }
-        set { 
+        set {
             set(
                 newValue >= 8 ? newValue : 8,
                 forKey: Self.thumbnailPaddingKey

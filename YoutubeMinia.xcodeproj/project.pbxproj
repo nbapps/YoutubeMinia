@@ -65,7 +65,7 @@
 		3700A4B92BDD306D00FB9E81 /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
 		3700A4BA2BDD306D00FB9E81 /* Pastboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */; };
 		3700A4BB2BDD306D00FB9E81 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30452BDA3CFF00135B48 /* String+Extensions.swift */; };
-		3700A4BC2BDD306D00FB9E81 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */; };
+		3700A4BC2BDD306D00FB9E81 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */; };
 		3700A4BD2BDD306D00FB9E81 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300A2BD99F4900135B48 /* Double+Extensions.swift */; };
 		3700A4BE2BDD306D00FB9E81 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30422BDA38A900135B48 /* FileManager+Extensions.swift */; };
 		3700A4BF2BDD306D00FB9E81 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E304D2BDA4A3600135B48 /* Date+Extensions.swift */; };
@@ -116,7 +116,7 @@
 		377E30022BD9981900135B48 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30012BD9981900135B48 /* Database.swift */; };
 		377E30042BD99A1300135B48 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 377E30032BD99A0600135B48 /* Config.xcconfig */; };
 		377E30072BD99A6B00135B48 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30062BD99A6B00135B48 /* Config.swift */; };
-		377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */; };
+		377E30092BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */; };
 		377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300A2BD99F4900135B48 /* Double+Extensions.swift */; };
 		377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300C2BD9A11000135B48 /* ProgressBar.swift */; };
 		377E300F2BD9AC2700135B48 /* devVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 377E300E2BD9AC2700135B48 /* devVideo.json */; };
@@ -215,6 +215,7 @@
 		374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pastboard+Extensions.swift"; sourceTree = "<group>"; };
 		374400832BDBE50D005E432B /* AppImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppImage+Extensions.swift"; sourceTree = "<group>"; };
 		374D14D12BDD468B00BCEB93 /* ShareConfigFileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareConfigFileButton.swift; sourceTree = "<group>"; };
+		374D14D32BDD5C2300BCEB93 /* YT Minia Maker Action.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YT Minia Maker Action.entitlements"; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -228,7 +229,7 @@
 		377E30032BD99A0600135B48 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		377E30052BD99A2200135B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		377E30062BD99A6B00135B48 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUbiquitousKeyValueStore+Extensions.swift"; sourceTree = "<group>"; };
 		377E300A2BD99F4900135B48 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		377E300C2BD9A11000135B48 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		377E300E2BD9AC2700135B48 /* devVideo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = devVideo.json; sourceTree = "<group>"; };
@@ -317,6 +318,7 @@
 		3700A4832BDD227800FB9E81 /* YT Minia Maker Action */ = {
 			isa = PBXGroup;
 			children = (
+				374D14D32BDD5C2300BCEB93 /* YT Minia Maker Action.entitlements */,
 				3700A4842BDD227800FB9E81 /* Media.xcassets */,
 				3700A4862BDD227800FB9E81 /* ActionViewController.swift */,
 				3700A4932BDD2B0B00FB9E81 /* ActionView.swift */,
@@ -475,7 +477,7 @@
 				374400362BDA9982005E432B /* Draggable.swift */,
 				374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */,
 				377E300A2BD99F4900135B48 /* Double+Extensions.swift */,
-				377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */,
+				377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */,
 				374400832BDBE50D005E432B /* AppImage+Extensions.swift */,
 				377E30422BDA38A900135B48 /* FileManager+Extensions.swift */,
 				3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */,
@@ -681,7 +683,7 @@
 				3700A4B92BDD306D00FB9E81 /* ProcessInfo+Extensions.swift in Sources */,
 				3700A4BA2BDD306D00FB9E81 /* Pastboard+Extensions.swift in Sources */,
 				3700A4BB2BDD306D00FB9E81 /* String+Extensions.swift in Sources */,
-				3700A4BC2BDD306D00FB9E81 /* UserDefaults+Extensions.swift in Sources */,
+				3700A4BC2BDD306D00FB9E81 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */,
 				3700A4BD2BDD306D00FB9E81 /* Double+Extensions.swift in Sources */,
 				3700A4BE2BDD306D00FB9E81 /* FileManager+Extensions.swift in Sources */,
 				3700A4BF2BDD306D00FB9E81 /* Date+Extensions.swift in Sources */,
@@ -734,7 +736,7 @@
 				374400482BDAA136005E432B /* WindowId.swift in Sources */,
 				3700A4672BDCF3D800FB9E81 /* VideoDurationView.swift in Sources */,
 				377E30522BDA508800135B48 /* Collection+Extensions.swift in Sources */,
-				377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */,
+				377E30092BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */,
 				3700A47A2BDD023A00FB9E81 /* ImageSaverService.swift in Sources */,
 				377E30482BDA3F7300135B48 /* Font+Extensions.swift in Sources */,
 				3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */,
@@ -780,6 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "YT Minia Maker Action/YT Minia Maker Action.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = $BUILD_VERSION;
 				DEVELOPMENT_TEAM = V4U726YWM5;
@@ -809,6 +812,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "YT Minia Maker Action/YT Minia Maker Action.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = $BUILD_VERSION;
 				DEVELOPMENT_TEAM = V4U726YWM5;

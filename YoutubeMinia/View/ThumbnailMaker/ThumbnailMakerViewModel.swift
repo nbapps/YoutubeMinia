@@ -35,22 +35,22 @@ final class ThumbnailMakerViewModel: ObservableObject {
     
     @Published var lastVideoURlStr: String?
     @Published var videoId: String?
-    @Published var videoURlStr: String = UserDefaults.standard.videoURlStr
-    @Published var showDuration: Bool = UserDefaults.standard.showDuration
-    @Published var showChannelIcon: Bool = UserDefaults.standard.showChannelIcon
-    @Published var showChannelName: Bool = UserDefaults.standard.showChannelName
-    @Published var showChannelCount: Bool = UserDefaults.standard.showChannelCount
-    @Published var showViewCount: Bool = UserDefaults.standard.showViewCount
-    @Published var showPublishDate: Bool = UserDefaults.standard.showPublishDate
-    @Published var showProgress: Bool = UserDefaults.standard.showProgress
-    @Published var lastProgress: Double = UserDefaults.standard.lastProgress
-    @Published var isDarkTheme: Bool = UserDefaults.standard.isDarkTheme
-    @Published var thumbnailCornerRadius: Double = UserDefaults.standard.thumbnailCornerRadius
-    @Published var thumbnailPadding: Double = UserDefaults.standard.thumbnailPadding
+    @Published var videoURlStr: String = NSUbiquitousKeyValueStore.default.videoURlStr
+    @Published var showDuration: Bool = NSUbiquitousKeyValueStore.default.showDuration
+    @Published var showChannelIcon: Bool = NSUbiquitousKeyValueStore.default.showChannelIcon
+    @Published var showChannelName: Bool = NSUbiquitousKeyValueStore.default.showChannelName
+    @Published var showChannelCount: Bool = NSUbiquitousKeyValueStore.default.showChannelCount
+    @Published var showViewCount: Bool = NSUbiquitousKeyValueStore.default.showViewCount
+    @Published var showPublishDate: Bool = NSUbiquitousKeyValueStore.default.showPublishDate
+    @Published var showProgress: Bool = NSUbiquitousKeyValueStore.default.showProgress
+    @Published var lastProgress: Double = NSUbiquitousKeyValueStore.default.lastProgress
+    @Published var isDarkTheme: Bool = NSUbiquitousKeyValueStore.default.isDarkTheme
+    @Published var thumbnailCornerRadius: Double = NSUbiquitousKeyValueStore.default.thumbnailCornerRadius
+    @Published var thumbnailPadding: Double = NSUbiquitousKeyValueStore.default.thumbnailPadding
     
-    @Published var applySavedSettingsOnSelectFromHistory: Bool = UserDefaults.standard.applySavedSettingsOnSelectFromHistory
+    @Published var applySavedSettingsOnSelectFromHistory: Bool = NSUbiquitousKeyValueStore.default.applySavedSettingsOnSelectFromHistory
     
-    @Published var exportSize: ExportScale = UserDefaults.standard.exportSize
+    @Published var exportSize: ExportScale = NSUbiquitousKeyValueStore.default.exportSize
     
     @Published var ymThumbnailData: YMThumbnailData?
     @Published var videoThumbnail: Image?
@@ -66,8 +66,11 @@ final class ThumbnailMakerViewModel: ObservableObject {
     var onExportSuccess: (() -> Void)?
     var isValidURL = false
     
+    deinit { NotificationCenter.default.removeObserver(self) }
+    
     init(fetchOnLaunch: Bool) {
         udObservers()
+        observeUbiquitousKeyValueStore()
         
         if fetchOnLaunch {
             if videoURlStr.isNotEmpty {
@@ -468,102 +471,206 @@ private extension ThumbnailMakerViewModel {
 }
 
 private extension ThumbnailMakerViewModel {
+    func observeUbiquitousKeyValueStore() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ubiquitousKeyValueStoreDidChange(_:)),
+                                               name: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
+                                               object: NSUbiquitousKeyValueStore.default)
+    }
+    
+    @objc
+    func ubiquitousKeyValueStoreDidChange(_ notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        
+        guard let reasonForChange = userInfo[NSUbiquitousKeyValueStoreChangeReasonKey] as? Int else { return }
+        
+        guard reasonForChange != NSUbiquitousKeyValueStoreQuotaViolationChange else { return }
+        
+        guard let keys = userInfo[NSUbiquitousKeyValueStoreChangedKeysKey] as? [String] else { return }
+        DispatchQueue.main.async {
+            if keys.contains(NSUbiquitousKeyValueStore.videoURlStrKey) {
+                withAnimation {
+                    self.videoURlStr = NSUbiquitousKeyValueStore.default.videoURlStr
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.showDurationKey) {
+                withAnimation {
+                    self.showDuration = NSUbiquitousKeyValueStore.default.showDuration
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.showChannelIconKey) {
+                withAnimation {
+                    self.showChannelIcon = NSUbiquitousKeyValueStore.default.showChannelIcon
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.showChannelNameKey) {
+                withAnimation {
+                    self.showChannelName = NSUbiquitousKeyValueStore.default.showChannelName
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.showChannelCountKey) {
+                withAnimation {
+                    self.showChannelCount = NSUbiquitousKeyValueStore.default.showChannelCount
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.showViewCountKey) {
+                withAnimation {
+                    self.showViewCount = NSUbiquitousKeyValueStore.default.showViewCount
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.showPublishDateKey) {
+                withAnimation {
+                    self.showPublishDate = NSUbiquitousKeyValueStore.default.showPublishDate
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.showProgressKey) {
+                withAnimation {
+                    self.showProgress = NSUbiquitousKeyValueStore.default.showProgress
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.lastProgressKey) {
+                withAnimation {
+                    self.lastProgress = NSUbiquitousKeyValueStore.default.lastProgress
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.isDarkThemeKey) {
+                withAnimation {
+                    self.isDarkTheme = NSUbiquitousKeyValueStore.default.isDarkTheme
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.thumbnailCornerRadiusKey) {
+                withAnimation {
+                    self.thumbnailCornerRadius = NSUbiquitousKeyValueStore.default.thumbnailCornerRadius
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.thumbnailPaddingKey) {
+                withAnimation {
+                    self.thumbnailPadding = NSUbiquitousKeyValueStore.default.thumbnailPadding
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.exportScaleKey) {
+                withAnimation {
+                    self.exportSize = NSUbiquitousKeyValueStore.default.exportSize
+                }
+            }
+            if keys.contains(NSUbiquitousKeyValueStore.applySavedSettingsOnSelectFromHistoryKey) {
+                withAnimation {
+                    self.applySavedSettingsOnSelectFromHistory = NSUbiquitousKeyValueStore.default.applySavedSettingsOnSelectFromHistory
+                }
+            }
+        }
+    }
+
     func udObservers() {
         $videoURlStr
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.videoURlStr = newValue
+                NSUbiquitousKeyValueStore.default.videoURlStr = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $showDuration
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.showDuration = newValue
+                NSUbiquitousKeyValueStore.default.showDuration = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $showChannelIcon
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.showChannelIcon = newValue
+                NSUbiquitousKeyValueStore.default.showChannelIcon = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $showChannelName
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.showChannelName = newValue
+                NSUbiquitousKeyValueStore.default.showChannelName = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)     
         
         $showChannelCount
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.showChannelCount = newValue
+                NSUbiquitousKeyValueStore.default.showChannelCount = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $showViewCount
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.showViewCount = newValue
+                NSUbiquitousKeyValueStore.default.showViewCount = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $showPublishDate
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.showPublishDate = newValue
+                NSUbiquitousKeyValueStore.default.showPublishDate = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $showProgress
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.showProgress = newValue
+                NSUbiquitousKeyValueStore.default.showProgress = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $lastProgress
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.lastProgress = newValue
+                NSUbiquitousKeyValueStore.default.lastProgress = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $isDarkTheme
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.isDarkTheme = newValue
+                NSUbiquitousKeyValueStore.default.isDarkTheme = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $thumbnailCornerRadius
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.thumbnailCornerRadius = newValue
+                NSUbiquitousKeyValueStore.default.thumbnailCornerRadius = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)  
         
         $thumbnailPadding
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.thumbnailPadding = newValue
+                NSUbiquitousKeyValueStore.default.thumbnailPadding = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
         
         $exportSize
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.exportSize = newValue
+                NSUbiquitousKeyValueStore.default.exportSize = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)  
         
         $applySavedSettingsOnSelectFromHistory
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { newValue in
-                UserDefaults.standard.applySavedSettingsOnSelectFromHistory = newValue
+                NSUbiquitousKeyValueStore.default.applySavedSettingsOnSelectFromHistory = newValue
+                NSUbiquitousKeyValueStore.default.synchronize()
             }
             .store(in: &cancellables)
     }
