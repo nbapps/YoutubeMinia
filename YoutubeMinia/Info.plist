@@ -41,7 +41,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
-		<string></string>
+		<string>launchIcon</string>
 	</dict>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
