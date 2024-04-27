@@ -96,4 +96,10 @@ extension UserDefaults {
         }
         set { set(newValue.rawValue, forKey: Self.exportScaleKey) }
     }
+    
+    static let applySavedSettingsOnSelectFromHistoryKey = "applySavedSettingsOnSelectFromHistoryKey"
+    var applySavedSettingsOnSelectFromHistory: Bool {
+        get { bool(forKey: Self.applySavedSettingsOnSelectFromHistoryKey) }
+        set { set(newValue, forKey: Self.applySavedSettingsOnSelectFromHistoryKey) }
+    }
 }

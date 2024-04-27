@@ -113,6 +113,22 @@
         }
       }
     },
+    "!Apply options when select previous url" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apply options when select previous url from history"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appliquer les options lors de la sélection de l'url précédente à partir de l'historique"
+          }
+        }
+      }
+    },
     "!Channel name" : {
       "localizations" : {
         "en" : {

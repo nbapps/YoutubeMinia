@@ -24,13 +24,12 @@ final class PreviousURL {
         self.timestamp = timestamp
     }
     
-    var urlStr: String
-    var videoId: String
-    var title: String
+    var urlStr: String = ""
+    var videoId: String = ""
+    var title: String = ""
     var thumbnailUrlStr: String?
-    var timestamp: Date
+    var timestamp: Date = Date.now
     
-    // TODO: save conf for recrate preview
     var videoURlStr: String = UserDefaults.standard.videoURlStr
     var showDuration: Bool = UserDefaults.standard.showDuration
     var showChannelIcon: Bool = UserDefaults.standard.showChannelIcon

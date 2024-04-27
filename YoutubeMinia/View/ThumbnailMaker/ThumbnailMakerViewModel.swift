@@ -47,6 +47,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
     @Published var thumbnailCornerRadius: Double = UserDefaults.standard.thumbnailCornerRadius
     @Published var thumbnailPadding: Double = UserDefaults.standard.thumbnailPadding
     
+    @Published var applySavedSettingsOnSelectFromHistory: Bool = UserDefaults.standard.applySavedSettingsOnSelectFromHistory
+    
     @Published var exportSize: ExportScale = UserDefaults.standard.exportSize
     
     @Published var ymThumbnailData: YMThumbnailData?
@@ -275,7 +277,10 @@ final class ThumbnailMakerViewModel: ObservableObject {
     }
 
     func applySettings(from previousURL: PreviousURL) {
+        guard previousURL.urlStr.isNotEmpty else  {return }
         videoURlStr = previousURL.urlStr
+        
+        guard applySavedSettingsOnSelectFromHistory else { return }
         
         videoURlStr = previousURL.videoURlStr
         showDuration = previousURL.showDuration
@@ -530,6 +535,13 @@ private extension ThumbnailMakerViewModel {
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
             .sink { newValue in
                 UserDefaults.standard.exportSize = newValue
+            }
+            .store(in: &cancellables)  
+        
+        $applySavedSettingsOnSelectFromHistory
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .sink { newValue in
+                UserDefaults.standard.applySavedSettingsOnSelectFromHistory = newValue
             }
             .store(in: &cancellables)
     }

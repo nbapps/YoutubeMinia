@@ -56,6 +56,7 @@ struct LastUrlsRowView: View {
         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
             Button(role: .destructive) {
                 modelContext.delete(previousURL)
+                try? modelContext.save()
             } label: {
                 Label("!Remove", systemImage: "trash")
             }

@@ -61,6 +61,10 @@ struct YMOptionsView: View {
                     }
                 }
             }
+            
+            Section {
+                Toggle("!Apply options when select previous url", isOn: $viewModel.applySavedSettingsOnSelectFromHistory)
+            }
         }
         .toggleStyle(.switch)
     }
