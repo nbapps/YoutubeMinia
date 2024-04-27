@@ -35,41 +35,17 @@ struct EmptyThumbnailView: View {
                 }
                 
                 if viewModel.showDuration {
-                    Text("10:10")
-                        .font(.roboto(weight: .medium, size: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 12)))
-                        .foregroundStyle( .white)
-                        .padding(
-                            .horizontal,
-                            viewModel.responsiveFontSize(currentWidth: width, referenceSize: 6)
-                        )
-                        .padding(
-                            .vertical,
-                            viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)
-                        )
-                        .background(
-                            .black.opacity(0.5),
-                            in: RoundedRectangle(
-                                cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 6)
-                            )
-                        )
-                        .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
-                        .redacted(reason: .placeholder)
+                    VideoDurationView(
+                        value: "10:10",
+                        thumbnailWidth: width
+                    )
+                    .redacted(reason: .placeholder)
                 }
                 
                 if viewModel.showProgress {
-                    RoundedRectangle(
-                        cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8)
-                    )
-                    .frame(
-                        width: width * viewModel.lastProgress,
-                        height: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 5),
-                        alignment: .leading
-                    )
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundStyle(.red)
-                    .padding(
-                        .bottom,
-                        viewModel.responsiveFontSize(currentWidth: width, referenceSize: 1)
+                    VideoProgressView(
+                        value: 0.5,
+                        thumbnailWidth: width
                     )
                     .redacted(reason: .placeholder)
                 }
@@ -86,58 +62,61 @@ struct EmptyThumbnailView: View {
                 spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 16)
             ) {
                 if viewModel.showChannelIcon {
-                    ZStack {
-                        if let channelThumbnail = viewModel.channelThumbnail {
-                            channelThumbnail
-                                .resizable()
-                                .scaledToFit()
-                                .clipShape(Circle())
-                                .thumbnailShadow()
-                        } else {
-                            ProgressView()
-                                .scaledToFit()
-                                .clipShape(Circle())
-                        }
-                    }
-                    .frame(width: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 40))
+                    ChannelThumbnailView(
+                        value: viewModel.channelThumbnail,
+                        thumbnailWidth: width
+                    )
                 }
                 
                 VStack(
                     alignment: .leading,
                     spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)
                 ) {
-                    Text("This is a video title")
-                        .multilineTextAlignment(.leading)
-                        .font(.roboto(weight: .medium, size: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 14)))
-                        .foregroundStyle(viewModel.isDarkTheme ? .white : .black)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.5)
+                    VideoTitleView(
+                        value: "This is a video title",
+                        thumbnailWidth: width
+                    )
                     
                     VStack(
                         alignment: .leading,
                         spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)
                     ) {
-                        HStack(spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)) {
-                            if viewModel.showChannelName {
-                                Text("My channel")
-                            }
-                            if viewModel.showChannelName && viewModel.showChannelCount {
-                                Text(verbatim: "-")
-                            }
-                            if viewModel.showChannelCount {
-                                Text("200000".formatChannelCount())
+                        if viewModel.showChannelName || viewModel.showChannelCount {
+                            HStack(spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)) {
+                                if viewModel.showChannelName {
+                                    ChannelTitleView(
+                                        value: "My channel",
+                                        thumbnailWidth: width
+                                    )
+                                }
+                                if viewModel.showChannelName && viewModel.showChannelCount {
+                                    Text(verbatim: "-")
+                                }
+                                if viewModel.showChannelCount {
+                                    ChannelSubCountView(
+                                        value: "200000",
+                                        thumbnailWidth: width
+                                    )
+                                }
                             }
                         }
-                        HStack(spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)) {
-                            if viewModel.showViewCount {
-                                Text("404000".formatViewCount())
-                            }
-                            if viewModel.showViewCount && viewModel.showPublishDate {
-                                Text(verbatim: "-")
-                            }
-                            if viewModel.showPublishDate {
-                                Text(Date.now.formatPublicationDate())
+                        if viewModel.showViewCount || viewModel.showPublishDate {
+                            HStack(spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)) {
+                                if viewModel.showViewCount {
+                                    VideoViewCountView(
+                                        value: "404000",
+                                        thumbnailWidth: width
+                                    )
+                                }
+                                if viewModel.showViewCount && viewModel.showPublishDate {
+                                    Text(verbatim: "-")
+                                }
+                                if viewModel.showPublishDate {
+                                    VideoPublishDateView(
+                                        value: .now,
+                                        thumbnailWidth: width
+                                    )
+                                }
                             }
                         }
                     }

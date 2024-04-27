@@ -113,6 +113,18 @@
         }
       }
     },
+    "!Channel name" : {
+
+    },
+    "!Channel subscribers" : {
+
+    },
+    "!Channel thumbnail" : {
+
+    },
+    "!Click on a component in the thumbnail to hide it. e.g. channel thumbnail" : {
+
+    },
     "!Context" : {
       "localizations" : {
         "en" : {
@@ -256,6 +268,9 @@
           }
         }
       }
+    },
+    "!Hidden components" : {
+
     },
     "!Invalid Number" : {
       "localizations" : {
@@ -666,6 +681,9 @@
         }
       }
     },
+    "!The thumbnail has been saved in your Photo library" : {
+
+    },
     "!The thumbnail is in your clipboard" : {
       "localizations" : {
         "en" : {
@@ -729,6 +747,21 @@
           }
         }
       }
+    },
+    "!Total views" : {
+
+    },
+    "!Video duration" : {
+
+    },
+    "!Video progress bar" : {
+
+    },
+    "!Video publish date" : {
+
+    },
+    "!Video title" : {
+
     },
     "!You can share a configuration file with your editor so that he can use exactly the same configuration as you had created." : {
       "localizations" : {

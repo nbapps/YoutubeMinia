@@ -68,22 +68,6 @@ struct ThumbnailMakerView: View {
                                             .getScaledImage(scale: viewModel.exportSize.scale)
                                             .appImage
                                     )
-                                
-                                HStack {
-                                    makeSaveButton(padding: 8)
-                                    
-                                    CopyImageButtonView(
-                                        padding: 8,
-                                        showError: $showError,
-                                        errorMessage: $errorMessage
-                                    )
-                                }
-                                .buttonStyle(.borderedProminent)
-                                
-#if os(macOS)
-                                shareFileButton(padding: 8)
-                                    .buttonStyle(.borderedProminent)
-#endif
                             }
                         } else {
                             VStack {
@@ -91,6 +75,11 @@ struct ThumbnailMakerView: View {
                                 Text("!Enter YouTube video URL to generate sharable thumbnail")
                             }
                         }
+                    }
+                    
+                    Section {
+                        HiddenComponents(width: proxy.size.width * 0.8)
+                            .padding()
                     }
                     
                 }

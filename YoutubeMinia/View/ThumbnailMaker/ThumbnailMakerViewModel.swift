@@ -27,7 +27,9 @@ final class ThumbnailMakerViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private let networkService = NetworkService()
     private let notificationService = NotificationService()
-    
+    #if os(iOS)
+    private let imageSaverService = ImageSaverService()
+    #endif
     static let shared = ThumbnailMakerViewModel(fetchOnLaunch: true)
     static let preview = ThumbnailMakerViewModel(fetchOnLaunch: false)
     
@@ -238,7 +240,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             throw YMViewModelError.noImage
         }
         
-        UIImageWriteToSavedPhotosAlbum(final, nil, nil, nil)
+        imageSaverService.writeToPhotoAlbum(image: final, videoURlStr: videoURlStr)
     }
 #endif
     
@@ -403,6 +405,16 @@ extension ThumbnailMakerViewModel {
     
     var bottomPadding: Double {
         mapValue(thumbnailPadding, fromRange: 8...20, toRange: 8...16)
+    }
+    
+    var allComponentsDisplayed: Bool {
+        showDuration &&
+        showChannelIcon &&
+        showChannelName &&
+        showChannelCount &&
+        showViewCount &&
+        showPublishDate &&
+        showProgress
     }
 }
 
