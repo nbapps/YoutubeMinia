@@ -42,6 +42,8 @@ struct ThumbnailMakerView: View {
                                 Button {
                                     viewModel.videoURlStr = ""
                                     viewModel.ymThumbnailData = nil
+                                    viewModel.videoThumbnail = nil
+                                    viewModel.channelThumbnail = nil
                                 } label: {
                                     Image(systemName: "xmark")
                                 }

@@ -150,6 +150,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
         else { return }
         
         ymThumbnailData = nil
+        videoThumbnail = nil
+        channelThumbnail = nil
         isFetching = true
         
         self.videoId = videoId
@@ -564,113 +566,127 @@ private extension ThumbnailMakerViewModel {
     func udObservers() {
         $videoURlStr
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.videoURlStr = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $showDuration
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.showDuration = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $showChannelIcon
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.showChannelIcon = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $showChannelName
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.showChannelName = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)     
         
         $showChannelCount
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.showChannelCount = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $showViewCount
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.showViewCount = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $showPublishDate
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.showPublishDate = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $showProgress
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.showProgress = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $lastProgress
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.lastProgress = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $isDarkTheme
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.isDarkTheme = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $thumbnailCornerRadius
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.thumbnailCornerRadius = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)  
         
         $thumbnailPadding
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.thumbnailPadding = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
         
         $exportSize
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.exportSize = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)  
         
         $applySavedSettingsOnSelectFromHistory
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
-            .sink { newValue in
+            .sink { [weak self] newValue in
                 NSUbiquitousKeyValueStore.default.applySavedSettingsOnSelectFromHistory = newValue
                 NSUbiquitousKeyValueStore.default.synchronize()
+                _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
     }

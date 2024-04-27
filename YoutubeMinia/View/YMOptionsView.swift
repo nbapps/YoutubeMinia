@@ -43,7 +43,7 @@ struct YMOptionsView: View {
                 
             Section {
                 Toggle("!Show progress bar", isOn: $viewModel.showProgress.animation())
-                ProgressBar(title: String(localized: "!Progress"), progress: $viewModel.lastProgress.animation())
+                ProgressBar(title: String(localized: "!Progress"), progress: $viewModel.lastProgress)
                     .onChange(of: viewModel.lastProgress) { _, newValue in
                         viewModel.showProgress = newValue != 0
                     }

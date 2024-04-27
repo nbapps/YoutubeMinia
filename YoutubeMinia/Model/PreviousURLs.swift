@@ -101,4 +101,42 @@ extension PreviousURL {
         
         return new
     }
+    
+    @discardableResult
+    static func updateIfExist(
+        videoId: String?,
+        title: String? = nil,
+        timestamp: Date = .now
+    ) throws -> PreviousURL? {
+        guard let videoId else { return nil }
+        let context = ModelContext(Database.container)
+        
+        var descriptor = FetchDescriptor<PreviousURL>(predicate: existingEntry(for: videoId))
+        descriptor.fetchLimit = 1
+        let existing = try context.fetch(descriptor).first
+        
+        guard let existing else { return nil }
+        
+        existing.timestamp = .now
+        if let title {
+            existing.title = title
+        }
+        
+        existing.videoURlStr = NSUbiquitousKeyValueStore.default.videoURlStr
+        existing.showDuration = NSUbiquitousKeyValueStore.default.showDuration
+        existing.showChannelIcon = NSUbiquitousKeyValueStore.default.showChannelIcon
+        existing.showChannelName = NSUbiquitousKeyValueStore.default.showChannelName
+        existing.showChannelCount = NSUbiquitousKeyValueStore.default.showChannelCount
+        existing.showViewCount = NSUbiquitousKeyValueStore.default.showViewCount
+        existing.showPublishDate = NSUbiquitousKeyValueStore.default.showPublishDate
+        existing.showProgress = NSUbiquitousKeyValueStore.default.showProgress
+        existing.lastProgress = NSUbiquitousKeyValueStore.default.lastProgress
+        existing.isDarkTheme = NSUbiquitousKeyValueStore.default.isDarkTheme
+        existing.thumbnailCornerRadius = NSUbiquitousKeyValueStore.default.thumbnailCornerRadius
+        existing.thumbnailPadding = NSUbiquitousKeyValueStore.default.thumbnailPadding
+        
+        try context.save()
+        
+        return existing
+    }
 }
