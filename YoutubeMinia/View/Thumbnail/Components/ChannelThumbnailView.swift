@@ -23,9 +23,21 @@ struct ChannelThumbnailView: View {
                         .clipShape(Circle())
                         .thumbnailShadow()
                 } else {
-                    ProgressView()
-                        .scaledToFit()
-                        .clipShape(Circle())
+                    ZStack {
+                        Image(systemName: "person")
+                            .resizable()
+                            .padding(viewModel.responsiveFontSize(currentWidth: thumbnailWidth, referenceSize: 12))
+                            .opacity(viewModel.isFetching ? 0.2 : 0.5)
+                        if viewModel.isFetching {
+                            ProgressView()
+                        }
+                    }
+                    .background(
+                        Circle()
+                        .foregroundStyle(.gray.opacity(0.7))
+                    )
+                    .scaledToFit()
+                    .clipShape(Circle())
                 }
             }
             .frame(width: viewModel.responsiveFontSize(currentWidth: thumbnailWidth, referenceSize: 40))
@@ -43,7 +55,7 @@ struct ChannelThumbnailView: View {
 
 #Preview {
     ChannelThumbnailView(
-        value: Image(systemName: "plus"),
+        value: nil,//Image(systemName: "plus"),
         thumbnailWidth: 350
     )
     .environmentObject(ThumbnailMakerViewModel.preview)
