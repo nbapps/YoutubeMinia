@@ -82,7 +82,7 @@ extension PreviousURL {
         descriptor.fetchLimit = 1
         let existing = try context.fetch(descriptor).first
         
-        if var existing {
+        if let existing {
             existing.timestamp = .now
             try context.save()
             return existing

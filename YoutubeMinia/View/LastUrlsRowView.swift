@@ -62,7 +62,7 @@ struct LastUrlsRowView: View {
         }
         .swipeActions(edge: .leading, allowsFullSwipe: true) {
             Button(action: onSelect) {
-                Label("!Make", systemImage: "photo")
+                Label("!Select", systemImage: "photo")
             }
             .tint(.accentColor)
         }

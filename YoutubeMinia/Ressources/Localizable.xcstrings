@@ -114,16 +114,68 @@
       }
     },
     "!Channel name" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Channel name"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom de la chaine"
+          }
+        }
+      }
     },
     "!Channel subscribers" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Channel subscribers"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre d'abonnés de la chaine"
+          }
+        }
+      }
     },
     "!Channel thumbnail" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Channel thumbnail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miniature de la chaine"
+          }
+        }
+      }
     },
     "!Click on a component in the thumbnail to hide it. e.g. channel thumbnail" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click on a component in the thumbnail to hide it. e.g. channel thumbnail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cliquez sur un composant de la vignette pour le masquer, par exemple la vignette du canal"
+          }
+        }
+      }
     },
     "!Context" : {
       "localizations" : {
@@ -270,7 +322,20 @@
       }
     },
     "!Hidden components" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hidden components"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Composants masqués"
+          }
+        }
+      }
     },
     "!Invalid Number" : {
       "localizations" : {
@@ -288,8 +353,21 @@
         }
       }
     },
-    "!Make" : {
-
+    "!Maker" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maker"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créateur"
+          }
+        }
+      }
     },
     "!Open app" : {
       "localizations" : {
@@ -404,7 +482,20 @@
       }
     },
     "!Remove" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
+          }
+        }
+      }
     },
     "!Save .yttm file" : {
       "localizations" : {
@@ -439,7 +530,36 @@
       }
     },
     "!Save in Photo library" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save in Photo Library"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegarder dans la libraire de photos"
+          }
+        }
+      }
+    },
+    "!Select" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionner"
+          }
+        }
+      }
     },
     "!Show channel icon" : {
       "localizations" : {
@@ -682,7 +802,20 @@
       }
     },
     "!The thumbnail has been saved in your Photo library" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The thumbnail has been saved in your Photo library"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La vignette a été enregistrée dans votre bibliothèque de photos"
+          }
+        }
+      }
     },
     "!The thumbnail is in your clipboard" : {
       "localizations" : {
@@ -749,19 +882,100 @@
       }
     },
     "!Total views" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total of views"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total des vues"
+          }
+        }
+      }
+    },
+    "!URLs" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URLs"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URLs"
+          }
+        }
+      }
     },
     "!Video duration" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video duration"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durée de la vidéo"
+          }
+        }
+      }
     },
     "!Video progress bar" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video progress bar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barre de progression de la vidéo"
+          }
+        }
+      }
     },
     "!Video publish date" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video publish date"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date de publication de la vidéo"
+          }
+        }
+      }
     },
     "!Video title" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video title"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titre de la vidéo"
+          }
+        }
+      }
     },
     "!You can share a configuration file with your editor so that he can use exactly the same configuration as you had created." : {
       "localizations" : {
@@ -851,14 +1065,14 @@
         }
       }
     },
-    "Last" : {
-
-    },
-    "Maker" : {
-
-    },
     "My channel" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Channel"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",

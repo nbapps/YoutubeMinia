@@ -56,11 +56,11 @@ struct YoutubeMiniaApp: App {
         WindowGroup {
             TabView(selection: $thumbnailMakerViewModel.selectedTab) {
                 ContentView()
-                    .tabItem { Label("Maker", systemImage: "photo") }
+                    .tabItem { Label("!Maker", systemImage: "photo") }
                     .tag(Tabs.maker)
                 
                 LastUrlsListView()
-                    .tabItem { Label("Last", systemImage: "externaldrive.fill.badge.icloud") }
+                    .tabItem { Label("!URLs", systemImage: "externaldrive.fill.badge.icloud") }
                     .tag(Tabs.last)
             }
             .dataContainer()
