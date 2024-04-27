@@ -14,10 +14,10 @@
 				<false/>
 				<key>NSExtensionActivationSupportsMovie</key>
 				<false/>
-				<key>NSExtensionActivationSupportsText</key>
-				<true/>
-				<key>NSExtensionActivationSupportsWebURL</key>
-				<true/>
+				<key>NSExtensionActivationSupportsTextWithMaxCount</key>
+				<integer>1</integer>
+				<key>NSExtensionActivationSupportsWebURLWithMaxCount</key>
+				<integer>1</integer>
 			</dict>
 			<key>NSExtensionServiceAllowsFinderPreviewItem</key>
 			<true/>
