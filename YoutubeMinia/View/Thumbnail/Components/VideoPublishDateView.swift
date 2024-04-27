@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VideoPublishDateView: View {    
+struct VideoPublishDateView: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
     
     let value: Date

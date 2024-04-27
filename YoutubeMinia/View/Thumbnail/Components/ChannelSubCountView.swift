@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ChannelSubCountView: View {
-    typealias T = String
-    
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
+
     let value: String
     let thumbnailWidth: CGFloat
     
@@ -37,13 +36,4 @@ struct ChannelSubCountView: View {
         thumbnailWidth: 350
     )
     .environmentObject(ThumbnailMakerViewModel.preview)
-}
-
-protocol ThumbnailComponent {
-    associatedtype T
-    
-    var value: T { get }
-    var thumbnailWidth: CGFloat { get }
-    
-    func toggle()
 }
