@@ -25,7 +25,7 @@
 		3700A4852BDD227800FB9E81 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3700A4842BDD227800FB9E81 /* Media.xcassets */; };
 		3700A4872BDD227800FB9E81 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4862BDD227800FB9E81 /* ActionViewController.swift */; };
 		3700A48A2BDD227800FB9E81 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3700A4892BDD227800FB9E81 /* Base */; };
-		3700A48E2BDD227800FB9E81 /* YT Minia Maker Action.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3700A47F2BDD227800FB9E81 /* YT Minia Maker Action.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3700A48E2BDD227800FB9E81 /* YT Minia Maker Action.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3700A47F2BDD227800FB9E81 /* YT Minia Maker Action.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3700A4942BDD2B0B00FB9E81 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4932BDD2B0B00FB9E81 /* ActionView.swift */; };
 		3700A4952BDD2FDB00FB9E81 /* ThumbnailMakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30342BD9BDF900135B48 /* ThumbnailMakerViewModel.swift */; };
 		3700A4972BDD304800FB9E81 /* ThumbnailMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30592BDA524500135B48 /* ThumbnailMakerView.swift */; };
@@ -77,6 +77,19 @@
 		3700A4C62BDD309400FB9E81 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4C52BDD309400FB9E81 /* Tabs.swift */; };
 		3700A4C72BDD309700FB9E81 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4C52BDD309400FB9E81 /* Tabs.swift */; };
 		3700A4C82BDD31A400FB9E81 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 377E30032BD99A0600135B48 /* Config.xcconfig */; };
+		3700A4C92BDD420A00FB9E81 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 377E304F2BDA4A6600135B48 /* Localizable.xcstrings */; };
+		3700A4CA2BDD437A00FB9E81 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30252BD9BABE00135B48 /* Roboto-LightItalic.ttf */; };
+		3700A4CB2BDD437A00FB9E81 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30222BD9BABE00135B48 /* Roboto-Thin.ttf */; };
+		3700A4CC2BDD437A00FB9E81 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */; };
+		3700A4CD2BDD437A00FB9E81 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */; };
+		3700A4CE2BDD437A00FB9E81 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301D2BD9BABE00135B48 /* Roboto-Italic.ttf */; };
+		3700A4CF2BDD437A00FB9E81 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30232BD9BABE00135B48 /* Roboto-Light.ttf */; };
+		3700A4D02BDD437A00FB9E81 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */; };
+		3700A4D12BDD437A00FB9E81 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30202BD9BABE00135B48 /* Roboto-Medium.ttf */; };
+		3700A4D22BDD437A00FB9E81 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */; };
+		3700A4D32BDD437A00FB9E81 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301E2BD9BABE00135B48 /* Roboto-Black.ttf */; };
+		3700A4D42BDD437A00FB9E81 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301F2BD9BABE00135B48 /* Roboto-BlackItalic.ttf */; };
+		3700A4D52BDD437A00FB9E81 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30212BD9BABE00135B48 /* Roboto-BoldItalic.ttf */; };
 		3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
 		374400312BDA7BB8005E432B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 374400302BDA7BB8005E432B /* README.md */; };
 		374400332BDA7EF5005E432B /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
@@ -574,7 +587,20 @@
 			files = (
 				3700A4852BDD227800FB9E81 /* Media.xcassets in Resources */,
 				3700A4C82BDD31A400FB9E81 /* Config.xcconfig in Resources */,
+				3700A4C92BDD420A00FB9E81 /* Localizable.xcstrings in Resources */,
 				3700A48A2BDD227800FB9E81 /* Base in Resources */,
+				3700A4CA2BDD437A00FB9E81 /* Roboto-LightItalic.ttf in Resources */,
+				3700A4CB2BDD437A00FB9E81 /* Roboto-Thin.ttf in Resources */,
+				3700A4CC2BDD437A00FB9E81 /* Roboto-ThinItalic.ttf in Resources */,
+				3700A4CD2BDD437A00FB9E81 /* Roboto-Regular.ttf in Resources */,
+				3700A4CE2BDD437A00FB9E81 /* Roboto-Italic.ttf in Resources */,
+				3700A4CF2BDD437A00FB9E81 /* Roboto-Light.ttf in Resources */,
+				3700A4D02BDD437A00FB9E81 /* Roboto-MediumItalic.ttf in Resources */,
+				3700A4D12BDD437A00FB9E81 /* Roboto-Medium.ttf in Resources */,
+				3700A4D22BDD437A00FB9E81 /* Roboto-Bold.ttf in Resources */,
+				3700A4D32BDD437A00FB9E81 /* Roboto-Black.ttf in Resources */,
+				3700A4D42BDD437A00FB9E81 /* Roboto-BlackItalic.ttf in Resources */,
+				3700A4D52BDD437A00FB9E81 /* Roboto-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +753,7 @@
 /* Begin PBXTargetDependency section */
 		3700A48D2BDD227800FB9E81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 3700A47E2BDD227800FB9E81 /* YT Minia Maker Action */;
 			targetProxy = 3700A48C2BDD227800FB9E81 /* PBXContainerItemProxy */;
 		};

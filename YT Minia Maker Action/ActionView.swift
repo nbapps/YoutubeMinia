@@ -92,12 +92,12 @@ struct ActionView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: onClose) {
-                        Text("!Done")
+                        Text("!Close")
                             .padding(.horizontal)
                     }
                 }
             }
-            .navigationTitle("Thumbnail")
+            .navigationTitle("!Thumbnail")
             .navigationBarTitleDisplayMode(.inline)
         }
         .padding(.horizontal)

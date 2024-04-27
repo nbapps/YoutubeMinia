@@ -1,6 +1,38 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "!%lld day%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld day%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld jour%2$@"
+          }
+        }
+      }
+    },
+    "!%lld hour%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld hour%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld heure%2$@"
+          }
+        }
+      }
+    },
     "!%lld k subscribers" : {
       "localizations" : {
         "en" : {
@@ -65,6 +97,22 @@
         }
       }
     },
+    "!%lld month%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld month%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld mois"
+          }
+        }
+      }
+    },
     "!%lld subscribers" : {
       "localizations" : {
         "en" : {
@@ -93,6 +141,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld vues"
+          }
+        }
+      }
+    },
+    "!%lld week%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld week%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld semaine%2$@"
+          }
+        }
+      }
+    },
+    "!%lld year%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld year%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld an%2$@"
           }
         }
       }
@@ -189,6 +269,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cliquez sur un composant de la vignette pour le masquer, par exemple la vignette du canal"
+          }
+        }
+      }
+    },
+    "!Close" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Close"
           }
         }
       }
@@ -689,70 +785,6 @@
         }
       }
     },
-    "!Since %lld day%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld day%2$@ ago"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "il y a %1$lld jour%2$@"
-          }
-        }
-      }
-    },
-    "!Since %lld month%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld month%2$@ ago"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "il y a %1$lld moi%2$@"
-          }
-        }
-      }
-    },
-    "!Since %lld week%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld week%2$@ ago"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "il y a %1$lld semaine%2$@"
-          }
-        }
-      }
-    },
-    "!Since %lld year%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld year%2$@ ago"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "il y a %1$lld an%2$@"
-          }
-        }
-      }
-    },
     "!Source code" : {
       "localizations" : {
         "en" : {
@@ -861,6 +893,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cette application a été créée suite au défi réseau de Basti Ui et Benjamin Code. Cette application est open source. Le lien Github est ci-dessous."
+          }
+        }
+      }
+    },
+    "!This URL does not appear to be a valid YouTube URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This URL does not appear to be a valid YouTube URL"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Cette URL ne semble pas être une URL valide de YouTube"
+          }
+        }
+      }
+    },
+    "!Thumbnail" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thumbnail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Miniature"
           }
         }
       }

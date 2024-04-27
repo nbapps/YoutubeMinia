@@ -49,7 +49,7 @@ struct ThumbnailView: View {
                     }
                 }
                 .clipShape(
-                    RoundedRectangle(cornerRadius: viewModel.innerCornerRadius)
+                    RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius))
                 )
                 .thumbnailShadow(
                     radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8)
@@ -127,9 +127,9 @@ struct ThumbnailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .frame(width: width)
-            .padding([.horizontal, .top], viewModel.thumbnailPadding)
-            .padding(.bottom, viewModel.bottomPadding)
-            .background(viewModel.isDarkTheme ? .black.opacity(0.88) : .white, in: RoundedRectangle(cornerRadius: viewModel.outerCornerRadius))
+            .padding([.horizontal, .top], viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.thumbnailPadding))
+            .padding(.bottom, viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.bottomPadding))
+            .background(viewModel.isDarkTheme ? .black.opacity(0.88) : .white, in: RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.outerCornerRadius)))
             .shadow(color: .clear, radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 10))
             .thumbnailShadow(radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
             .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: 16))
