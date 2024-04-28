@@ -996,6 +996,22 @@
         }
       }
     },
+    "!Version: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version: %@"
+          }
+        }
+      }
+    },
     "!Video duration" : {
       "localizations" : {
         "en" : {

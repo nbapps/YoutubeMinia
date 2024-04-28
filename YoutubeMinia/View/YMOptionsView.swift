@@ -50,6 +50,18 @@ struct YMOptionsView: View {
             Section {
                 Toggle("!Apply options when select previous url", isOn: $viewModel.applySavedSettingsOnSelectFromHistory)
             }
+            
+            Section { } footer: {
+                VStack {
+                    HStack {
+                        Text(Bundle.main.appName)
+                        Text(verbatim: "|")
+                        Text("!Version: \(Bundle.main.appVersion)")
+                    }
+                    Text(verbatim: "2024 © NBApps")
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
         }
         .toggleStyle(.switch)
     }
