@@ -38,20 +38,20 @@ struct EmptyThumbnailView: View {
                 )
                 
                 VStack(alignment: .trailing, spacing: 0) {
-                    if viewModel.showDuration {
-                        VideoDurationView(
-                            value: "10:10",
-                            thumbnailWidth: width
-                        )
-                    }
+                    VideoDurationView(
+                        value: "10:10",
+                        thumbnailWidth: width
+                    )
+                    .opacity(viewModel.showDuration ? 1 : 0)
                     
                     if viewModel.showProgress {
                         VideoProgressView(
-                            value: 0.5,
+                            value: viewModel.lastProgress,
                             thumbnailWidth: width
                         )
                     }
                 }
+                .frame(maxWidth: .infinity, alignment: .trailing)
                 .redacted(reason: .placeholder)
                 .clipShape(
                     RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius + 0.5))
@@ -132,11 +132,10 @@ struct EmptyThumbnailView: View {
             .padding(.horizontal, viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(width: width)
         .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.thumbnailPadding))
         .background(viewModel.isDarkTheme ? .black.opacity(0.88) : .white, in: RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.outerCornerRadius)))
         .thumbnailShadow(radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
-        .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
+        .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: 16))
     }
 }
 

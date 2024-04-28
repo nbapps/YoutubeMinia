@@ -291,6 +291,7 @@
 		3700A4652BDCF3BB00FB9E81 /* Thumbnail */ = {
 			isa = PBXGroup;
 			children = (
+				374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */,
 				3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */,
 				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
 				3700A4772BDCF95300FB9E81 /* HiddenComponents.swift */,
@@ -339,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				377E2FC52BD9943A00135B48 /* ContentView.swift */,
-				374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */,
 				374400392BDA99EF005E432B /* ThumbnailMaker */,
 				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
 				374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */,

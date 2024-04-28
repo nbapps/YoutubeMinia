@@ -141,14 +141,11 @@ struct ThumbnailMakerView: View {
                 print(error.localizedDescription)
             }
         }
-        .task {
-            if let lastEntry = previousURLs.first, viewModel.videoURlStr.isEmpty {
-                viewModel.videoURlStr = lastEntry.videoURlStr
-            }
-        }
         .onChange(of: viewModel.videoURlStr) { _, newValue in
             guard newValue.isNotEmpty else { return }
+            #if !DEBUG
             requestReview()
+            #endif
         }
     }
 }

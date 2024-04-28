@@ -75,6 +75,9 @@ extension PreviousURL {
         thumbnailUrlStr: String?,
         timestamp: Date = .now
     ) throws -> PreviousURL {
+        guard videoURlStr.isNotEmpty else { throw DatabaseError.missingVideoURL }
+        guard videoId.isNotEmpty else { throw DatabaseError.missingVideoId }
+        
         let context = ModelContext(Database.container)
         
         var descriptor = FetchDescriptor<PreviousURL>(predicate: existingEntry(for: videoId))
@@ -108,7 +111,8 @@ extension PreviousURL {
         title: String? = nil,
         timestamp: Date = .now
     ) throws -> PreviousURL? {
-        guard let videoId else { return nil }
+        guard let videoId, videoId.isNotEmpty else { throw DatabaseError.missingVideoId }
+        
         let context = ModelContext(Database.container)
         
         var descriptor = FetchDescriptor<PreviousURL>(predicate: existingEntry(for: videoId))
@@ -122,7 +126,9 @@ extension PreviousURL {
             existing.title = title
         }
         
-        existing.videoURlStr = NSUbiquitousKeyValueStore.default.videoURlStr
+        if NSUbiquitousKeyValueStore.default.videoURlStr.isNotEmpty {
+            existing.videoURlStr = NSUbiquitousKeyValueStore.default.videoURlStr
+        }
         existing.showDuration = NSUbiquitousKeyValueStore.default.showDuration
         existing.showChannelIcon = NSUbiquitousKeyValueStore.default.showChannelIcon
         existing.showChannelName = NSUbiquitousKeyValueStore.default.showChannelName

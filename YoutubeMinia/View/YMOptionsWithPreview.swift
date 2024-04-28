@@ -18,12 +18,13 @@ struct YMOptionsWithPreview: View {
                         .safeAreaPadding(.top, proxy.safeAreaInsets.top + 16)
                         .font(.title)
                         .fontWeight(.bold)
+                        .padding(.horizontal)
                     
                     
                     ThumbnailViewOrEmpty(width: proxy.size.width * 0.8)
                         .padding(8)
                 }
-                .frame(maxWidth: .infinity, alignment: .center)
+                .frame(maxWidth: proxy.size.width, alignment: .center)
                 .zIndex(1)
                 
                 .ignoresSafeArea()

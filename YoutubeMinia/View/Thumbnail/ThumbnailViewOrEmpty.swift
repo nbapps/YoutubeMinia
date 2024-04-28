@@ -16,10 +16,7 @@ struct ThumbnailViewOrEmpty: View {
         if let thumbnailData = viewModel.ymThumbnailData {
             ThumbnailView(thumbnailData: thumbnailData, width: width)
                 .draggableIfAllow(
-                    image: ThumbnailView(thumbnailData: thumbnailData)
-                        .environmentObject(viewModel)
-                        .getScaledImage(scale: viewModel.exportSize.scale)
-                        .appImage
+                    image: viewModel.renderThumbnail()
                 )
             
         } else {

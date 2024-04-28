@@ -44,6 +44,11 @@ struct YMDataMocViewModifier: ViewModifier {
     }
 }
 
+enum DatabaseError: Error {
+    case missingVideoURL
+    case missingVideoId
+}
+
 actor Database {
     private init() {}
     

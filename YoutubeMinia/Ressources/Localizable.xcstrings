@@ -1146,6 +1146,12 @@
     },
     "10:10" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10:10"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1182,6 +1188,12 @@
     },
     "This is a video title" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is a video title"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",

@@ -30,8 +30,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
     #if os(iOS)
     private let imageSaverService = ImageSaverService()
     #endif
-    static let shared = ThumbnailMakerViewModel(fetchOnLaunch: true)
-    static let preview = ThumbnailMakerViewModel(fetchOnLaunch: false)
+    static let shared = ThumbnailMakerViewModel()
+    static let preview = ThumbnailMakerViewModel()
     
     @Published var lastVideoURlStr: String?
     @Published var videoId: String?
@@ -68,22 +68,15 @@ final class ThumbnailMakerViewModel: ObservableObject {
     
     deinit { NotificationCenter.default.removeObserver(self) }
     
-    init(fetchOnLaunch: Bool) {
+    init() {
         udObservers()
         observeUbiquitousKeyValueStore()
-        
-        if fetchOnLaunch {
-            if videoURlStr.isNotEmpty {
-                Task { @MainActor in
-                    try await fetch()
-                }
-            }
-        }
-        
-        if ProcessInfo.runForPreview && !fetchOnLaunch {
-            ymThumbnailData = .moc
+
+        if ProcessInfo.runForPreview {
+            let moc = YMThumbnailData.moc
+            ymThumbnailData = moc
             Task { @MainActor in
-                try? await fetchThumbnails(videoThumbnailUrl: ymThumbnailData!.videoThumbnailUrl, channelThumbnailUrl: ymThumbnailData!.channelThumbnailUrl)
+                try? await fetchThumbnails(videoThumbnailUrl: moc.videoThumbnailUrl, channelThumbnailUrl: moc.channelThumbnailUrl)
             }
         }
         
@@ -131,24 +124,26 @@ final class ThumbnailMakerViewModel: ObservableObject {
             guard let urlStr = checkIfURLIsValid(urlStr: clipboardString) else { return }
             self.videoURlStr = urlStr
             try? await self.fetch()
-            
-            guard let thumbnailData = ymThumbnailData else { return }
-            let rendered = ThumbnailView(thumbnailData: thumbnailData)
-                .environmentObject(self)
-                .getScaledImage(scale: exportSize.scale)
 
-            copy(rendered.appImage)
+            copy(renderThumbnail())
         }
+    }
+    
+    @MainActor
+    func renderThumbnail() -> AppImage? {
+        guard let thumbnailData = ymThumbnailData else { return nil }
+        let rendered = ThumbnailView(thumbnailData: thumbnailData)
+            .environmentObject(self)
+            .frame(width: 400)
+            .getScaledImage(scale: exportSize.scale)
+
+        return rendered.appImage
     }
     
     func copyPreviousThumbnailIfExisting() {
         Task { @MainActor in
-            guard let thumbnailData = ymThumbnailData else { return }
-            let rendered = ThumbnailView(thumbnailData: thumbnailData)
-                .environmentObject(self)
-                .getScaledImage(scale: exportSize.scale)
-            
-            copy(rendered.appImage)
+            guard let image = renderThumbnail() else { return }
+            copy(image)
         }
     }
     
@@ -263,13 +258,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
 #if os(iOS)
     @MainActor
     func saveInPhotoLibrary(thumbnailData: YMThumbnailData) throws {
-        let rendered = ThumbnailView(thumbnailData: thumbnailData)
-            .environmentObject(self)
-            .background(Color.clear)
-            .getScaledImage(scale: exportSize.scale)
-
         // Mandatory to convert to png and re convert to image for keep transparency...
-        guard let image = rendered.appImage, let data = image.pngData(), let final = UIImage(data: data) else {
+        guard let image = renderThumbnail(), let data = image.pngData(), let final = UIImage(data: data) else {
             throw YMViewModelError.noImage
         }
         
@@ -283,12 +273,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
     
     @MainActor
     func exportToDownloads(thumbnailData: YMThumbnailData) throws {
-        let rendered = ThumbnailView(thumbnailData: thumbnailData)
-            .environmentObject(self)
-            .getScaledImage(scale: exportSize.scale)
-        
         try exportThumbnail(
-            image: rendered.appImage,
+            image: renderThumbnail(),
             fileName: thumbnailData.videoTitle.formatFileName()
         )
     }
@@ -504,7 +490,7 @@ private extension ThumbnailMakerViewModel {
         
         guard let keys = userInfo[NSUbiquitousKeyValueStoreChangedKeysKey] as? [String] else { return }
         DispatchQueue.main.async {
-            if keys.contains(NSUbiquitousKeyValueStore.videoURlStrKey) {
+            if keys.contains(NSUbiquitousKeyValueStore.videoURlStrKey), NSUbiquitousKeyValueStore.default.videoURlStr.isNotEmpty {
                 withAnimation {
                     self.videoURlStr = NSUbiquitousKeyValueStore.default.videoURlStr
                 }
@@ -586,6 +572,7 @@ private extension ThumbnailMakerViewModel {
                     NSUbiquitousKeyValueStore.default.videoURlStr = newValue
                     NSUbiquitousKeyValueStore.default.synchronize()
                 }
+                
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)

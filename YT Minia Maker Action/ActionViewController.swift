@@ -19,7 +19,7 @@ class ActionViewController: UIViewController {
     
     private var actionViewModel = ActionViewModel()
     
-    lazy var thumbnailMakerViewModel = ThumbnailMakerViewModel(fetchOnLaunch: false)
+    lazy var thumbnailMakerViewModel = ThumbnailMakerViewModel.shared
     
     lazy var actionHostingView: UIHostingController<some View> = {
         let actionView = ActionView(
