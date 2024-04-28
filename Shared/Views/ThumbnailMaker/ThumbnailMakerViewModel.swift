@@ -151,7 +151,11 @@ final class ThumbnailMakerViewModel: ObservableObject {
     
     @MainActor
     func fetch() async throws {
-        defer { isFetching = false }
+        defer {
+            print("fetch done")
+            isFetching = false
+        }
+        
         guard videoURlStr.isNotEmpty else { return }
         guard let videoURlStr = checkIfURLIsValid(urlStr: videoURlStr) else { return }
         
@@ -230,7 +234,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             try exportToDownloads(thumbnailData: thumbnailData)
             exportAfterOnDrop = false
         }
-        print("fetch done")
+        print("fetch success")
     }
     
     @MainActor
