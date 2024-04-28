@@ -29,5 +29,7 @@ struct ThumbnailViewOrEmpty: View {
     ThumbnailViewOrEmpty(
     width: 300
     )
+    .scaledToFit()
+    .frame(width: 300)
     .environmentObject(ThumbnailMakerViewModel.preview)
 }

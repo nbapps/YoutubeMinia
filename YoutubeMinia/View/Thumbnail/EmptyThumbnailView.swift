@@ -15,7 +15,7 @@ struct EmptyThumbnailView: View {
     var body: some View {
         
         VStack(spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 12)) {
-            ZStack(alignment: .bottomTrailing) {
+            ZStack(alignment: .bottom) {
                 ZStack {
                     if let videoThumbnail = viewModel.videoThumbnail {
                         videoThumbnail

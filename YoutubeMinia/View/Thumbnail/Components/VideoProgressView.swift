@@ -14,32 +14,34 @@ struct VideoProgressView: View {
     let thumbnailWidth: CGFloat
     
     var body: some View {
-        Button(action: toggle) {
-            ZStack {
-                Capsule()
-                    .foregroundStyle(.black.opacity(0.1))
-                    .frame(
-                        height: viewModel.responsiveFontSize(currentWidth: thumbnailWidth, referenceSize: 5),
-                        alignment: .trailing
-                    )
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Capsule()
-                    .foregroundStyle(.red)
-                    .frame(
-                        width: thumbnailWidth * viewModel.lastProgress,
-                        height: viewModel.responsiveFontSize(currentWidth: thumbnailWidth, referenceSize: 5),
-                        alignment: .leading
-                    )
-                    .frame(maxWidth: .infinity, alignment: .leading)
+        GeometryReader { proxy in
+            Button(action: toggle) {
+                ZStack {
+                    Capsule()
+                        .foregroundStyle(.black.opacity(0.1))
+                        .frame(
+                            alignment: .trailing
+                        )
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Capsule()
+                        .foregroundStyle(.red)
+                        .frame(
+                            width: (proxy.size.width * viewModel.lastProgress),
+                            alignment: .leading
+                        )
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(
+                    .bottom,
+                    viewModel.responsiveFontSize(currentWidth: thumbnailWidth, referenceSize: 1)
+                )
             }
-            .padding(
-                .bottom,
-                viewModel.responsiveFontSize(currentWidth: thumbnailWidth, referenceSize: 1)
-            )
+            .accessibilityLabel("!Video progress bar")
+            .buttonStyle(.plain)
         }
-        .accessibilityLabel("!Video progress bar")
-        .buttonStyle(.plain)
+        .frame(height: viewModel.responsiveFontSize(currentWidth: thumbnailWidth, referenceSize: 5))
+        .fixedSize(horizontal: false, vertical: true)
     }
     
     func toggle() {
