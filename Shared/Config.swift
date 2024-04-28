@@ -17,7 +17,8 @@ struct Config {
         urlComponents.queryItems = [
             URLQueryItem(name: "part", value: "snippet,statistics,contentDetails"),
             URLQueryItem(name: "id", value: videoId),
-            URLQueryItem(name: "key", value: apiKey)
+            URLQueryItem(name: "key", value: apiKey),
+            URLQueryItem(name: "maxResults", value: "1")
         ]
         
         return urlComponents.url?.absoluteURL
@@ -28,12 +29,24 @@ struct Config {
         urlComponents.queryItems = [
             URLQueryItem(name: "part", value: "snippet,statistics"),
             URLQueryItem(name: "id", value: channelId),
-            URLQueryItem(name: "key", value: apiKey)
+            URLQueryItem(name: "key", value: apiKey),
+            URLQueryItem(name: "maxResults", value: "1")
         ]
 
         return urlComponents.url?.absoluteURL
     }
     
+    static func channelURL(channelCustomUrl: String) -> URL? {
+        guard var urlComponents = URLComponents(string: ytBaseURLStr + "channels") else { return nil }
+        urlComponents.queryItems = [
+            URLQueryItem(name: "part", value: "snippet,statistics"),
+            URLQueryItem(name: "forHandle", value: channelCustomUrl),
+            URLQueryItem(name: "key", value: apiKey),
+            URLQueryItem(name: "maxResults", value: "1")
+        ]
+        
+        return urlComponents.url?.absoluteURL
+    }
     enum Key: String {
         case youtubeApiKey = "YT_API_KEY"
     }

@@ -16,8 +16,6 @@ struct CopyImageButtonView: View {
     
     var body: some View {
         Button {
-            guard let thumbnailData = viewModel.ymThumbnailData else { return }
-            
             Task { @MainActor in
                 viewModel.copy(viewModel.renderThumbnail())
             }

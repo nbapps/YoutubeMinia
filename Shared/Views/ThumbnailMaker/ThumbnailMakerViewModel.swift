@@ -15,7 +15,10 @@ import KeyboardShortcuts
 
 enum YMViewModelError: Error {
     case missingHost
+    case notAYoutubeURL
+    case foundYouTubeChannelCustomUrl
     case notAYoutubeVideoURL
+    case notAYoutubeChannelURL
     case missingVideoId
     case missingChannelId
     
@@ -84,6 +87,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
             .compactMap { $0.isNotEmpty ? $0 : nil }
             .compactMap { [weak self] url in self?.checkIfURLIsValid(urlStr: url) }
+            .removeDuplicates()
             .sink { [weak self] newValue in
                 guard let self else { return }
                 Task { @MainActor in
@@ -159,16 +163,38 @@ final class ThumbnailMakerViewModel: ObservableObject {
             print("fetch done")
             isFetching = false
         }
-        
         guard videoURlStr.isNotEmpty else { return }
         guard let videoURlStr = checkIfURLIsValid(urlStr: videoURlStr) else { return }
         
         guard lastVideoURlStr != videoURlStr else { return }
         
-        guard let videoId = try extractVideoId(from: videoURlStr),
-              let ytVideoUrl = Config.videoURL(for: videoId)
-        else { return }
-        
+        do {
+            if let videoId = try extractVideoId(from: videoURlStr),
+               let ytVideoUrl = Config.videoURL(for: videoId) {
+                try await fetchVideo(for: ytVideoUrl, videoId: videoId)
+            } else if let channelCustomUrl = try extractChannelCustomUrl(from: videoURlStr),
+                      let channelUrl = Config.channelURL(channelCustomUrl: channelCustomUrl) {
+                try await fetchChannel(for: channelUrl, channelCustomUrl: channelCustomUrl)
+            }
+        } catch let error as YMViewModelError {
+            guard error == .foundYouTubeChannelCustomUrl else { throw error }
+            guard let channelCustomUrl = try extractChannelCustomUrl(from: videoURlStr),
+                  let channelUrl = Config.channelURL(channelCustomUrl: channelCustomUrl) else { throw error }
+            try await fetchChannel(for: channelUrl, channelCustomUrl: channelCustomUrl)
+        } catch {
+            throw error
+        }
+    }
+    
+    @MainActor
+    func fetchVideo(for ytVideoUrl: URL, videoId: String) async throws {
+        defer {
+            print("fetchVideo done")
+            isFetching = false
+        }
+
+        guard lastVideoURlStr != videoURlStr else { return }
+
         ymThumbnailData = nil
         videoThumbnail = nil
         channelThumbnail = nil
@@ -177,7 +203,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
         self.videoId = videoId
         self.lastVideoURlStr = videoURlStr
         
-        print("start fetch")
+        print("start fetchVideo")
         let videoResponse: YTDecodable = try await networkService.fetch(from: ytVideoUrl)
         guard let videoItem = videoResponse.items.first,
               let videoSnippet = videoItem.snippet,
@@ -236,15 +262,69 @@ final class ThumbnailMakerViewModel: ObservableObject {
             try exportToDownloads(thumbnailData: thumbnailData)
             exportAfterOnDrop = false
         }
-        print("fetch success")
+        
+        print("fetch video success")
+    }
+    
+    @MainActor
+    func fetchChannel(for channelUrl: URL, channelCustomUrl: String) async throws {
+        defer {
+            print("fetchChannel done")
+            isFetching = false
+        }
+        
+        guard lastVideoURlStr != videoURlStr else { return }
+        
+        ymThumbnailData = nil
+        videoThumbnail = nil
+        channelThumbnail = nil
+        isFetching = true
+        
+        self.videoId = videoId
+        self.lastVideoURlStr = videoURlStr
+        
+        print("start fetchChannel")
+        let channelResponse: YTDecodable = try await networkService.fetch(from: channelUrl)
+        guard let channelItem = channelResponse.items.first,
+              let channelSnippet = channelItem.snippet,
+              let channelStatistics = channelItem.statistics,
+              let channelThumbnails = channelSnippet.thumbnails?.medium?.url
+        else { throw YMViewModelError.missingResponse }
+        
+        guard
+            let channelThumbnailUrl = URL(string: channelThumbnails),
+            let channelTitle = channelSnippet.title,
+            let channelCount = channelStatistics.subscriberCount
+        else { throw YMViewModelError.missingResponse }
+        
+        try await fetchChannelThumbnail(channelThumbnailUrl: channelThumbnailUrl)
+
+        let channelData = YMChannelData(
+            channelUrl: channelUrl,
+            channelThumbnailUrl: channelThumbnailUrl,
+            channelTitle: channelTitle,
+            channelCount: channelCount
+        )
+        
+        print("fetch channel success")
     }
     
     @MainActor
     func fetchThumbnails(videoThumbnailUrl: URL, channelThumbnailUrl: URL) async throws {
+        try await fetchVideoThumbnail(videoThumbnailUrl: videoThumbnailUrl)
+        try await fetchChannelThumbnail(channelThumbnailUrl: channelThumbnailUrl)
+    }
+    
+    @MainActor
+    func fetchVideoThumbnail(videoThumbnailUrl: URL) async throws {
         let videoThumbnailData: Data = try await networkService.fetch(url: videoThumbnailUrl)
         if let img = AppImage(data: videoThumbnailData) {
             self.videoThumbnail = Image(appImage: img)
         }
+    }
+    
+    @MainActor
+    func fetchChannelThumbnail(channelThumbnailUrl: URL) async throws {
         let channelThumbnailData: Data = try await networkService.fetch(url: channelThumbnailUrl)
         if let img = AppImage(data: channelThumbnailData) {
             self.channelThumbnail = Image(appImage: img)
@@ -459,9 +539,11 @@ extension ThumbnailMakerViewModel {
 
 private extension ThumbnailMakerViewModel {
     func extractVideoId(from urlStr: String) throws -> String? {
-        guard let valideURL = checkIfURLIsValid(urlStr: urlStr) else { throw YMViewModelError.notAYoutubeVideoURL }
+        guard let valideURL = checkIfURLIsValid(urlStr: urlStr) else { throw YMViewModelError.notAYoutubeURL }
         guard let comp = URLComponents(string: valideURL) else { return nil }
         guard let host = comp.host else { throw YMViewModelError.missingHost}
+        guard !comp.path.starts(with: "/@") else { throw YMViewModelError.foundYouTubeChannelCustomUrl }
+        
         if host == "youtu.be" {
             return comp.path.replacingOccurrences(of: "/", with: "")
         } else if host.contains("youtube.com") {
@@ -476,6 +558,13 @@ private extension ThumbnailMakerViewModel {
         } else {
             throw YMViewModelError.notAYoutubeVideoURL
         }
+    }
+    
+    func extractChannelCustomUrl(from urlStr: String) throws -> String? {
+        guard let valideURL = checkIfURLIsValid(urlStr: urlStr) else { throw YMViewModelError.notAYoutubeURL }
+        guard let comp = URLComponents(string: valideURL) else { return nil }
+        guard comp.path.starts(with: "/@") else { throw YMViewModelError.notAYoutubeChannelURL }
+        return comp.path.replacingOccurrences(of: "/", with: "")
     }
 }
 

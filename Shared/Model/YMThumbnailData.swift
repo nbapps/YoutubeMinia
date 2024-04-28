@@ -9,10 +9,20 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-struct YMThumbnailData {
+protocol YMDataProtocol {
+    var kind: YMKind { get }
+}
+
+enum YMKind: String, Codable {
+    case channel, video
+}
+
+struct YMThumbnailData: YMDataProtocol {
     let videoURL: URL
     let videoThumbnailUrl: URL
     let channelThumbnailUrl: URL
+    
+    let kind: YMKind = .video
     
     let videoTitle: String
     let channelTitle: String
@@ -35,4 +45,14 @@ extension YMThumbnailData {
         videoDuration: "16:31",
         publicationDate: Date(timeIntervalSince1970: 1713046764)
     )
+}
+
+struct YMChannelData: YMDataProtocol {
+    let channelUrl: URL
+    let channelThumbnailUrl: URL
+    
+    let kind: YMKind = .channel
+    
+    let channelTitle: String
+    let channelCount: String
 }
