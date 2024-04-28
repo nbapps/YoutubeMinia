@@ -56,6 +56,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
     @Published var exportSize: ExportScale = UserDefaults.appGroup.exportSize
     
     @Published var ymThumbnailData: YMThumbnailData?
+    @Published var ymChannelData: YMChannelData?
     @Published var videoThumbnail: Image?
     @Published var channelThumbnail: Image?
     
@@ -213,7 +214,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
               let channelId = videoSnippet.channelId
         else { throw YMViewModelError.missingResponse }
         
-        guard let ytChannelUrl = Config.channelURL(for: channelId)else { throw YMViewModelError.missingChannelId }
+        guard let ytChannelUrl = Config.channelURL(for: channelId) else { throw YMViewModelError.missingChannelId }
         
         let channelResponse: YTDecodable = try await networkService.fetch(from: ytChannelUrl)
         
@@ -233,7 +234,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
         else { throw YMViewModelError.missingResponse }
         
         let thumbnailData = YMThumbnailData(
-            videoURL: ytVideoUrl,
+            url: ytVideoUrl,
             videoThumbnailUrl: videoThumbnailUrl,
             channelThumbnailUrl: channelThumbnailUrl,
             videoTitle: videoTitle,
@@ -245,6 +246,14 @@ final class ThumbnailMakerViewModel: ObservableObject {
         )
         
         self.ymThumbnailData = thumbnailData
+        
+        let channelData = YMChannelData(
+            url: ytChannelUrl,
+            channelThumbnailUrl: channelThumbnailUrl,
+            channelTitle: channelTitle,
+            channelCount: channelCount
+        )
+        self.ymChannelData = channelData
         
         try await fetchThumbnails(
             videoThumbnailUrl: videoThumbnailUrl,
@@ -297,14 +306,27 @@ final class ThumbnailMakerViewModel: ObservableObject {
             let channelCount = channelStatistics.subscriberCount
         else { throw YMViewModelError.missingResponse }
         
-        try await fetchChannelThumbnail(channelThumbnailUrl: channelThumbnailUrl)
-
         let channelData = YMChannelData(
-            channelUrl: channelUrl,
+            url: channelUrl,
             channelThumbnailUrl: channelThumbnailUrl,
             channelTitle: channelTitle,
             channelCount: channelCount
         )
+        self.ymChannelData = channelData
+        
+        try await fetchChannelThumbnail(channelThumbnailUrl: channelThumbnailUrl)
+        
+//        _ = try PreviousURL.add(
+//            videoURlStr,
+//            videoId: videoId,
+//            title: videoTitle,
+//            thumbnailUrlStr: videoThumbnailUrl.absoluteString
+//        )
+        
+//        if exportAfterOnDrop {
+//            try exportToDownloads(thumbnailData: thumbnailData)
+//            exportAfterOnDrop = false
+//        }
         
         print("fetch channel success")
     }

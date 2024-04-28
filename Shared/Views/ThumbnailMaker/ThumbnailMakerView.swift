@@ -80,6 +80,45 @@ struct ThumbnailMakerView: View {
                             .padding()
                     }
                     
+                    // TODO: refactor, add drag and export and save in BDD
+                    
+                    let width = proxy.size.width
+                    Section {
+                        HStack(
+                            alignment: .center,
+                            spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8)
+                        ) {
+                            ChannelThumbnailView(
+                                value: viewModel.channelThumbnail,
+                                thumbnailWidth: width
+                            )
+                            
+                            VStack(
+                                alignment: .leading,
+                                spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)
+                            ) {
+                                
+                                ChannelTitleView(
+                                    value: viewModel.ymChannelData?.channelTitle ?? "My Channel",
+                                    thumbnailWidth: width
+                                )
+                                ChannelSubCountView(
+                                    value: viewModel.ymChannelData?.channelCount ?? "200000",
+                                    thumbnailWidth: width
+                                )
+                            }
+                            .font(.roboto(size: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 12)))
+                            .foregroundStyle(.primary)
+                        }
+                        .padding(.leading, viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
+                        .padding(.trailing, viewModel.responsiveFontSize(currentWidth: width, referenceSize: 16))
+                        .padding(.vertical, viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
+                        .background(viewModel.isDarkTheme ? .black.opacity(0.88) : .white, in: Capsule())
+                        .thumbnailShadow(radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
+                        .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: 16))
+                    }
+                    
+                    
                 }
                 if viewModel.isFetching {
                     ProgressView()

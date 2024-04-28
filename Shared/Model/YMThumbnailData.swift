@@ -9,16 +9,12 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-protocol YMDataProtocol {
-    var kind: YMKind { get }
-}
-
 enum YMKind: String, Codable {
     case channel, video
 }
 
-struct YMThumbnailData: YMDataProtocol {
-    let videoURL: URL
+struct YMThumbnailData {
+    let url: URL
     let videoThumbnailUrl: URL
     let channelThumbnailUrl: URL
     
@@ -35,7 +31,7 @@ struct YMThumbnailData: YMDataProtocol {
 extension YMThumbnailData {
     static let moc: YMThumbnailData =
     YMThumbnailData(
-        videoURL: URL(string: "https://www.youtube.com/watch?v=f7_CHu0ADhM")!,
+        url: URL(string: "https://www.youtube.com/watch?v=f7_CHu0ADhM")!,
         videoThumbnailUrl: URL(string: "https://i.ytimg.com/vi/f7_CHu0ADhM/maxresdefault.jpg")!,
         channelThumbnailUrl: URL(string: "https://yt3.ggpht.com/ytc/AIdro_ladyg5fV6ymBjPWBVtxYT06g8wSVa4-wnvez7kd9T-Ums=s240-c-k-c0x00ffffff-no-rj")!,
         videoTitle: "Quel abonné codera la meilleure solution ?",
@@ -47,12 +43,22 @@ extension YMThumbnailData {
     )
 }
 
-struct YMChannelData: YMDataProtocol {
-    let channelUrl: URL
+struct YMChannelData {
+    let url: URL
     let channelThumbnailUrl: URL
     
     let kind: YMKind = .channel
     
     let channelTitle: String
     let channelCount: String
+}
+
+extension YMChannelData {
+    static let moc: YMChannelData =
+    YMChannelData(
+        url: URL(string: "https://www.youtube.com/@BenjaminCode")!,
+        channelThumbnailUrl: URL(string: "https://yt3.ggpht.com/ytc/AIdro_ladyg5fV6ymBjPWBVtxYT06g8wSVa4-wnvez7kd9T-Ums=s240-c-k-c0x00ffffff-no-rj")!,
+        channelTitle: "Benjamin Code",
+        channelCount: "131000"
+    )
 }
