@@ -20,12 +20,12 @@ struct EmptyThumbnailView: View {
                     if let videoThumbnail = viewModel.videoThumbnail {
                         videoThumbnail
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                         
                     } else {
                         Image("videoThumbnail")
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .overlay {
                                 Rectangle()
                                     .foregroundStyle(.gray.opacity(0.7))

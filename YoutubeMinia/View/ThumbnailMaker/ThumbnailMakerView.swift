@@ -68,7 +68,7 @@ struct ThumbnailMakerView: View {
                     
                     Section {
                         VStack {
-                            ThumbnailViewOrEmpty(width: proxy.size.width * 0.8)
+                            ThumbnailViewOrEmpty(width: proxy.size.width)
                             if viewModel.ymThumbnailData == nil {
                                 Text("!Enter YouTube video URL to generate sharable thumbnail")
                             }
@@ -76,7 +76,7 @@ struct ThumbnailMakerView: View {
                     }
                     
                     Section {
-                        HiddenComponents(width: proxy.size.width * 0.8)
+                        HiddenComponents(width: proxy.size.width)
                             .padding()
                     }
                     

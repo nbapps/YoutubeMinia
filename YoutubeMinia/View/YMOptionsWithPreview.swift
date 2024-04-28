@@ -21,10 +21,9 @@ struct YMOptionsWithPreview: View {
                         .padding(.horizontal)
                     
                     
-                    ThumbnailViewOrEmpty(width: proxy.size.width * 0.8)
+                    ThumbnailViewOrEmpty(width: proxy.size.width)
                         .padding(8)
                 }
-                .frame(maxWidth: proxy.size.width, alignment: .center)
                 .zIndex(1)
                 
                 .ignoresSafeArea()

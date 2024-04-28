@@ -22,12 +22,12 @@ struct ThumbnailView: View {
                         if let videoThumbnail = viewModel.videoThumbnail {
                             videoThumbnail
                                 .resizable()
-                                .scaledToFit()
+                                .scaledToFill()
                         } else {
                             ZStack {
                                 Image("videoThumbnail")
                                     .resizable()
-                                    .scaledToFit()
+                                    .scaledToFill()
                                     .redacted(reason: .placeholder)
                                 
                                 ProgressView()

@@ -132,9 +132,11 @@ final class ThumbnailMakerViewModel: ObservableObject {
     @MainActor
     func renderThumbnail() -> AppImage? {
         guard let thumbnailData = ymThumbnailData else { return nil }
-        let rendered = ThumbnailView(thumbnailData: thumbnailData)
+        let width: CGFloat = 600
+        let rendered = ThumbnailView(thumbnailData: thumbnailData, width: width)
             .environmentObject(self)
-            .frame(width: 400)
+            .frame(width: width)
+//            .padding()
             .getScaledImage(scale: exportSize.scale)
 
         return rendered.appImage

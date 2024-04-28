@@ -34,11 +34,11 @@ struct ActionView: View {
                         }
                         
                         Section {
-                            ThumbnailViewOrEmpty(width: proxy.size.width * 0.8)
+                            ThumbnailViewOrEmpty(width: proxy.size.width)
                         }
                         
                         Section {
-                            HiddenComponents(width: proxy.size.width * 0.8)
+                            HiddenComponents(width: proxy.size.width)
                                 .padding()
                         }
                     }
