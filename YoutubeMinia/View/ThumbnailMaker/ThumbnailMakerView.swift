@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
+import SwiftData
 
 struct ThumbnailMakerView: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
@@ -21,6 +22,9 @@ struct ThumbnailMakerView: View {
     
     @State private var saveConfigFile = false
     @State private var showImportFile = false
+    
+    @Query(sort: [SortDescriptor(\PreviousURL.timestamp, order: .reverse)])
+    private var previousURLs: [PreviousURL]
     
     var body: some View {
         GeometryReader { proxy in
@@ -132,6 +136,11 @@ struct ThumbnailMakerView: View {
                 print("Saved to \(url)")
             case .failure(let error):
                 print(error.localizedDescription)
+            }
+        }
+        .task {
+            if let lastEntry = previousURLs.first, viewModel.videoURlStr.isEmpty {
+                viewModel.videoURlStr = lastEntry.videoURlStr
             }
         }
     }

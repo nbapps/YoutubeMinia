@@ -7,6 +7,92 @@
 
 import Foundation
 
+extension UserDefaults {
+    static let appGroup = UserDefaults(suiteName: Config.appGroup)!
+    
+    var videoURlStr: String {
+        get { string(forKey: NSUbiquitousKeyValueStore.videoURlStrKey) ?? "" }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.videoURlStrKey) }
+    }
+    
+    var showDuration: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.showDurationKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.showDurationKey) }
+    }
+    
+    var showChannelIcon: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.showChannelIconKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.showChannelIconKey) }
+    }
+    
+    var showChannelName: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.showChannelNameKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.showChannelNameKey) }
+    }
+    
+    var showChannelCount: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.showChannelCountKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.showChannelCountKey) }
+    }
+    
+    var showViewCount: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.showViewCountKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.showViewCountKey) }
+    }
+    
+    var showPublishDate: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.showPublishDateKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.showPublishDateKey) }
+    }
+    
+    var showProgress: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.showProgressKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.showProgressKey) }
+    }
+    
+    var lastProgress: Double {
+        get { double(forKey: NSUbiquitousKeyValueStore.lastProgressKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.lastProgressKey) }
+    }
+    
+    var isDarkTheme: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.isDarkThemeKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.isDarkThemeKey) }
+    }
+    
+    
+    var thumbnailCornerRadius: Double {
+        get { double(forKey: NSUbiquitousKeyValueStore.thumbnailCornerRadiusKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.thumbnailCornerRadiusKey) }
+    }
+    
+    var thumbnailPadding: Double {
+        get {
+            let val = double(forKey: NSUbiquitousKeyValueStore.thumbnailPaddingKey)
+            return val < 8 ? 8: val
+        }
+        set {
+            set(
+                newValue >= 8 ? newValue : 8,
+                forKey: NSUbiquitousKeyValueStore.thumbnailPaddingKey
+            )
+        }
+    }
+    
+    var exportSize: ExportScale {
+        get {
+            guard let val = string(forKey: NSUbiquitousKeyValueStore.exportScaleKey) else { return .x2}
+            return ExportScale(rawValue: val) ?? .x2
+        }
+        set { set(newValue.rawValue, forKey: NSUbiquitousKeyValueStore.exportScaleKey) }
+    }
+    
+    var applySavedSettingsOnSelectFromHistory: Bool {
+        get { bool(forKey: NSUbiquitousKeyValueStore.applySavedSettingsOnSelectFromHistoryKey) }
+        set { set(newValue, forKey: NSUbiquitousKeyValueStore.applySavedSettingsOnSelectFromHistoryKey) }
+    }
+}
+
 extension NSUbiquitousKeyValueStore {
     static let videoURlStrKey = "lastURlStrKey"
     var videoURlStr: String {

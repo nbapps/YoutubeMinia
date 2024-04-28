@@ -28,7 +28,8 @@ struct ThumbnailView: View {
                                 Image("videoThumbnail")
                                     .resizable()
                                     .scaledToFit()
-                                    .opacity(0.1)
+                                    .redacted(reason: .placeholder)
+                                
                                 ProgressView()
                             }
                         }
@@ -133,8 +134,7 @@ struct ThumbnailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .frame(width: width)
-            .padding([.horizontal, .top], viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.thumbnailPadding))
-            .padding(.bottom, viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.bottomPadding))
+            .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.thumbnailPadding))
             .background(viewModel.isDarkTheme ? .black.opacity(0.88) : .white, in: RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.outerCornerRadius)))
             .thumbnailShadow(radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
             .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))

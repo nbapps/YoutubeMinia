@@ -33,12 +33,6 @@ class ActionViewController: UIViewController {
         return v
     }()
 
-    override func loadView() {
-        super.loadView()
-        
-        NSUbiquitousKeyValueStore.default.synchronize()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

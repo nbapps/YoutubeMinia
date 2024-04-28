@@ -10,6 +10,7 @@ import Foundation
 struct Config {
     static let ytBaseURLStr = "https://www.googleapis.com/youtube/v3/"
     static let apiKey = Config.getValue(for: .youtubeApiKey)!
+    static let appGroup = "group.V4U726YWM5.com.nbapps.youtubeMiniaMaker"
     
     static func videoURL(for videoId: String) -> URL? {
         guard var urlComponents = URLComponents(string: ytBaseURLStr + "videos") else { return nil }

@@ -35,22 +35,22 @@ final class ThumbnailMakerViewModel: ObservableObject {
     
     @Published var lastVideoURlStr: String?
     @Published var videoId: String?
-    @Published var videoURlStr: String = ""//NSUbiquitousKeyValueStore.default.videoURlStr
-    @Published var showDuration: Bool = NSUbiquitousKeyValueStore.default.showDuration
-    @Published var showChannelIcon: Bool = NSUbiquitousKeyValueStore.default.showChannelIcon
-    @Published var showChannelName: Bool = NSUbiquitousKeyValueStore.default.showChannelName
-    @Published var showChannelCount: Bool = NSUbiquitousKeyValueStore.default.showChannelCount
-    @Published var showViewCount: Bool = NSUbiquitousKeyValueStore.default.showViewCount
-    @Published var showPublishDate: Bool = NSUbiquitousKeyValueStore.default.showPublishDate
-    @Published var showProgress: Bool = NSUbiquitousKeyValueStore.default.showProgress
-    @Published var lastProgress: Double = NSUbiquitousKeyValueStore.default.lastProgress
-    @Published var isDarkTheme: Bool = NSUbiquitousKeyValueStore.default.isDarkTheme
-    @Published var thumbnailCornerRadius: Double = NSUbiquitousKeyValueStore.default.thumbnailCornerRadius
-    @Published var thumbnailPadding: Double = NSUbiquitousKeyValueStore.default.thumbnailPadding
+    @Published var videoURlStr: String = ""// Dont use anymore this key because it's over consume API and it's not necessary with DB //UserDefaults.appGroup.videoURlStr
+    @Published var showDuration: Bool = UserDefaults.appGroup.showDuration
+    @Published var showChannelIcon: Bool = UserDefaults.appGroup.showChannelIcon
+    @Published var showChannelName: Bool = UserDefaults.appGroup.showChannelName
+    @Published var showChannelCount: Bool = UserDefaults.appGroup.showChannelCount
+    @Published var showViewCount: Bool = UserDefaults.appGroup.showViewCount
+    @Published var showPublishDate: Bool = UserDefaults.appGroup.showPublishDate
+    @Published var showProgress: Bool = UserDefaults.appGroup.showProgress
+    @Published var lastProgress: Double = UserDefaults.appGroup.lastProgress
+    @Published var isDarkTheme: Bool = UserDefaults.appGroup.isDarkTheme
+    @Published var thumbnailCornerRadius: Double = UserDefaults.appGroup.thumbnailCornerRadius
+    @Published var thumbnailPadding: Double = UserDefaults.appGroup.thumbnailPadding
     
-    @Published var applySavedSettingsOnSelectFromHistory: Bool = NSUbiquitousKeyValueStore.default.applySavedSettingsOnSelectFromHistory
+    @Published var applySavedSettingsOnSelectFromHistory: Bool = UserDefaults.appGroup.applySavedSettingsOnSelectFromHistory
     
-    @Published var exportSize: ExportScale = NSUbiquitousKeyValueStore.default.exportSize
+    @Published var exportSize: ExportScale = UserDefaults.appGroup.exportSize
     
     @Published var ymThumbnailData: YMThumbnailData?
     @Published var videoThumbnail: Image?
@@ -446,12 +446,9 @@ extension ThumbnailMakerViewModel {
     var innerCornerRadius: Double {
         mapValue(thumbnailCornerRadius, fromRange: 0...1, toRange: 8...20)
     }
+    
     var outerCornerRadius: Double {
         (innerCornerRadius + thumbnailPadding).rounded(.up)
-    }
-    
-    var bottomPadding: Double {
-        mapValue(thumbnailPadding, fromRange: 8...20, toRange: 8...16)
     }
     
     var allComponentsDisplayed: Bool {
@@ -489,10 +486,12 @@ private extension ThumbnailMakerViewModel {
 
 private extension ThumbnailMakerViewModel {
     func observeUbiquitousKeyValueStore() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(ubiquitousKeyValueStoreDidChange(_:)),
-                                               name: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
-                                               object: NSUbiquitousKeyValueStore.default)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(ubiquitousKeyValueStoreDidChange(_:)),
+            name: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
+            object: NSUbiquitousKeyValueStore.default
+        )
     }
     
     @objc
@@ -582,8 +581,11 @@ private extension ThumbnailMakerViewModel {
         $videoURlStr
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.videoURlStr = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.videoURlStr = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.videoURlStr {
+                    NSUbiquitousKeyValueStore.default.videoURlStr = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -591,8 +593,11 @@ private extension ThumbnailMakerViewModel {
         $showDuration
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.showDuration = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.showDuration = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.showDuration {
+                    NSUbiquitousKeyValueStore.default.showDuration = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -600,8 +605,11 @@ private extension ThumbnailMakerViewModel {
         $showChannelIcon
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.showChannelIcon = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.showChannelIcon = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.showChannelIcon {
+                    NSUbiquitousKeyValueStore.default.showChannelIcon = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -609,8 +617,11 @@ private extension ThumbnailMakerViewModel {
         $showChannelName
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.showChannelName = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.showChannelName = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.showChannelName {
+                    NSUbiquitousKeyValueStore.default.showChannelName = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)     
@@ -618,8 +629,11 @@ private extension ThumbnailMakerViewModel {
         $showChannelCount
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.showChannelCount = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.showChannelCount = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.showChannelCount {
+                    NSUbiquitousKeyValueStore.default.showChannelCount = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -627,8 +641,11 @@ private extension ThumbnailMakerViewModel {
         $showViewCount
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.showViewCount = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.showViewCount = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.showViewCount {
+                    NSUbiquitousKeyValueStore.default.showViewCount = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -636,8 +653,11 @@ private extension ThumbnailMakerViewModel {
         $showPublishDate
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.showPublishDate = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.showPublishDate = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.showPublishDate {
+                    NSUbiquitousKeyValueStore.default.showPublishDate = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -645,8 +665,11 @@ private extension ThumbnailMakerViewModel {
         $showProgress
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.showProgress = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.showProgress = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.showProgress {
+                    NSUbiquitousKeyValueStore.default.showProgress = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -654,8 +677,11 @@ private extension ThumbnailMakerViewModel {
         $lastProgress
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.lastProgress = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.lastProgress = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.lastProgress {
+                    NSUbiquitousKeyValueStore.default.lastProgress = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -663,8 +689,11 @@ private extension ThumbnailMakerViewModel {
         $isDarkTheme
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.isDarkTheme = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.isDarkTheme = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.isDarkTheme {
+                    NSUbiquitousKeyValueStore.default.isDarkTheme = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -672,8 +701,11 @@ private extension ThumbnailMakerViewModel {
         $thumbnailCornerRadius
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.thumbnailCornerRadius = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.thumbnailCornerRadius = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.thumbnailCornerRadius {
+                    NSUbiquitousKeyValueStore.default.thumbnailCornerRadius = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)  
@@ -681,8 +713,11 @@ private extension ThumbnailMakerViewModel {
         $thumbnailPadding
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.thumbnailPadding = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.thumbnailPadding = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.thumbnailPadding {
+                    NSUbiquitousKeyValueStore.default.thumbnailPadding = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
@@ -690,8 +725,11 @@ private extension ThumbnailMakerViewModel {
         $exportSize
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.exportSize = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.exportSize = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.exportSize {
+                    NSUbiquitousKeyValueStore.default.exportSize = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)  
@@ -699,8 +737,11 @@ private extension ThumbnailMakerViewModel {
         $applySavedSettingsOnSelectFromHistory
             .debounce(for: .seconds(1), scheduler: DispatchQueue.global())
             .sink { [weak self] newValue in
-                NSUbiquitousKeyValueStore.default.applySavedSettingsOnSelectFromHistory = newValue
-                NSUbiquitousKeyValueStore.default.synchronize()
+                UserDefaults.appGroup.applySavedSettingsOnSelectFromHistory = newValue
+                if newValue != NSUbiquitousKeyValueStore.default.applySavedSettingsOnSelectFromHistory {
+                    NSUbiquitousKeyValueStore.default.applySavedSettingsOnSelectFromHistory = newValue
+                    NSUbiquitousKeyValueStore.default.synchronize()
+                }
                 _ = try? PreviousURL.updateIfExist(videoId: self?.videoId)
             }
             .store(in: &cancellables)
