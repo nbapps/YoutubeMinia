@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if os(macOS)
 struct SaveInDownloadButton: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
     
@@ -43,3 +44,4 @@ struct SaveInDownloadButton: View {
     )
         .environmentObject(ThumbnailMakerViewModel.preview)
 }
+#endif

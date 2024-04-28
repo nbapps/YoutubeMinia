@@ -37,16 +37,11 @@
 		3700A49D2BDD304E00FB9E81 /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
 		3700A49E2BDD304E00FB9E81 /* YMThumbnailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30552BDA518300135B48 /* YMThumbnailData.swift */; };
 		3700A49F2BDD305400FB9E81 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30062BD99A6B00135B48 /* Config.swift */; };
-		3700A4A02BDD306000FB9E81 /* LastUrlsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4632BDC11E300FB9E81 /* LastUrlsRowView.swift */; };
 		3700A4A12BDD306000FB9E81 /* YMOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30362BDA2D0C00135B48 /* YMOptionsView.swift */; };
 		3700A4A22BDD306000FB9E81 /* CopyImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400402BDA9F33005E432B /* CopyImageButtonView.swift */; };
-		3700A4A32BDD306000FB9E81 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400422BDAA04A005E432B /* PreferencesView.swift */; };
 		3700A4A42BDD306000FB9E81 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300C2BD9A11000135B48 /* ProgressBar.swift */; };
 		3700A4A52BDD306000FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */; };
-		3700A4A62BDD306000FB9E81 /* LastUrlsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4612BDC039800FB9E81 /* LastUrlsListView.swift */; };
 		3700A4A72BDD306000FB9E81 /* EmptyThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */; };
-		3700A4A82BDD306000FB9E81 /* SaveInDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */; };
-		3700A4A92BDD306000FB9E81 /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */; };
 		3700A4AA2BDD306700FB9E81 /* VideoTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A46D2BDCF6E600FB9E81 /* VideoTitleView.swift */; };
 		3700A4AB2BDD306700FB9E81 /* ChannelSubCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4712BDCF7E700FB9E81 /* ChannelSubCountView.swift */; };
 		3700A4AC2BDD306700FB9E81 /* VideoPublishDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4752BDCF8EB00FB9E81 /* VideoPublishDateView.swift */; };
@@ -93,7 +88,6 @@
 		3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
 		374400312BDA7BB8005E432B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 374400302BDA7BB8005E432B /* README.md */; };
 		374400332BDA7EF5005E432B /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
-		374400352BDA92CE005E432B /* yttm_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 374400342BDA92CE005E432B /* yttm_icon.png */; };
 		374400372BDA9982005E432B /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400362BDA9982005E432B /* Draggable.swift */; };
 		3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */; };
 		3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003C2BDA9BFF005E432B /* ThumbnailView.swift */; };
@@ -113,6 +107,9 @@
 		374D14D62BDE3F3C00BCEB93 /* ThumbnailViewOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */; };
 		374D14D82BDE42A200BCEB93 /* YMOptionsWithPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */; };
 		374D14D92BDE431400BCEB93 /* YMOptionsWithPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */; };
+		374D14DC2BDE78BB00BCEB93 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */; };
+		374D14DD2BDE790700BCEB93 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */; };
+		374D14E22BDE7AB500BCEB93 /* yttm_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 374D14E12BDE7AB500BCEB93 /* yttm_icon.png */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
@@ -203,7 +200,6 @@
 		3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extensions.swift"; sourceTree = "<group>"; };
 		374400302BDA7BB8005E432B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		374400322BDA7EF5005E432B /* SharableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharableFile.swift; sourceTree = "<group>"; };
-		374400342BDA92CE005E432B /* yttm_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yttm_icon.png; sourceTree = "<group>"; };
 		374400362BDA9982005E432B /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 		3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
 		3744003C2BDA9BFF005E432B /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
@@ -222,6 +218,8 @@
 		374D14D32BDD5C2300BCEB93 /* YT Minia Maker Action.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YT Minia Maker Action.entitlements"; sourceTree = "<group>"; };
 		374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailViewOrEmpty.swift; sourceTree = "<group>"; };
 		374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMOptionsWithPreview.swift; sourceTree = "<group>"; };
+		374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
+		374D14E12BDE7AB500BCEB93 /* yttm_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yttm_icon.png; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -340,17 +338,10 @@
 			isa = PBXGroup;
 			children = (
 				377E2FC52BD9943A00135B48 /* ContentView.swift */,
-				374400392BDA99EF005E432B /* ThumbnailMaker */,
-				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
-				374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */,
-				3700A4652BDCF3BB00FB9E81 /* Thumbnail */,
-				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
 				3700A4612BDC039800FB9E81 /* LastUrlsListView.swift */,
 				3700A4632BDC11E300FB9E81 /* LastUrlsRowView.swift */,
 				3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */,
 				374D14D12BDD468B00BCEB93 /* ShareConfigFileButton.swift */,
-				374400402BDA9F33005E432B /* CopyImageButtonView.swift */,
-				3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */,
 				3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */,
 				374400422BDAA04A005E432B /* PreferencesView.swift */,
 			);
@@ -366,12 +357,40 @@
 			path = ThumbnailMaker;
 			sourceTree = "<group>";
 		};
+		374D14DA2BDE78AE00BCEB93 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */,
+				377E30062BD99A6B00135B48 /* Config.swift */,
+				377E30132BD9ADAC00135B48 /* Model */,
+				374D14DE2BDE795E00BCEB93 /* Views */,
+				377E30442BDA3CF500135B48 /* Extensions */,
+				377E305B2BDA550D00135B48 /* Services */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		374D14DE2BDE795E00BCEB93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
+				374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */,
+				3700A4652BDCF3BB00FB9E81 /* Thumbnail */,
+				374400392BDA99EF005E432B /* ThumbnailMaker */,
+				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
+				374400402BDA9F33005E432B /* CopyImageButtonView.swift */,
+				3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		377E2FB72BD9943A00135B48 = {
 			isa = PBXGroup;
 			children = (
 				374400302BDA7BB8005E432B /* README.md */,
 				3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */,
 				377E30032BD99A0600135B48 /* Config.xcconfig */,
+				374D14DA2BDE78AE00BCEB93 /* Shared */,
 				377E2FC22BD9943A00135B48 /* YoutubeMinia */,
 				377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */,
 				377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */,
@@ -393,15 +412,11 @@
 		377E2FC22BD9943A00135B48 /* YoutubeMinia */ = {
 			isa = PBXGroup;
 			children = (
+				377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */,
 				377E30052BD99A2200135B48 /* Info.plist */,
 				377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */,
-				377E30062BD99A6B00135B48 /* Config.swift */,
-				377E30132BD9ADAC00135B48 /* Model */,
 				374400382BDA99B5005E432B /* View */,
-				377E30442BDA3CF500135B48 /* Extensions */,
-				377E305B2BDA550D00135B48 /* Services */,
 				377E301A2BD9BA9400135B48 /* Ressources */,
-				377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */,
 				377E2FCB2BD9943B00135B48 /* Preview Content */,
 			);
 			path = YoutubeMinia;
@@ -410,6 +425,8 @@
 		377E2FCB2BD9943B00135B48 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				377E300E2BD9AC2700135B48 /* devVideo.json */,
+				377E30182BD9B00F00135B48 /* devChannel.json */,
 				377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -450,11 +467,9 @@
 		377E301A2BD9BA9400135B48 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				377E300E2BD9AC2700135B48 /* devVideo.json */,
-				377E30182BD9B00F00135B48 /* devChannel.json */,
-				374400342BDA92CE005E432B /* yttm_icon.png */,
 				377E301B2BD9BAAF00135B48 /* font */,
 				377E2FC92BD9943B00135B48 /* Assets.xcassets */,
+				374D14E12BDE7AB500BCEB93 /* yttm_icon.png */,
 				377E304F2BDA4A6600135B48 /* Localizable.xcstrings */,
 			);
 			path = Ressources;
@@ -602,6 +617,7 @@
 				3700A4C82BDD31A400FB9E81 /* Config.xcconfig in Resources */,
 				3700A4C92BDD420A00FB9E81 /* Localizable.xcstrings in Resources */,
 				3700A48A2BDD227800FB9E81 /* Base in Resources */,
+				374D14DD2BDE790700BCEB93 /* Shared.xcassets in Resources */,
 				3700A4CA2BDD437A00FB9E81 /* Roboto-LightItalic.ttf in Resources */,
 				3700A4CB2BDD437A00FB9E81 /* Roboto-Thin.ttf in Resources */,
 				3700A4CC2BDD437A00FB9E81 /* Roboto-ThinItalic.ttf in Resources */,
@@ -637,10 +653,11 @@
 				377E302B2BD9BABE00135B48 /* Roboto-BlackItalic.ttf in Resources */,
 				377E302C2BD9BABE00135B48 /* Roboto-Medium.ttf in Resources */,
 				377E30502BDA4A6600135B48 /* Localizable.xcstrings in Resources */,
-				374400352BDA92CE005E432B /* yttm_icon.png in Resources */,
 				377E300F2BD9AC2700135B48 /* devVideo.json in Resources */,
+				374D14E22BDE7AB500BCEB93 /* yttm_icon.png in Resources */,
 				377E302E2BD9BABE00135B48 /* Roboto-Thin.ttf in Resources */,
 				377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */,
+				374D14DC2BDE78BB00BCEB93 /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,18 +687,13 @@
 				3700A49F2BDD305400FB9E81 /* Config.swift in Sources */,
 				3700A4992BDD304E00FB9E81 /* PreviousURLs.swift in Sources */,
 				3700A49A2BDD304E00FB9E81 /* ExportScale.swift in Sources */,
-				3700A4A02BDD306000FB9E81 /* LastUrlsRowView.swift in Sources */,
 				3700A4A12BDD306000FB9E81 /* YMOptionsView.swift in Sources */,
 				3700A4A22BDD306000FB9E81 /* CopyImageButtonView.swift in Sources */,
-				3700A4A32BDD306000FB9E81 /* PreferencesView.swift in Sources */,
 				3700A4A42BDD306000FB9E81 /* ProgressBar.swift in Sources */,
 				3700A4A52BDD306000FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */,
-				3700A4A62BDD306000FB9E81 /* LastUrlsListView.swift in Sources */,
 				3700A4A72BDD306000FB9E81 /* EmptyThumbnailView.swift in Sources */,
-				3700A4A82BDD306000FB9E81 /* SaveInDownloadButton.swift in Sources */,
 				374D14D62BDE3F3C00BCEB93 /* ThumbnailViewOrEmpty.swift in Sources */,
 				374D14D92BDE431400BCEB93 /* YMOptionsWithPreview.swift in Sources */,
-				3700A4A92BDD306000FB9E81 /* MenuBarExtraView.swift in Sources */,
 				3700A49B2BDD304E00FB9E81 /* Database.swift in Sources */,
 				3700A49C2BDD304E00FB9E81 /* YTDecodable.swift in Sources */,
 				3700A49D2BDD304E00FB9E81 /* SharableFile.swift in Sources */,
