@@ -85,7 +85,7 @@ struct HiddenComponents: View {
                             }
                             if !viewModel.showPublishDate {
                                 VideoPublishDateView(
-                                    value: viewModel.ymThumbnailData?.publicationDate ?? .now,
+                                    value: viewModel.ymThumbnailData?.publicationDate ?? Date(timeIntervalSinceNow: -3600),
                                     thumbnailWidth: width
                                 )
                             }

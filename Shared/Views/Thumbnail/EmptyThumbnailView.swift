@@ -114,7 +114,7 @@ struct EmptyThumbnailView: View {
                                 }
                                 if viewModel.showPublishDate {
                                     VideoPublishDateView(
-                                        value: .now,
+                                        value: Date(timeIntervalSinceNow: -3600),
                                         thumbnailWidth: width
                                     )
                                 }
