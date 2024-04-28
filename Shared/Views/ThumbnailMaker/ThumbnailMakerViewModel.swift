@@ -170,8 +170,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
         self.lastVideoURlStr = videoURlStr
         
         print("start fetch")
-        let videoReponse: YTDecodable = try await networkService.fetch(from: ytVideoUrl)
-        guard let videoItem = videoReponse.items.first,
+        let videoResponse: YTDecodable = try await networkService.fetch(from: ytVideoUrl)
+        guard let videoItem = videoResponse.items.first,
               let videoSnippet = videoItem.snippet,
               let videoStatistics = videoItem.statistics,
               let thumbnails = videoSnippet.thumbnails,
