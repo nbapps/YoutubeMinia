@@ -8,8 +8,11 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import SwiftData
+import StoreKit
 
 struct ThumbnailMakerView: View {
+    @Environment(\.requestReview) var requestReview
+    
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
 #if os(macOS)
     @State private var showInspector = true
@@ -142,6 +145,10 @@ struct ThumbnailMakerView: View {
             if let lastEntry = previousURLs.first, viewModel.videoURlStr.isEmpty {
                 viewModel.videoURlStr = lastEntry.videoURlStr
             }
+        }
+        .onChange(of: viewModel.videoURlStr) { _, newValue in
+            guard newValue.isNotEmpty else { return }
+            requestReview()
         }
     }
 }

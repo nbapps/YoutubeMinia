@@ -35,7 +35,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
     
     @Published var lastVideoURlStr: String?
     @Published var videoId: String?
-    @Published var videoURlStr: String = ""// Dont use anymore this key because it's over consume API and it's not necessary with DB //UserDefaults.appGroup.videoURlStr
+    @Published var videoURlStr: String = ""// Dont use anymore this key because it's not necessary with DB // UserDefaults.appGroup.videoURlStr
     @Published var showDuration: Bool = UserDefaults.appGroup.showDuration
     @Published var showChannelIcon: Bool = UserDefaults.appGroup.showChannelIcon
     @Published var showChannelName: Bool = UserDefaults.appGroup.showChannelName
