@@ -33,9 +33,6 @@ struct EmptyThumbnailView: View {
                             .redacted(reason: .placeholder)
                     }
                 }
-                .clipShape(
-                    RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius))
-                )
                 
                 VStack(alignment: .trailing, spacing: 0) {
                     VideoDurationView(
@@ -53,10 +50,10 @@ struct EmptyThumbnailView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .redacted(reason: .placeholder)
-                .clipShape(
-                    RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius + 0.5))
-                )
             }
+            .clipShape(
+                RoundedRectangle(cornerRadius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.innerCornerRadius))
+            )
             .thumbnailShadow(
                 radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)
             )
@@ -140,6 +137,8 @@ struct EmptyThumbnailView: View {
 }
 
 #Preview {
-    EmptyThumbnailView()
+    EmptyThumbnailView(width: 350)
+        .scaledToFit()
+        .frame(width: 350)
         .environmentObject(ThumbnailMakerViewModel.shared)
 }
