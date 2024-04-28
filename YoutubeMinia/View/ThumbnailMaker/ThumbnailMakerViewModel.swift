@@ -35,7 +35,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
     
     @Published var lastVideoURlStr: String?
     @Published var videoId: String?
-    @Published var videoURlStr: String = NSUbiquitousKeyValueStore.default.videoURlStr
+    @Published var videoURlStr: String = ""//NSUbiquitousKeyValueStore.default.videoURlStr
     @Published var showDuration: Bool = NSUbiquitousKeyValueStore.default.showDuration
     @Published var showChannelIcon: Bool = NSUbiquitousKeyValueStore.default.showChannelIcon
     @Published var showChannelName: Bool = NSUbiquitousKeyValueStore.default.showChannelName
@@ -99,6 +99,21 @@ final class ThumbnailMakerViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
+        $showProgress
+            .compactMap { $0 ? $0 : nil }
+            .sink { [weak self] newValue in
+                if self?.lastProgress == 0 {
+                    self?.lastProgress = 0.5
+                }
+            }
+            .store(in: &cancellables)
+        
+        $lastProgress
+            .debounce(for: .seconds(0.3), scheduler: DispatchQueue.main)
+            .sink { [weak self] newValue in
+                self?.showProgress = newValue != 0
+            }
+            .store(in: &cancellables)
 #if os(macOS)
         KeyboardShortcuts.onKeyUp(for: .fetchThumbnail) { [weak self] in
             self?.pastUrlAndFetchIfPossible()

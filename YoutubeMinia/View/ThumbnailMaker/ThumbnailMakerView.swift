@@ -60,21 +60,9 @@ struct ThumbnailMakerView: View {
                     }
                     
                     Section {
-                        if let thumbnailData = viewModel.ymThumbnailData {
-                            VStack {
-                                ThumbnailView(thumbnailData: thumbnailData, width: proxy.size.width * 0.8)
-                                //                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .padding()
-                                    .draggableIfAllow(
-                                        image: ThumbnailView(thumbnailData: thumbnailData)
-                                            .environmentObject(viewModel)
-                                            .getScaledImage(scale: viewModel.exportSize.scale)
-                                            .appImage
-                                    )
-                            }
-                        } else {
-                            VStack {
-                                EmptyThumbnailView(width: proxy.size.width * 0.8)
+                        VStack {
+                            ThumbnailViewOrEmpty(width: proxy.size.width * 0.8)
+                            if viewModel.ymThumbnailData == nil {
                                 Text("!Enter YouTube video URL to generate sharable thumbnail")
                             }
                         }
@@ -99,7 +87,7 @@ struct ThumbnailMakerView: View {
         }
 #else
         .sheet(isPresented: $showInspector) {
-            YMOptionsView()
+            YMOptionsWithPreview()
                 .disabled(viewModel.isFetching)
         }
 #endif
@@ -125,7 +113,6 @@ struct ThumbnailMakerView: View {
             } label: {
                 Image(systemName: "switch.2")
             }
-            
         }
         .disabled(viewModel.isFetching)
         .onDrop(of: [.item], isTargeted: nil, perform: viewModel.processOnDrop)
@@ -182,7 +169,9 @@ private extension ThumbnailMakerView {
 }
 
 #Preview {
-    ThumbnailMakerView()
+    NavigationStack {
+        ThumbnailMakerView()
+    }
 #if os(macOS)
         .frame(width: 800, height: 500)
 #endif

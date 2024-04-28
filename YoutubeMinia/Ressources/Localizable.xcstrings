@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "!%lld day%@ ago" : {
       "localizations" : {
         "en" : {
@@ -283,7 +286,7 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Close"
           }
         }
@@ -907,7 +910,7 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cette URL ne semble pas être une URL valide de YouTube"
           }
         }
@@ -923,7 +926,7 @@
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Miniature"
           }
         }

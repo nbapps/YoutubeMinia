@@ -58,7 +58,7 @@ struct EmptyThumbnailView: View {
                 )
             }
             .thumbnailShadow(
-                radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8)
+                radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4)
             )
             
             HStack(
@@ -137,7 +137,7 @@ struct EmptyThumbnailView: View {
         .padding(.bottom, viewModel.bottomPadding)
         .background(viewModel.isDarkTheme ? .black.opacity(0.88) : .white, in: RoundedRectangle(cornerRadius: viewModel.outerCornerRadius))
         .thumbnailShadow(radius: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
-        .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: 16))
+        .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
     }
 }
 

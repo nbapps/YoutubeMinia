@@ -12,43 +12,28 @@ struct YMOptionsView: View {
     
     var body: some View {
         List {
-            Text("!Options")
-#if os(macOS)
-                .font(.footnote)
-                .fontWeight(.bold)
-                .foregroundStyle(.secondary)
-#else
-                .font(.title)
-                .fontWeight(.bold)
-                .listRowInsets(.init())
-                .listRowBackground(Color.clear)
-#endif
-
-                Section {
-                    Toggle("!Show video duration", isOn: $viewModel.showDuration.animation())
-                    Toggle("!Show views count", isOn: $viewModel.showViewCount.animation())
-                    Toggle("!Show publication date", isOn: $viewModel.showPublishDate.animation())
-                }
-                
-                
-                Section {
-                    Toggle("!Show channel icon", isOn: $viewModel.showChannelIcon.animation())
-                    Toggle("!Show channel name", isOn: $viewModel.showChannelName.animation())
-                    Toggle("!Show channel sub", isOn: $viewModel.showChannelCount.animation())
-                }
-                
+            Section {
+                Toggle("!Show video duration", isOn: $viewModel.showDuration.animation())
+                Toggle("!Show views count", isOn: $viewModel.showViewCount.animation())
+                Toggle("!Show publication date", isOn: $viewModel.showPublishDate.animation())
+            }
+            
+            
+            Section {
+                Toggle("!Show channel icon", isOn: $viewModel.showChannelIcon.animation())
+                Toggle("!Show channel name", isOn: $viewModel.showChannelName.animation())
+                Toggle("!Show channel sub", isOn: $viewModel.showChannelCount.animation())
+            }
+            
             Section {
                 Toggle("!Dark theme", isOn: $viewModel.isDarkTheme.animation())
             }
-                
+            
             Section {
                 Toggle("!Show progress bar", isOn: $viewModel.showProgress.animation())
-                ProgressBar(title: String(localized: "!Progress"), progress: $viewModel.lastProgress)
-                    .onChange(of: viewModel.lastProgress) { _, newValue in
-                        viewModel.showProgress = newValue != 0
-                    }
+                ProgressBar(title: String(localized: "!Progress"), progress: $viewModel.lastProgress, range: 0...1)
             }
-                
+            
             Section {
                 ProgressBar(title: String(localized: "!Corner radius"), progress: $viewModel.thumbnailCornerRadius)
                 ProgressBar(title: String(localized: "!Thumbnail padding"), progress: $viewModel.thumbnailPadding, showValue: false, range: 8...20, step: 1)
@@ -72,5 +57,5 @@ struct YMOptionsView: View {
 
 #Preview {
     YMOptionsView()
-        .environmentObject(ThumbnailMakerViewModel.shared)
+        .environmentObject(ThumbnailMakerViewModel.preview)
 }

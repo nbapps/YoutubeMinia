@@ -11,6 +11,8 @@ struct ActionView: View {
     @StateObject var actionViewModel: ActionViewModel
     @StateObject var thumbnailMakerViewModel: ThumbnailMakerViewModel
 
+    @State private var showSheet = false
+    
     @State private var showError = false
     @State private var errorMessage = ""
     
@@ -32,24 +34,7 @@ struct ActionView: View {
                         }
                         
                         Section {
-                            if let thumbnailData = thumbnailMakerViewModel.ymThumbnailData {
-                                VStack {
-                                    ThumbnailView(thumbnailData: thumbnailData, width: proxy.size.width * 0.8)
-                                    //                                    .frame(maxWidth: .infinity, alignment: .center)
-                                        .padding()
-                                        .draggableIfAllow(
-                                            image: ThumbnailView(thumbnailData: thumbnailData)
-                                                .environmentObject(thumbnailMakerViewModel)
-                                                .getScaledImage(scale: thumbnailMakerViewModel.exportSize.scale)
-                                                .appImage
-                                        )
-                                }
-                            } else {
-                                VStack {
-                                    EmptyThumbnailView(width: proxy.size.width * 0.8)
-                                    Text("!Enter YouTube video URL to generate sharable thumbnail")
-                                }
-                            }
+                            ThumbnailViewOrEmpty(width: proxy.size.width * 0.8)
                         }
                         
                         Section {
@@ -93,7 +78,7 @@ struct ActionView: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     if actionViewModel.isValidYTURL {
                         Menu("!Close") {
                             SaveToPhotoLibraryButtonView(
@@ -115,6 +100,19 @@ struct ActionView: View {
                         }
                     }
                 }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showSheet.toggle()
+                    } label: {
+                        Image(systemName: "switch.2")
+                            .padding(.horizontal)
+                    }
+                }
+            }
+            .sheet(isPresented: $showSheet) {
+                YMOptionsWithPreview()
+                    .disabled(thumbnailMakerViewModel.isFetching)
             }
             .padding(.horizontal)
             .navigationTitle("!Thumbnail")
