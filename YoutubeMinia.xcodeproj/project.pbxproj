@@ -110,6 +110,7 @@
 		374D14DC2BDE78BB00BCEB93 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */; };
 		374D14DD2BDE790700BCEB93 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */; };
 		374D14E22BDE7AB500BCEB93 /* yttm_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 374D14E12BDE7AB500BCEB93 /* yttm_icon.png */; };
+		374D14EA2BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
@@ -157,6 +158,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3700A47E2BDD227800FB9E81;
 			remoteInfo = "YT Minia Maker Action";
+		};
+		374D14EB2BDE7DCB00BCEB93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 377E2FB82BD9943A00135B48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377E2FBF2BD9943A00135B48;
+			remoteInfo = YoutubeMinia;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -220,15 +228,15 @@
 		374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMOptionsWithPreview.swift; sourceTree = "<group>"; };
 		374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		374D14E12BDE7AB500BCEB93 /* yttm_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yttm_icon.png; sourceTree = "<group>"; };
+		374D14E72BDE7DCB00BCEB93 /* YT Minia MakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YT Minia MakerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YT_Minia_MakerTests.swift; sourceTree = "<group>"; };
+		374D14F02BDE7FDC00BCEB93 /* YoutubeMinia.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = YoutubeMinia.xctestplan; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		377E2FC92BD9943B00135B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoutubeMinia.entitlements; sourceTree = "<group>"; };
-		377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaTests.swift; sourceTree = "<group>"; };
-		377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITests.swift; sourceTree = "<group>"; };
-		377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		377E30012BD9981900135B48 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		377E30032BD99A0600135B48 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		377E30052BD99A2200135B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -272,6 +280,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3700A4822BDD227800FB9E81 /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374D14E42BDE7DCB00BCEB93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,17 +399,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		374D14E82BDE7DCB00BCEB93 /* YT Minia MakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */,
+			);
+			path = "YT Minia MakerTests";
+			sourceTree = "<group>";
+		};
 		377E2FB72BD9943A00135B48 = {
 			isa = PBXGroup;
 			children = (
+				374D14F02BDE7FDC00BCEB93 /* YoutubeMinia.xctestplan */,
 				374400302BDA7BB8005E432B /* README.md */,
 				3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */,
 				377E30032BD99A0600135B48 /* Config.xcconfig */,
 				374D14DA2BDE78AE00BCEB93 /* Shared */,
 				377E2FC22BD9943A00135B48 /* YoutubeMinia */,
-				377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */,
-				377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */,
 				3700A4832BDD227800FB9E81 /* YT Minia Maker Action */,
+				374D14E82BDE7DCB00BCEB93 /* YT Minia MakerTests */,
 				3700A4802BDD227800FB9E81 /* Frameworks */,
 				377E2FC12BD9943A00135B48 /* Products */,
 			);
@@ -405,6 +428,7 @@
 			children = (
 				377E2FC02BD9943A00135B48 /* YT Minia Maker.app */,
 				3700A47F2BDD227800FB9E81 /* YT Minia Maker Action.appex */,
+				374D14E72BDE7DCB00BCEB93 /* YT Minia MakerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -430,23 +454,6 @@
 				377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */ = {
-			isa = PBXGroup;
-			children = (
-				377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */,
-			);
-			path = YoutubeMiniaTests;
-			sourceTree = "<group>";
-		};
-		377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */,
-				377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */,
-			);
-			path = YoutubeMiniaUITests;
 			sourceTree = "<group>";
 		};
 		377E30132BD9ADAC00135B48 /* Model */ = {
@@ -545,6 +552,24 @@
 			productReference = 3700A47F2BDD227800FB9E81 /* YT Minia Maker Action.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		374D14E62BDE7DCB00BCEB93 /* YT Minia MakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 374D14ED2BDE7DCB00BCEB93 /* Build configuration list for PBXNativeTarget "YT Minia MakerTests" */;
+			buildPhases = (
+				374D14E32BDE7DCB00BCEB93 /* Sources */,
+				374D14E42BDE7DCB00BCEB93 /* Frameworks */,
+				374D14E52BDE7DCB00BCEB93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				374D14EC2BDE7DCB00BCEB93 /* PBXTargetDependency */,
+			);
+			name = "YT Minia MakerTests";
+			productName = "YT Minia MakerTests";
+			productReference = 374D14E72BDE7DCB00BCEB93 /* YT Minia MakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		377E2FBF2BD9943A00135B48 /* YoutubeMinia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 377E2FE72BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMinia" */;
@@ -580,6 +605,10 @@
 					3700A47E2BDD227800FB9E81 = {
 						CreatedOnToolsVersion = 15.3;
 					};
+					374D14E62BDE7DCB00BCEB93 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 377E2FBF2BD9943A00135B48;
+					};
 					377E2FBF2BD9943A00135B48 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -604,6 +633,7 @@
 			targets = (
 				377E2FBF2BD9943A00135B48 /* YoutubeMinia */,
 				3700A47E2BDD227800FB9E81 /* YT Minia Maker Action */,
+				374D14E62BDE7DCB00BCEB93 /* YT Minia MakerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -630,6 +660,13 @@
 				3700A4D32BDD437A00FB9E81 /* Roboto-Black.ttf in Resources */,
 				3700A4D42BDD437A00FB9E81 /* Roboto-BlackItalic.ttf in Resources */,
 				3700A4D52BDD437A00FB9E81 /* Roboto-BoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374D14E52BDE7DCB00BCEB93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +755,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		374D14E32BDE7DCB00BCEB93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				374D14EA2BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		377E2FBC2BD9943A00135B48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -786,6 +831,11 @@
 			platformFilter = ios;
 			target = 3700A47E2BDD227800FB9E81 /* YT Minia Maker Action */;
 			targetProxy = 3700A48C2BDD227800FB9E81 /* PBXContainerItemProxy */;
+		};
+		374D14EC2BDE7DCB00BCEB93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 377E2FBF2BD9943A00135B48 /* YoutubeMinia */;
+			targetProxy = 374D14EB2BDE7DCB00BCEB93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -858,6 +908,47 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		374D14EE2BDE7DCB00BCEB93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4U726YWM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nbapps.YT-Minia-MakerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YT Minia Maker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YT Minia Maker";
+			};
+			name = Debug;
+		};
+		374D14EF2BDE7DCB00BCEB93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4U726YWM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nbapps.YT-Minia-MakerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YT Minia Maker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YT Minia Maker";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1072,6 +1163,15 @@
 			buildConfigurations = (
 				3700A4902BDD227800FB9E81 /* Debug */,
 				3700A4912BDD227800FB9E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		374D14ED2BDE7DCB00BCEB93 /* Build configuration list for PBXNativeTarget "YT Minia MakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374D14EE2BDE7DCB00BCEB93 /* Debug */,
+				374D14EF2BDE7DCB00BCEB93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

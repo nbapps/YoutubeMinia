@@ -211,6 +211,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             videoDuration: videoDuration.formattedVideoDuration(),
             publicationDate: publicationDate
         )
+        
         self.ymThumbnailData = thumbnailData
         
         try await fetchThumbnails(

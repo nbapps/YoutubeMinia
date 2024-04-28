@@ -100,6 +100,22 @@
         }
       }
     },
+    "!%lld minute%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld minute%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld minute%2$@"
+          }
+        }
+      }
+    },
     "!%lld month%@ ago" : {
       "localizations" : {
         "en" : {
@@ -112,6 +128,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "il y a %1$lld mois"
+          }
+        }
+      }
+    },
+    "!%lld second%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld second%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld second%2$@"
           }
         }
       }

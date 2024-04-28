@@ -9,10 +9,24 @@ import Foundation
 
 extension Date {
     func formatPublicationDate() -> String {
-        let diffDays = Calendar.current.dateComponents([.day], from: self, to: .now).day ?? 0
+        let calendar = Calendar.current
+        let now = Date.now
+        let dateComponents = calendar.dateComponents([.day, .hour, .minute, .second], from: self, to: now)
+        
+        let diffSeconds = dateComponents.second ?? 0
+        let diffMinutes = dateComponents.minute ?? 0
+        let diffHours = dateComponents.hour ?? 0
+        let diffDays = dateComponents.day ?? 0
+        
+        if diffMinutes < 1 && diffHours == 0 && diffDays == 0 {
+            return String(localized: "!\(diffSeconds) second\(diffSeconds != 1 ? "s" : "") ago")
+        }
+        
+        if diffHours < 1 && diffDays == 0 {
+            return String(localized: "!\(diffMinutes) minute\(diffMinutes != 1 ? "s" : "") ago")
+        }
         
         if diffDays < 1 {
-            let diffHours = Calendar.current.dateComponents([.hour], from: self, to: .now).hour ?? 0
             return String(localized: "!\(diffHours) hour\(diffHours != 1 ? "s" : "") ago")
         }
         
