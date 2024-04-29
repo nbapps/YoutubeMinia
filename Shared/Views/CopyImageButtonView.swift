@@ -1,5 +1,5 @@
 //
-//  SaveInDownloadButton.swift
+//  CopyImageButtonView.swift
 //  YoutubeMinia
 //
 //  Created by Nicolas Bachur on 25/04/2024.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-#if os(macOS)
-struct SaveInDownloadButton: View {
+struct CopyImageButtonView: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
     
     var padding: CGFloat = 0
@@ -18,30 +17,24 @@ struct SaveInDownloadButton: View {
     var body: some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
-
+            
             Task { @MainActor in
-                do {
-                    try viewModel.exportToDownloads(thumbnailData: thumbnailData)
-                } catch {
-                    errorMessage = error.localizedDescription
-                    showError = true
-                }
+                viewModel.copy(viewModel.renderThumbnail())
             }
         } label: {
-            Label("!Save in Dowmloads", systemImage: "photo.badge.arrow.down")
+            Label("!Copy", systemImage: "doc.on.doc")
                 .padding(padding)
         }
-        .keyboardShortcut("1")
+        .keyboardShortcut("2")
         .disabled(viewModel.ymThumbnailData == nil)
         .disabled(viewModel.isFetching)
     }
 }
 
 #Preview {
-    SaveInDownloadButton(
-        showError: .constant(false), 
+    CopyImageButtonView(
+        showError: .constant(false),
         errorMessage: .constant("")
     )
-        .environmentObject(ThumbnailMakerViewModel.preview)
+    .environmentObject(ThumbnailMakerViewModel.preview)
 }
-#endif

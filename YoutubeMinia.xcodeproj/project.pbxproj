@@ -7,10 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3700A45E2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */; };
+		3700A4602BDC012100FB9E81 /* PreviousURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A45F2BDC012100FB9E81 /* PreviousURLs.swift */; };
+		3700A4622BDC039800FB9E81 /* LastUrlsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4612BDC039800FB9E81 /* LastUrlsListView.swift */; };
+		3700A4642BDC11E300FB9E81 /* LastUrlsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4632BDC11E300FB9E81 /* LastUrlsRowView.swift */; };
+		3700A4672BDCF3D800FB9E81 /* VideoDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4662BDCF3D800FB9E81 /* VideoDurationView.swift */; };
+		3700A46A2BDCF4CA00FB9E81 /* VideoProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4692BDCF4CA00FB9E81 /* VideoProgressView.swift */; };
+		3700A46C2BDCF62300FB9E81 /* ChannelThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A46B2BDCF62300FB9E81 /* ChannelThumbnailView.swift */; };
+		3700A46E2BDCF6E600FB9E81 /* VideoTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A46D2BDCF6E600FB9E81 /* VideoTitleView.swift */; };
+		3700A4702BDCF76500FB9E81 /* ChannelTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A46F2BDCF76500FB9E81 /* ChannelTitleView.swift */; };
+		3700A4722BDCF7E700FB9E81 /* ChannelSubCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4712BDCF7E700FB9E81 /* ChannelSubCountView.swift */; };
+		3700A4742BDCF86700FB9E81 /* VideoViewCoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4732BDCF86700FB9E81 /* VideoViewCoutView.swift */; };
+		3700A4762BDCF8EB00FB9E81 /* VideoPublishDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4752BDCF8EB00FB9E81 /* VideoPublishDateView.swift */; };
+		3700A4782BDCF95300FB9E81 /* HiddenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4772BDCF95300FB9E81 /* HiddenComponents.swift */; };
+		3700A47A2BDD023A00FB9E81 /* ImageSaverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4792BDD023A00FB9E81 /* ImageSaverService.swift */; };
+		3700A4822BDD227800FB9E81 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3700A4812BDD227800FB9E81 /* UniformTypeIdentifiers.framework */; };
+		3700A4852BDD227800FB9E81 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3700A4842BDD227800FB9E81 /* Media.xcassets */; };
+		3700A4872BDD227800FB9E81 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4862BDD227800FB9E81 /* ActionViewController.swift */; };
+		3700A48A2BDD227800FB9E81 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3700A4892BDD227800FB9E81 /* Base */; };
+		3700A48E2BDD227800FB9E81 /* YT Minia Maker Action.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3700A47F2BDD227800FB9E81 /* YT Minia Maker Action.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3700A4942BDD2B0B00FB9E81 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4932BDD2B0B00FB9E81 /* ActionView.swift */; };
+		3700A4952BDD2FDB00FB9E81 /* ThumbnailMakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30342BD9BDF900135B48 /* ThumbnailMakerViewModel.swift */; };
+		3700A4972BDD304800FB9E81 /* ThumbnailMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30592BDA524500135B48 /* ThumbnailMakerView.swift */; };
+		3700A4982BDD304E00FB9E81 /* WindowId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400472BDAA135005E432B /* WindowId.swift */; };
+		3700A4992BDD304E00FB9E81 /* PreviousURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A45F2BDC012100FB9E81 /* PreviousURLs.swift */; };
+		3700A49A2BDD304E00FB9E81 /* ExportScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400502BDBD268005E432B /* ExportScale.swift */; };
+		3700A49B2BDD304E00FB9E81 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30012BD9981900135B48 /* Database.swift */; };
+		3700A49C2BDD304E00FB9E81 /* YTDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30142BD9ADB200135B48 /* YTDecodable.swift */; };
+		3700A49D2BDD304E00FB9E81 /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
+		3700A49E2BDD304E00FB9E81 /* YMThumbnailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30552BDA518300135B48 /* YMThumbnailData.swift */; };
+		3700A49F2BDD305400FB9E81 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30062BD99A6B00135B48 /* Config.swift */; };
+		3700A4A12BDD306000FB9E81 /* YMOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30362BDA2D0C00135B48 /* YMOptionsView.swift */; };
+		3700A4A22BDD306000FB9E81 /* CopyImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400402BDA9F33005E432B /* CopyImageButtonView.swift */; };
+		3700A4A42BDD306000FB9E81 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300C2BD9A11000135B48 /* ProgressBar.swift */; };
+		3700A4A52BDD306000FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */; };
+		3700A4A72BDD306000FB9E81 /* EmptyThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */; };
+		3700A4AA2BDD306700FB9E81 /* VideoTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A46D2BDCF6E600FB9E81 /* VideoTitleView.swift */; };
+		3700A4AB2BDD306700FB9E81 /* ChannelSubCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4712BDCF7E700FB9E81 /* ChannelSubCountView.swift */; };
+		3700A4AC2BDD306700FB9E81 /* VideoPublishDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4752BDCF8EB00FB9E81 /* VideoPublishDateView.swift */; };
+		3700A4AD2BDD306700FB9E81 /* VideoProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4692BDCF4CA00FB9E81 /* VideoProgressView.swift */; };
+		3700A4AE2BDD306700FB9E81 /* ChannelThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A46B2BDCF62300FB9E81 /* ChannelThumbnailView.swift */; };
+		3700A4AF2BDD306700FB9E81 /* VideoDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4662BDCF3D800FB9E81 /* VideoDurationView.swift */; };
+		3700A4B02BDD306700FB9E81 /* HiddenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4772BDCF95300FB9E81 /* HiddenComponents.swift */; };
+		3700A4B12BDD306700FB9E81 /* VideoViewCoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4732BDCF86700FB9E81 /* VideoViewCoutView.swift */; };
+		3700A4B22BDD306700FB9E81 /* ChannelTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A46F2BDCF76500FB9E81 /* ChannelTitleView.swift */; };
+		3700A4B32BDD306700FB9E81 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003C2BDA9BFF005E432B /* ThumbnailView.swift */; };
+		3700A4B42BDD306D00FB9E81 /* KeyboardShortcuts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */; };
+		3700A4B52BDD306D00FB9E81 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400362BDA9982005E432B /* Draggable.swift */; };
+		3700A4B62BDD306D00FB9E81 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30512BDA508800135B48 /* Collection+Extensions.swift */; };
+		3700A4B72BDD306D00FB9E81 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30532BDA514500135B48 /* Bundle+Extensions.swift */; };
+		3700A4B82BDD306D00FB9E81 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E304B2BDA455700135B48 /* View+Extensions.swift */; };
+		3700A4B92BDD306D00FB9E81 /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
+		3700A4BA2BDD306D00FB9E81 /* Pastboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */; };
+		3700A4BB2BDD306D00FB9E81 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30452BDA3CFF00135B48 /* String+Extensions.swift */; };
+		3700A4BC2BDD306D00FB9E81 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */; };
+		3700A4BD2BDD306D00FB9E81 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300A2BD99F4900135B48 /* Double+Extensions.swift */; };
+		3700A4BE2BDD306D00FB9E81 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30422BDA38A900135B48 /* FileManager+Extensions.swift */; };
+		3700A4BF2BDD306D00FB9E81 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E304D2BDA4A3600135B48 /* Date+Extensions.swift */; };
+		3700A4C02BDD306D00FB9E81 /* AppImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400832BDBE50D005E432B /* AppImage+Extensions.swift */; };
+		3700A4C12BDD306D00FB9E81 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30472BDA3F7300135B48 /* Font+Extensions.swift */; };
+		3700A4C22BDD307300FB9E81 /* ImageSaverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4792BDD023A00FB9E81 /* ImageSaverService.swift */; };
+		3700A4C32BDD307300FB9E81 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004B2BDAA656005E432B /* NotificationService.swift */; };
+		3700A4C42BDD307300FB9E81 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30572BDA51BD00135B48 /* NetworkService.swift */; };
+		3700A4C62BDD309400FB9E81 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4C52BDD309400FB9E81 /* Tabs.swift */; };
+		3700A4C72BDD309700FB9E81 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3700A4C52BDD309400FB9E81 /* Tabs.swift */; };
+		3700A4C82BDD31A400FB9E81 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 377E30032BD99A0600135B48 /* Config.xcconfig */; };
+		3700A4C92BDD420A00FB9E81 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 377E304F2BDA4A6600135B48 /* Localizable.xcstrings */; };
+		3700A4CA2BDD437A00FB9E81 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30252BD9BABE00135B48 /* Roboto-LightItalic.ttf */; };
+		3700A4CB2BDD437A00FB9E81 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30222BD9BABE00135B48 /* Roboto-Thin.ttf */; };
+		3700A4CC2BDD437A00FB9E81 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30242BD9BABE00135B48 /* Roboto-ThinItalic.ttf */; };
+		3700A4CD2BDD437A00FB9E81 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30272BD9BABE00135B48 /* Roboto-Regular.ttf */; };
+		3700A4CE2BDD437A00FB9E81 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301D2BD9BABE00135B48 /* Roboto-Italic.ttf */; };
+		3700A4CF2BDD437A00FB9E81 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30232BD9BABE00135B48 /* Roboto-Light.ttf */; };
+		3700A4D02BDD437A00FB9E81 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30262BD9BABE00135B48 /* Roboto-MediumItalic.ttf */; };
+		3700A4D12BDD437A00FB9E81 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30202BD9BABE00135B48 /* Roboto-Medium.ttf */; };
+		3700A4D22BDD437A00FB9E81 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301C2BD9BABE00135B48 /* Roboto-Bold.ttf */; };
+		3700A4D32BDD437A00FB9E81 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301E2BD9BABE00135B48 /* Roboto-Black.ttf */; };
+		3700A4D42BDD437A00FB9E81 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E301F2BD9BABE00135B48 /* Roboto-BlackItalic.ttf */; };
+		3700A4D52BDD437A00FB9E81 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377E30212BD9BABE00135B48 /* Roboto-BoldItalic.ttf */; };
 		3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */; };
 		374400312BDA7BB8005E432B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 374400302BDA7BB8005E432B /* README.md */; };
 		374400332BDA7EF5005E432B /* SharableFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400322BDA7EF5005E432B /* SharableFile.swift */; };
-		374400352BDA92CE005E432B /* yttm_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 374400342BDA92CE005E432B /* yttm_icon.png */; };
 		374400372BDA9982005E432B /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400362BDA9982005E432B /* Draggable.swift */; };
 		3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */; };
 		3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003C2BDA9BFF005E432B /* ThumbnailView.swift */; };
@@ -23,18 +100,25 @@
 		3744004C2BDAA656005E432B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004B2BDAA656005E432B /* NotificationService.swift */; };
 		3744004F2BDB8ABE005E432B /* EmptyThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */; };
 		374400512BDBD268005E432B /* ExportScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400502BDBD268005E432B /* ExportScale.swift */; };
+		374400822BDBE3B8005E432B /* Pastboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */; };
+		374400842BDBE50D005E432B /* AppImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400832BDBE50D005E432B /* AppImage+Extensions.swift */; };
+		374D14D22BDD468B00BCEB93 /* ShareConfigFileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14D12BDD468B00BCEB93 /* ShareConfigFileButton.swift */; };
+		374D14D52BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */; };
+		374D14D62BDE3F3C00BCEB93 /* ThumbnailViewOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */; };
+		374D14D82BDE42A200BCEB93 /* YMOptionsWithPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */; };
+		374D14D92BDE431400BCEB93 /* YMOptionsWithPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */; };
+		374D14DC2BDE78BB00BCEB93 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */; };
+		374D14DD2BDE790700BCEB93 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */; };
+		374D14E22BDE7AB500BCEB93 /* yttm_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 374D14E12BDE7AB500BCEB93 /* yttm_icon.png */; };
+		374D14EA2BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
 		377E2FCD2BD9943B00135B48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */; };
-		377E2FD82BD9943B00135B48 /* YoutubeMiniaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */; };
-		377E2FE22BD9943B00135B48 /* YoutubeMiniaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */; };
-		377E2FE42BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */; };
-		377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FF02BD9974000135B48 /* GoogleService-Info.plist */; };
 		377E30022BD9981900135B48 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30012BD9981900135B48 /* Database.swift */; };
 		377E30042BD99A1300135B48 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 377E30032BD99A0600135B48 /* Config.xcconfig */; };
 		377E30072BD99A6B00135B48 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30062BD99A6B00135B48 /* Config.swift */; };
-		377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */; };
+		377E30092BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */; };
 		377E300B2BD99F4900135B48 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300A2BD99F4900135B48 /* Double+Extensions.swift */; };
 		377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E300C2BD9A11000135B48 /* ProgressBar.swift */; };
 		377E300F2BD9AC2700135B48 /* devVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 377E300E2BD9AC2700135B48 /* devVideo.json */; };
@@ -68,14 +152,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		377E2FD42BD9943B00135B48 /* PBXContainerItemProxy */ = {
+		3700A48C2BDD227800FB9E81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 377E2FB82BD9943A00135B48 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 377E2FBF2BD9943A00135B48;
-			remoteInfo = YoutubeMinia;
+			remoteGlobalIDString = 3700A47E2BDD227800FB9E81;
+			remoteInfo = "YT Minia Maker Action";
 		};
-		377E2FDE2BD9943B00135B48 /* PBXContainerItemProxy */ = {
+		374D14EB2BDE7DCB00BCEB93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 377E2FB82BD9943A00135B48 /* Project object */;
 			proxyType = 1;
@@ -84,11 +168,46 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3700A48F2BDD227800FB9E81 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3700A48E2BDD227800FB9E81 /* YT Minia Maker Action.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToPhotoLibraryButtonView.swift; sourceTree = "<group>"; };
+		3700A45F2BDC012100FB9E81 /* PreviousURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousURLs.swift; sourceTree = "<group>"; };
+		3700A4612BDC039800FB9E81 /* LastUrlsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUrlsListView.swift; sourceTree = "<group>"; };
+		3700A4632BDC11E300FB9E81 /* LastUrlsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUrlsRowView.swift; sourceTree = "<group>"; };
+		3700A4662BDCF3D800FB9E81 /* VideoDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDurationView.swift; sourceTree = "<group>"; };
+		3700A4692BDCF4CA00FB9E81 /* VideoProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProgressView.swift; sourceTree = "<group>"; };
+		3700A46B2BDCF62300FB9E81 /* ChannelThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelThumbnailView.swift; sourceTree = "<group>"; };
+		3700A46D2BDCF6E600FB9E81 /* VideoTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTitleView.swift; sourceTree = "<group>"; };
+		3700A46F2BDCF76500FB9E81 /* ChannelTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTitleView.swift; sourceTree = "<group>"; };
+		3700A4712BDCF7E700FB9E81 /* ChannelSubCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSubCountView.swift; sourceTree = "<group>"; };
+		3700A4732BDCF86700FB9E81 /* VideoViewCoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewCoutView.swift; sourceTree = "<group>"; };
+		3700A4752BDCF8EB00FB9E81 /* VideoPublishDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPublishDateView.swift; sourceTree = "<group>"; };
+		3700A4772BDCF95300FB9E81 /* HiddenComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenComponents.swift; sourceTree = "<group>"; };
+		3700A4792BDD023A00FB9E81 /* ImageSaverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaverService.swift; sourceTree = "<group>"; };
+		3700A47F2BDD227800FB9E81 /* YT Minia Maker Action.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YT Minia Maker Action.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3700A4812BDD227800FB9E81 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		3700A4842BDD227800FB9E81 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		3700A4862BDD227800FB9E81 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		3700A4892BDD227800FB9E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3700A48B2BDD227800FB9E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3700A4932BDD2B0B00FB9E81 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		3700A4C52BDD309400FB9E81 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extensions.swift"; sourceTree = "<group>"; };
 		374400302BDA7BB8005E432B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		374400322BDA7EF5005E432B /* SharableFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharableFile.swift; sourceTree = "<group>"; };
-		374400342BDA92CE005E432B /* yttm_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yttm_icon.png; sourceTree = "<group>"; };
 		374400362BDA9982005E432B /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 		3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarExtraView.swift; sourceTree = "<group>"; };
 		3744003C2BDA9BFF005E432B /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
@@ -101,23 +220,28 @@
 		3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyThumbnailView.swift; sourceTree = "<group>"; };
 		374400502BDBD268005E432B /* ExportScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportScale.swift; sourceTree = "<group>"; };
+		374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pastboard+Extensions.swift"; sourceTree = "<group>"; };
+		374400832BDBE50D005E432B /* AppImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppImage+Extensions.swift"; sourceTree = "<group>"; };
+		374D14D12BDD468B00BCEB93 /* ShareConfigFileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareConfigFileButton.swift; sourceTree = "<group>"; };
+		374D14D32BDD5C2300BCEB93 /* YT Minia Maker Action.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YT Minia Maker Action.entitlements"; sourceTree = "<group>"; };
+		374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailViewOrEmpty.swift; sourceTree = "<group>"; };
+		374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YMOptionsWithPreview.swift; sourceTree = "<group>"; };
+		374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
+		374D14E12BDE7AB500BCEB93 /* yttm_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yttm_icon.png; sourceTree = "<group>"; };
+		374D14E72BDE7DCB00BCEB93 /* YT Minia MakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YT Minia MakerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YT_Minia_MakerTests.swift; sourceTree = "<group>"; };
+		374D14F02BDE7FDC00BCEB93 /* YoutubeMinia.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = YoutubeMinia.xctestplan; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		377E2FC92BD9943B00135B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YoutubeMinia.entitlements; sourceTree = "<group>"; };
-		377E2FD32BD9943B00135B48 /* YoutubeMiniaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeMiniaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaTests.swift; sourceTree = "<group>"; };
-		377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeMiniaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITests.swift; sourceTree = "<group>"; };
-		377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		377E2FF02BD9974000135B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		377E30012BD9981900135B48 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		377E30032BD99A0600135B48 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		377E30052BD99A2200135B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		377E30062BD99A6B00135B48 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUbiquitousKeyValueStore+Extensions.swift"; sourceTree = "<group>"; };
 		377E300A2BD99F4900135B48 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		377E300C2BD9A11000135B48 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		377E300E2BD9AC2700135B48 /* devVideo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = devVideo.json; sourceTree = "<group>"; };
@@ -151,6 +275,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3700A47C2BDD227800FB9E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3700A4822BDD227800FB9E81 /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374D14E42BDE7DCB00BCEB93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		377E2FBD2BD9943A00135B48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,34 +298,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		377E2FD02BD9943B00135B48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		377E2FDA2BD9943B00135B48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3700A4652BDCF3BB00FB9E81 /* Thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */,
+				3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */,
+				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
+				3700A4772BDCF95300FB9E81 /* HiddenComponents.swift */,
+				3700A4682BDCF4BD00FB9E81 /* Components */,
+			);
+			path = Thumbnail;
+			sourceTree = "<group>";
+		};
+		3700A4682BDCF4BD00FB9E81 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3700A4662BDCF3D800FB9E81 /* VideoDurationView.swift */,
+				3700A4692BDCF4CA00FB9E81 /* VideoProgressView.swift */,
+				3700A46B2BDCF62300FB9E81 /* ChannelThumbnailView.swift */,
+				3700A46D2BDCF6E600FB9E81 /* VideoTitleView.swift */,
+				3700A46F2BDCF76500FB9E81 /* ChannelTitleView.swift */,
+				3700A4712BDCF7E700FB9E81 /* ChannelSubCountView.swift */,
+				3700A4732BDCF86700FB9E81 /* VideoViewCoutView.swift */,
+				3700A4752BDCF8EB00FB9E81 /* VideoPublishDateView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3700A4802BDD227800FB9E81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3700A4812BDD227800FB9E81 /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3700A4832BDD227800FB9E81 /* YT Minia Maker Action */ = {
+			isa = PBXGroup;
+			children = (
+				374D14D32BDD5C2300BCEB93 /* YT Minia Maker Action.entitlements */,
+				3700A4842BDD227800FB9E81 /* Media.xcassets */,
+				3700A4862BDD227800FB9E81 /* ActionViewController.swift */,
+				3700A4932BDD2B0B00FB9E81 /* ActionView.swift */,
+				3700A4882BDD227800FB9E81 /* MainInterface.storyboard */,
+				3700A48B2BDD227800FB9E81 /* Info.plist */,
+			);
+			path = "YT Minia Maker Action";
+			sourceTree = "<group>";
+		};
 		374400382BDA99B5005E432B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				377E2FC52BD9943A00135B48 /* ContentView.swift */,
-				374400392BDA99EF005E432B /* ThumbnailMaker */,
-				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
-				3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */,
-				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
-				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
+				3700A4612BDC039800FB9E81 /* LastUrlsListView.swift */,
+				3700A4632BDC11E300FB9E81 /* LastUrlsRowView.swift */,
 				3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */,
-				374400402BDA9F33005E432B /* CopyImageButtonView.swift */,
+				374D14D12BDD468B00BCEB93 /* ShareConfigFileButton.swift */,
 				3744003A2BDA9B1F005E432B /* MenuBarExtraView.swift */,
 				374400422BDAA04A005E432B /* PreferencesView.swift */,
 			);
@@ -202,16 +372,53 @@
 			path = ThumbnailMaker;
 			sourceTree = "<group>";
 		};
+		374D14DA2BDE78AE00BCEB93 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */,
+				377E30062BD99A6B00135B48 /* Config.swift */,
+				377E30132BD9ADAC00135B48 /* Model */,
+				374D14DE2BDE795E00BCEB93 /* Views */,
+				377E30442BDA3CF500135B48 /* Extensions */,
+				377E305B2BDA550D00135B48 /* Services */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		374D14DE2BDE795E00BCEB93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				377E30362BDA2D0C00135B48 /* YMOptionsView.swift */,
+				374D14D72BDE42A200BCEB93 /* YMOptionsWithPreview.swift */,
+				3700A4652BDCF3BB00FB9E81 /* Thumbnail */,
+				374400392BDA99EF005E432B /* ThumbnailMaker */,
+				377E300C2BD9A11000135B48 /* ProgressBar.swift */,
+				374400402BDA9F33005E432B /* CopyImageButtonView.swift */,
+				3700A45D2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		374D14E82BDE7DCB00BCEB93 /* YT Minia MakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */,
+			);
+			path = "YT Minia MakerTests";
+			sourceTree = "<group>";
+		};
 		377E2FB72BD9943A00135B48 = {
 			isa = PBXGroup;
 			children = (
+				374D14F02BDE7FDC00BCEB93 /* YoutubeMinia.xctestplan */,
 				374400302BDA7BB8005E432B /* README.md */,
-				377E2FF02BD9974000135B48 /* GoogleService-Info.plist */,
 				3744004D2BDAC29B005E432B /* PrivacyInfo.xcprivacy */,
 				377E30032BD99A0600135B48 /* Config.xcconfig */,
+				374D14DA2BDE78AE00BCEB93 /* Shared */,
 				377E2FC22BD9943A00135B48 /* YoutubeMinia */,
-				377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */,
-				377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */,
+				3700A4832BDD227800FB9E81 /* YT Minia Maker Action */,
+				374D14E82BDE7DCB00BCEB93 /* YT Minia MakerTests */,
+				3700A4802BDD227800FB9E81 /* Frameworks */,
 				377E2FC12BD9943A00135B48 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -220,8 +427,8 @@
 			isa = PBXGroup;
 			children = (
 				377E2FC02BD9943A00135B48 /* YT Minia Maker.app */,
-				377E2FD32BD9943B00135B48 /* YoutubeMiniaTests.xctest */,
-				377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */,
+				3700A47F2BDD227800FB9E81 /* YT Minia Maker Action.appex */,
+				374D14E72BDE7DCB00BCEB93 /* YT Minia MakerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,15 +436,11 @@
 		377E2FC22BD9943A00135B48 /* YoutubeMinia */ = {
 			isa = PBXGroup;
 			children = (
+				377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */,
 				377E30052BD99A2200135B48 /* Info.plist */,
 				377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */,
-				377E30062BD99A6B00135B48 /* Config.swift */,
-				377E30132BD9ADAC00135B48 /* Model */,
 				374400382BDA99B5005E432B /* View */,
-				377E30442BDA3CF500135B48 /* Extensions */,
-				377E305B2BDA550D00135B48 /* Services */,
 				377E301A2BD9BA9400135B48 /* Ressources */,
-				377E2FCE2BD9943B00135B48 /* YoutubeMinia.entitlements */,
 				377E2FCB2BD9943B00135B48 /* Preview Content */,
 			);
 			path = YoutubeMinia;
@@ -246,34 +449,21 @@
 		377E2FCB2BD9943B00135B48 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				377E300E2BD9AC2700135B48 /* devVideo.json */,
+				377E30182BD9B00F00135B48 /* devChannel.json */,
 				377E2FCC2BD9943B00135B48 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		377E2FD62BD9943B00135B48 /* YoutubeMiniaTests */ = {
-			isa = PBXGroup;
-			children = (
-				377E2FD72BD9943B00135B48 /* YoutubeMiniaTests.swift */,
-			);
-			path = YoutubeMiniaTests;
-			sourceTree = "<group>";
-		};
-		377E2FE02BD9943B00135B48 /* YoutubeMiniaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				377E2FE12BD9943B00135B48 /* YoutubeMiniaUITests.swift */,
-				377E2FE32BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift */,
-			);
-			path = YoutubeMiniaUITests;
-			sourceTree = "<group>";
-		};
 		377E30132BD9ADAC00135B48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				377E30012BD9981900135B48 /* Database.swift */,
+				3700A4C52BDD309400FB9E81 /* Tabs.swift */,
+				3700A45F2BDC012100FB9E81 /* PreviousURLs.swift */,
 				374400322BDA7EF5005E432B /* SharableFile.swift */,
 				374400502BDBD268005E432B /* ExportScale.swift */,
-				377E30012BD9981900135B48 /* Database.swift */,
 				377E30142BD9ADB200135B48 /* YTDecodable.swift */,
 				377E30552BDA518300135B48 /* YMThumbnailData.swift */,
 				374400472BDAA135005E432B /* WindowId.swift */,
@@ -284,11 +474,9 @@
 		377E301A2BD9BA9400135B48 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				377E300E2BD9AC2700135B48 /* devVideo.json */,
-				377E30182BD9B00F00135B48 /* devChannel.json */,
-				374400342BDA92CE005E432B /* yttm_icon.png */,
 				377E301B2BD9BAAF00135B48 /* font */,
 				377E2FC92BD9943B00135B48 /* Assets.xcassets */,
+				374D14E12BDE7AB500BCEB93 /* yttm_icon.png */,
 				377E304F2BDA4A6600135B48 /* Localizable.xcstrings */,
 			);
 			path = Ressources;
@@ -317,8 +505,10 @@
 			isa = PBXGroup;
 			children = (
 				374400362BDA9982005E432B /* Draggable.swift */,
+				374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */,
 				377E300A2BD99F4900135B48 /* Double+Extensions.swift */,
-				377E30082BD99CF400135B48 /* UserDefaults+Extensions.swift */,
+				377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */,
+				374400832BDBE50D005E432B /* AppImage+Extensions.swift */,
 				377E30422BDA38A900135B48 /* FileManager+Extensions.swift */,
 				3744002E2BDA7731005E432B /* ProcessInfo+Extensions.swift */,
 				377E30532BDA514500135B48 /* Bundle+Extensions.swift */,
@@ -336,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				377E30572BDA51BD00135B48 /* NetworkService.swift */,
+				3700A4792BDD023A00FB9E81 /* ImageSaverService.swift */,
 				3744004B2BDAA656005E432B /* NotificationService.swift */,
 			);
 			path = Services;
@@ -344,6 +535,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3700A47E2BDD227800FB9E81 /* YT Minia Maker Action */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3700A4922BDD227800FB9E81 /* Build configuration list for PBXNativeTarget "YT Minia Maker Action" */;
+			buildPhases = (
+				3700A47B2BDD227800FB9E81 /* Sources */,
+				3700A47C2BDD227800FB9E81 /* Frameworks */,
+				3700A47D2BDD227800FB9E81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YT Minia Maker Action";
+			productName = "YT Minia Maker Action";
+			productReference = 3700A47F2BDD227800FB9E81 /* YT Minia Maker Action.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		374D14E62BDE7DCB00BCEB93 /* YT Minia MakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 374D14ED2BDE7DCB00BCEB93 /* Build configuration list for PBXNativeTarget "YT Minia MakerTests" */;
+			buildPhases = (
+				374D14E32BDE7DCB00BCEB93 /* Sources */,
+				374D14E42BDE7DCB00BCEB93 /* Frameworks */,
+				374D14E52BDE7DCB00BCEB93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				374D14EC2BDE7DCB00BCEB93 /* PBXTargetDependency */,
+			);
+			name = "YT Minia MakerTests";
+			productName = "YT Minia MakerTests";
+			productReference = 374D14E72BDE7DCB00BCEB93 /* YT Minia MakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		377E2FBF2BD9943A00135B48 /* YoutubeMinia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 377E2FE72BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMinia" */;
@@ -351,10 +577,12 @@
 				377E2FBC2BD9943A00135B48 /* Sources */,
 				377E2FBD2BD9943A00135B48 /* Frameworks */,
 				377E2FBE2BD9943A00135B48 /* Resources */,
+				3700A48F2BDD227800FB9E81 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3700A48D2BDD227800FB9E81 /* PBXTargetDependency */,
 			);
 			name = YoutubeMinia;
 			packageProductDependencies = (
@@ -363,42 +591,6 @@
 			productName = YoutubeMinia;
 			productReference = 377E2FC02BD9943A00135B48 /* YT Minia Maker.app */;
 			productType = "com.apple.product-type.application";
-		};
-		377E2FD22BD9943B00135B48 /* YoutubeMiniaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 377E2FEA2BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMiniaTests" */;
-			buildPhases = (
-				377E2FCF2BD9943B00135B48 /* Sources */,
-				377E2FD02BD9943B00135B48 /* Frameworks */,
-				377E2FD12BD9943B00135B48 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				377E2FD52BD9943B00135B48 /* PBXTargetDependency */,
-			);
-			name = YoutubeMiniaTests;
-			productName = YoutubeMiniaTests;
-			productReference = 377E2FD32BD9943B00135B48 /* YoutubeMiniaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		377E2FDC2BD9943B00135B48 /* YoutubeMiniaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 377E2FED2BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMiniaUITests" */;
-			buildPhases = (
-				377E2FD92BD9943B00135B48 /* Sources */,
-				377E2FDA2BD9943B00135B48 /* Frameworks */,
-				377E2FDB2BD9943B00135B48 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				377E2FDF2BD9943B00135B48 /* PBXTargetDependency */,
-			);
-			name = YoutubeMiniaUITests;
-			productName = YoutubeMiniaUITests;
-			productReference = 377E2FDD2BD9943B00135B48 /* YoutubeMiniaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -410,16 +602,15 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					3700A47E2BDD227800FB9E81 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					374D14E62BDE7DCB00BCEB93 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 377E2FBF2BD9943A00135B48;
+					};
 					377E2FBF2BD9943A00135B48 = {
 						CreatedOnToolsVersion = 15.3;
-					};
-					377E2FD22BD9943B00135B48 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 377E2FBF2BD9943A00135B48;
-					};
-					377E2FDC2BD9943B00135B48 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 377E2FBF2BD9943A00135B48;
 					};
 				};
 			};
@@ -441,13 +632,44 @@
 			projectRoot = "";
 			targets = (
 				377E2FBF2BD9943A00135B48 /* YoutubeMinia */,
-				377E2FD22BD9943B00135B48 /* YoutubeMiniaTests */,
-				377E2FDC2BD9943B00135B48 /* YoutubeMiniaUITests */,
+				3700A47E2BDD227800FB9E81 /* YT Minia Maker Action */,
+				374D14E62BDE7DCB00BCEB93 /* YT Minia MakerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3700A47D2BDD227800FB9E81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3700A4852BDD227800FB9E81 /* Media.xcassets in Resources */,
+				3700A4C82BDD31A400FB9E81 /* Config.xcconfig in Resources */,
+				3700A4C92BDD420A00FB9E81 /* Localizable.xcstrings in Resources */,
+				3700A48A2BDD227800FB9E81 /* Base in Resources */,
+				374D14DD2BDE790700BCEB93 /* Shared.xcassets in Resources */,
+				3700A4CA2BDD437A00FB9E81 /* Roboto-LightItalic.ttf in Resources */,
+				3700A4CB2BDD437A00FB9E81 /* Roboto-Thin.ttf in Resources */,
+				3700A4CC2BDD437A00FB9E81 /* Roboto-ThinItalic.ttf in Resources */,
+				3700A4CD2BDD437A00FB9E81 /* Roboto-Regular.ttf in Resources */,
+				3700A4CE2BDD437A00FB9E81 /* Roboto-Italic.ttf in Resources */,
+				3700A4CF2BDD437A00FB9E81 /* Roboto-Light.ttf in Resources */,
+				3700A4D02BDD437A00FB9E81 /* Roboto-MediumItalic.ttf in Resources */,
+				3700A4D12BDD437A00FB9E81 /* Roboto-Medium.ttf in Resources */,
+				3700A4D22BDD437A00FB9E81 /* Roboto-Bold.ttf in Resources */,
+				3700A4D32BDD437A00FB9E81 /* Roboto-Black.ttf in Resources */,
+				3700A4D42BDD437A00FB9E81 /* Roboto-BlackItalic.ttf in Resources */,
+				3700A4D52BDD437A00FB9E81 /* Roboto-BoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374D14E52BDE7DCB00BCEB93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		377E2FBE2BD9943A00135B48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,45 +684,98 @@
 				377E30332BD9BABE00135B48 /* Roboto-Regular.ttf in Resources */,
 				377E2FCD2BD9943B00135B48 /* Preview Assets.xcassets in Resources */,
 				377E302F2BD9BABE00135B48 /* Roboto-Light.ttf in Resources */,
-				377E2FF12BD9974000135B48 /* GoogleService-Info.plist in Resources */,
 				377E302A2BD9BABE00135B48 /* Roboto-Black.ttf in Resources */,
 				377E302D2BD9BABE00135B48 /* Roboto-BoldItalic.ttf in Resources */,
 				377E30292BD9BABE00135B48 /* Roboto-Italic.ttf in Resources */,
 				377E302B2BD9BABE00135B48 /* Roboto-BlackItalic.ttf in Resources */,
 				377E302C2BD9BABE00135B48 /* Roboto-Medium.ttf in Resources */,
 				377E30502BDA4A6600135B48 /* Localizable.xcstrings in Resources */,
-				374400352BDA92CE005E432B /* yttm_icon.png in Resources */,
 				377E300F2BD9AC2700135B48 /* devVideo.json in Resources */,
+				374D14E22BDE7AB500BCEB93 /* yttm_icon.png in Resources */,
 				377E302E2BD9BABE00135B48 /* Roboto-Thin.ttf in Resources */,
 				377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		377E2FD12BD9943B00135B48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		377E2FDB2BD9943B00135B48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				374D14DC2BDE78BB00BCEB93 /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3700A47B2BDD227800FB9E81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3700A4952BDD2FDB00FB9E81 /* ThumbnailMakerViewModel.swift in Sources */,
+				3700A4942BDD2B0B00FB9E81 /* ActionView.swift in Sources */,
+				3700A4AA2BDD306700FB9E81 /* VideoTitleView.swift in Sources */,
+				3700A4C72BDD309700FB9E81 /* Tabs.swift in Sources */,
+				3700A4AB2BDD306700FB9E81 /* ChannelSubCountView.swift in Sources */,
+				3700A4AC2BDD306700FB9E81 /* VideoPublishDateView.swift in Sources */,
+				3700A4AD2BDD306700FB9E81 /* VideoProgressView.swift in Sources */,
+				3700A4AE2BDD306700FB9E81 /* ChannelThumbnailView.swift in Sources */,
+				3700A4AF2BDD306700FB9E81 /* VideoDurationView.swift in Sources */,
+				3700A4B02BDD306700FB9E81 /* HiddenComponents.swift in Sources */,
+				3700A4B12BDD306700FB9E81 /* VideoViewCoutView.swift in Sources */,
+				3700A4B22BDD306700FB9E81 /* ChannelTitleView.swift in Sources */,
+				3700A4B32BDD306700FB9E81 /* ThumbnailView.swift in Sources */,
+				3700A4972BDD304800FB9E81 /* ThumbnailMakerView.swift in Sources */,
+				3700A4872BDD227800FB9E81 /* ActionViewController.swift in Sources */,
+				3700A4982BDD304E00FB9E81 /* WindowId.swift in Sources */,
+				3700A49F2BDD305400FB9E81 /* Config.swift in Sources */,
+				3700A4992BDD304E00FB9E81 /* PreviousURLs.swift in Sources */,
+				3700A49A2BDD304E00FB9E81 /* ExportScale.swift in Sources */,
+				3700A4A12BDD306000FB9E81 /* YMOptionsView.swift in Sources */,
+				3700A4A22BDD306000FB9E81 /* CopyImageButtonView.swift in Sources */,
+				3700A4A42BDD306000FB9E81 /* ProgressBar.swift in Sources */,
+				3700A4A52BDD306000FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */,
+				3700A4A72BDD306000FB9E81 /* EmptyThumbnailView.swift in Sources */,
+				374D14D62BDE3F3C00BCEB93 /* ThumbnailViewOrEmpty.swift in Sources */,
+				374D14D92BDE431400BCEB93 /* YMOptionsWithPreview.swift in Sources */,
+				3700A49B2BDD304E00FB9E81 /* Database.swift in Sources */,
+				3700A49C2BDD304E00FB9E81 /* YTDecodable.swift in Sources */,
+				3700A49D2BDD304E00FB9E81 /* SharableFile.swift in Sources */,
+				3700A4B42BDD306D00FB9E81 /* KeyboardShortcuts+Extensions.swift in Sources */,
+				3700A4B52BDD306D00FB9E81 /* Draggable.swift in Sources */,
+				3700A4B62BDD306D00FB9E81 /* Collection+Extensions.swift in Sources */,
+				3700A4B72BDD306D00FB9E81 /* Bundle+Extensions.swift in Sources */,
+				3700A4B82BDD306D00FB9E81 /* View+Extensions.swift in Sources */,
+				3700A4B92BDD306D00FB9E81 /* ProcessInfo+Extensions.swift in Sources */,
+				3700A4BA2BDD306D00FB9E81 /* Pastboard+Extensions.swift in Sources */,
+				3700A4BB2BDD306D00FB9E81 /* String+Extensions.swift in Sources */,
+				3700A4BC2BDD306D00FB9E81 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */,
+				3700A4BD2BDD306D00FB9E81 /* Double+Extensions.swift in Sources */,
+				3700A4BE2BDD306D00FB9E81 /* FileManager+Extensions.swift in Sources */,
+				3700A4BF2BDD306D00FB9E81 /* Date+Extensions.swift in Sources */,
+				3700A4C02BDD306D00FB9E81 /* AppImage+Extensions.swift in Sources */,
+				3700A4C12BDD306D00FB9E81 /* Font+Extensions.swift in Sources */,
+				3700A4C22BDD307300FB9E81 /* ImageSaverService.swift in Sources */,
+				3700A4C32BDD307300FB9E81 /* NotificationService.swift in Sources */,
+				3700A4C42BDD307300FB9E81 /* NetworkService.swift in Sources */,
+				3700A49E2BDD304E00FB9E81 /* YMThumbnailData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374D14E32BDE7DCB00BCEB93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				374D14EA2BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		377E2FBC2BD9943A00135B48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374D14D82BDE42A200BCEB93 /* YMOptionsWithPreview.swift in Sources */,
 				377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */,
 				3744004F2BDB8ABE005E432B /* EmptyThumbnailView.swift in Sources */,
 				377E30462BDA3CFF00135B48 /* String+Extensions.swift in Sources */,
+				3700A4C62BDD309400FB9E81 /* Tabs.swift in Sources */,
+				3700A4782BDCF95300FB9E81 /* HiddenComponents.swift in Sources */,
+				374D14D52BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift in Sources */,
 				377E30372BDA2D0C00135B48 /* YMOptionsView.swift in Sources */,
+				3700A46A2BDCF4CA00FB9E81 /* VideoProgressView.swift in Sources */,
 				374400372BDA9982005E432B /* Draggable.swift in Sources */,
 				377E30542BDA514500135B48 /* Bundle+Extensions.swift in Sources */,
 				377E30562BDA518300135B48 /* YMThumbnailData.swift in Sources */,
@@ -509,63 +784,183 @@
 				377E30072BD99A6B00135B48 /* Config.swift in Sources */,
 				374400512BDBD268005E432B /* ExportScale.swift in Sources */,
 				377E30432BDA38A900135B48 /* FileManager+Extensions.swift in Sources */,
+				3700A46C2BDCF62300FB9E81 /* ChannelThumbnailView.swift in Sources */,
 				374400332BDA7EF5005E432B /* SharableFile.swift in Sources */,
 				374400412BDA9F33005E432B /* CopyImageButtonView.swift in Sources */,
 				3744003B2BDA9B1F005E432B /* MenuBarExtraView.swift in Sources */,
 				377E30152BD9ADB200135B48 /* YTDecodable.swift in Sources */,
+				374D14D22BDD468B00BCEB93 /* ShareConfigFileButton.swift in Sources */,
 				374400432BDAA04A005E432B /* PreferencesView.swift in Sources */,
+				3700A4642BDC11E300FB9E81 /* LastUrlsRowView.swift in Sources */,
+				3700A4742BDCF86700FB9E81 /* VideoViewCoutView.swift in Sources */,
+				3700A45E2BDBF3FE00FB9E81 /* SaveToPhotoLibraryButtonView.swift in Sources */,
+				3700A46E2BDCF6E600FB9E81 /* VideoTitleView.swift in Sources */,
+				3700A4602BDC012100FB9E81 /* PreviousURLs.swift in Sources */,
+				3700A4762BDCF8EB00FB9E81 /* VideoPublishDateView.swift in Sources */,
+				3700A4702BDCF76500FB9E81 /* ChannelTitleView.swift in Sources */,
 				377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */,
+				374400822BDBE3B8005E432B /* Pastboard+Extensions.swift in Sources */,
 				377E30022BD9981900135B48 /* Database.swift in Sources */,
 				377E304E2BDA4A3600135B48 /* Date+Extensions.swift in Sources */,
 				374400482BDAA136005E432B /* WindowId.swift in Sources */,
+				3700A4672BDCF3D800FB9E81 /* VideoDurationView.swift in Sources */,
 				377E30522BDA508800135B48 /* Collection+Extensions.swift in Sources */,
-				377E30092BD99CF400135B48 /* UserDefaults+Extensions.swift in Sources */,
+				377E30092BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */,
+				3700A47A2BDD023A00FB9E81 /* ImageSaverService.swift in Sources */,
 				377E30482BDA3F7300135B48 /* Font+Extensions.swift in Sources */,
 				3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */,
 				377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */,
+				3700A4722BDCF7E700FB9E81 /* ChannelSubCountView.swift in Sources */,
 				3744003F2BDA9E5F005E432B /* SaveInDownloadButton.swift in Sources */,
 				377E300D2BD9A11000135B48 /* ProgressBar.swift in Sources */,
 				377E30352BD9BDF900135B48 /* ThumbnailMakerViewModel.swift in Sources */,
 				3744002F2BDA7731005E432B /* ProcessInfo+Extensions.swift in Sources */,
+				374400842BDBE50D005E432B /* AppImage+Extensions.swift in Sources */,
 				3744003D2BDA9BFF005E432B /* ThumbnailView.swift in Sources */,
 				377E304C2BDA455700135B48 /* View+Extensions.swift in Sources */,
+				3700A4622BDC039800FB9E81 /* LastUrlsListView.swift in Sources */,
 				377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		377E2FCF2BD9943B00135B48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				377E2FD82BD9943B00135B48 /* YoutubeMiniaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		377E2FD92BD9943B00135B48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				377E2FE22BD9943B00135B48 /* YoutubeMiniaUITests.swift in Sources */,
-				377E2FE42BD9943B00135B48 /* YoutubeMiniaUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		377E2FD52BD9943B00135B48 /* PBXTargetDependency */ = {
+		3700A48D2BDD227800FB9E81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 377E2FBF2BD9943A00135B48 /* YoutubeMinia */;
-			targetProxy = 377E2FD42BD9943B00135B48 /* PBXContainerItemProxy */;
+			platformFilter = ios;
+			target = 3700A47E2BDD227800FB9E81 /* YT Minia Maker Action */;
+			targetProxy = 3700A48C2BDD227800FB9E81 /* PBXContainerItemProxy */;
 		};
-		377E2FDF2BD9943B00135B48 /* PBXTargetDependency */ = {
+		374D14EC2BDE7DCB00BCEB93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 377E2FBF2BD9943A00135B48 /* YoutubeMinia */;
-			targetProxy = 377E2FDE2BD9943B00135B48 /* PBXContainerItemProxy */;
+			targetProxy = 374D14EB2BDE7DCB00BCEB93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		3700A4882BDD227800FB9E81 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3700A4892BDD227800FB9E81 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		3700A4902BDD227800FB9E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "YT Minia Maker Action/YT Minia Maker Action.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = $BUILD_VERSION;
+				DEVELOPMENT_TEAM = V4U726YWM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YT Minia Maker Action/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = $APP_VERSION;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nbapps.YoutubeThumbnailMaker.YT-Minia-Maker-Action";
+				PRODUCT_NAME = $TARGET_NAME;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3700A4912BDD227800FB9E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "YT Minia Maker Action/YT Minia Maker Action.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = $BUILD_VERSION;
+				DEVELOPMENT_TEAM = V4U726YWM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YT Minia Maker Action/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = $APP_VERSION;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nbapps.YoutubeThumbnailMaker.YT-Minia-Maker-Action";
+				PRODUCT_NAME = $TARGET_NAME;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		374D14EE2BDE7DCB00BCEB93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4U726YWM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nbapps.YT-Minia-MakerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YT Minia Maker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YT Minia Maker";
+			};
+			name = Debug;
+		};
+		374D14EF2BDE7DCB00BCEB93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4U726YWM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nbapps.YT-Minia-MakerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YT Minia Maker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YT Minia Maker";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		377E2FE52BD9943B00135B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 377E30032BD99A0600135B48 /* Config.xcconfig */;
@@ -689,6 +1084,7 @@
 		377E2FE82BD9943B00135B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = YoutubeMinia/YoutubeMinia.entitlements;
@@ -703,9 +1099,13 @@
 				INFOPLIST_FILE = YoutubeMinia/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
 				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow acces to save image";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -714,14 +1114,18 @@
 				MARKETING_VERSION = $APP_VERSION;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeThumbnailMaker;
 				PRODUCT_NAME = "YT Minia Maker";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		377E2FE92BD9943B00135B48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = YoutubeMinia/YoutubeMinia.entitlements;
@@ -736,9 +1140,13 @@
 				INFOPLIST_FILE = YoutubeMinia/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "YT Minia Maker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Allow acces to Download folder to save the thumbnail";
 				INFOPLIST_KEY_NSFileProviderPresenceUsageDescription = "Allow acces to share file";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow acces to save image";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -747,86 +1155,35 @@
 				MARKETING_VERSION = $APP_VERSION;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeThumbnailMaker;
 				PRODUCT_NAME = "YT Minia Maker";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		377E2FEB2BD9943B00135B48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V4U726YWM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMiniaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoutubeMinia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YoutubeMinia";
-			};
-			name = Debug;
-		};
-		377E2FEC2BD9943B00135B48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V4U726YWM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMiniaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoutubeMinia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YoutubeMinia";
-			};
-			name = Release;
-		};
-		377E2FEE2BD9943B00135B48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V4U726YWM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMiniaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = YoutubeMinia;
-			};
-			name = Debug;
-		};
-		377E2FEF2BD9943B00135B48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V4U726YWM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeMiniaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = YoutubeMinia;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3700A4922BDD227800FB9E81 /* Build configuration list for PBXNativeTarget "YT Minia Maker Action" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3700A4902BDD227800FB9E81 /* Debug */,
+				3700A4912BDD227800FB9E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		374D14ED2BDE7DCB00BCEB93 /* Build configuration list for PBXNativeTarget "YT Minia MakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374D14EE2BDE7DCB00BCEB93 /* Debug */,
+				374D14EF2BDE7DCB00BCEB93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		377E2FBB2BD9943A00135B48 /* Build configuration list for PBXProject "YoutubeMinia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -841,24 +1198,6 @@
 			buildConfigurations = (
 				377E2FE82BD9943B00135B48 /* Debug */,
 				377E2FE92BD9943B00135B48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		377E2FEA2BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMiniaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				377E2FEB2BD9943B00135B48 /* Debug */,
-				377E2FEC2BD9943B00135B48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		377E2FED2BD9943B00135B48 /* Build configuration list for PBXNativeTarget "YoutubeMiniaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				377E2FEE2BD9943B00135B48 /* Debug */,
-				377E2FEF2BD9943B00135B48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

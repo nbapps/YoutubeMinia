@@ -1,6 +1,41 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "!%lld day%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld day%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld jour%2$@"
+          }
+        }
+      }
+    },
+    "!%lld hour%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld hour%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld heure%2$@"
+          }
+        }
+      }
+    },
     "!%lld k subscribers" : {
       "localizations" : {
         "en" : {
@@ -65,6 +100,54 @@
         }
       }
     },
+    "!%lld minute%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld minute%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld minute%2$@"
+          }
+        }
+      }
+    },
+    "!%lld month%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld month%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld mois"
+          }
+        }
+      }
+    },
+    "!%lld second%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld second%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld second%2$@"
+          }
+        }
+      }
+    },
     "!%lld subscribers" : {
       "localizations" : {
         "en" : {
@@ -97,6 +180,38 @@
         }
       }
     },
+    "!%lld week%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld week%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld semaine%2$@"
+          }
+        }
+      }
+    },
+    "!%lld year%@ ago" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld year%2$@ ago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "il y a %1$lld an%2$@"
+          }
+        }
+      }
+    },
     "!Any Youtube URL" : {
       "localizations" : {
         "en" : {
@@ -109,6 +224,102 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "N'importe quelle URL Youtube / Shorts"
+          }
+        }
+      }
+    },
+    "!Apply options when select previous url" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apply options when select previous url from history"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appliquer les options lors de la sélection de l'url précédente à partir de l'historique"
+          }
+        }
+      }
+    },
+    "!Channel name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Channel name"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom de la chaine"
+          }
+        }
+      }
+    },
+    "!Channel subscribers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Channel subscribers"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre d'abonnés de la chaine"
+          }
+        }
+      }
+    },
+    "!Channel thumbnail" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Channel thumbnail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miniature de la chaine"
+          }
+        }
+      }
+    },
+    "!Click on a component in the thumbnail to hide it. e.g. channel thumbnail" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click on a component in the thumbnail to hide it. e.g. channel thumbnail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cliquez sur un composant de la vignette pour le masquer, par exemple la vignette du canal"
+          }
+        }
+      }
+    },
+    "!Close" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
           }
         }
       }
@@ -257,6 +468,22 @@
         }
       }
     },
+    "!Hidden components" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hidden components"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Composants masqués"
+          }
+        }
+      }
+    },
     "!Invalid Number" : {
       "localizations" : {
         "en" : {
@@ -269,6 +496,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Numéro non valide"
+          }
+        }
+      }
+    },
+    "!Maker" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maker"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créateur"
           }
         }
       }
@@ -385,6 +628,22 @@
         }
       }
     },
+    "!Remove" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
+          }
+        }
+      }
+    },
     "!Save .yttm file" : {
       "localizations" : {
         "en" : {
@@ -413,6 +672,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sauvegarder dans les téléchargements"
+          }
+        }
+      }
+    },
+    "!Save in Photo library" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save in Photo Library"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegarder dans la libraire de photos"
+          }
+        }
+      }
+    },
+    "!Select" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionner"
           }
         }
       }
@@ -529,70 +820,6 @@
         }
       }
     },
-    "!Since %lld day%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld day%2$@ ago"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "il y a %1$lld jour%2$@"
-          }
-        }
-      }
-    },
-    "!Since %lld month%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld month%2$@ ago"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "il y a %1$lld moi%2$@"
-          }
-        }
-      }
-    },
-    "!Since %lld week%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld week%2$@ ago"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "il y a %1$lld semaine%2$@"
-          }
-        }
-      }
-    },
-    "!Since %lld year%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld year%2$@ ago"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "il y a %1$lld an%2$@"
-          }
-        }
-      }
-    },
     "!Source code" : {
       "localizations" : {
         "en" : {
@@ -657,6 +884,22 @@
         }
       }
     },
+    "!The thumbnail has been saved in your Photo library" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The thumbnail has been saved in your Photo library"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La vignette a été enregistrée dans votre bibliothèque de photos"
+          }
+        }
+      }
+    },
     "!The thumbnail is in your clipboard" : {
       "localizations" : {
         "en" : {
@@ -689,6 +932,38 @@
         }
       }
     },
+    "!This URL does not appear to be a valid YouTube URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This URL does not appear to be a valid YouTube URL"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette URL ne semble pas être une URL valide de YouTube"
+          }
+        }
+      }
+    },
+    "!Thumbnail" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thumbnail"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miniature"
+          }
+        }
+      }
+    },
     "!Thumbnail padding" : {
       "localizations" : {
         "en" : {
@@ -717,6 +992,118 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pour créer une vignette, vous pouvez soit copier et coller l'URL de Youtube dans l'application, soit la faire glisser et la déposer dans l'application, soit configurer un raccourci clavier pour générer automatiquement la vignette après avoir copié l'URL."
+          }
+        }
+      }
+    },
+    "!Total views" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total of views"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total des vues"
+          }
+        }
+      }
+    },
+    "!URLs" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URLs"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URLs"
+          }
+        }
+      }
+    },
+    "!Version: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version: %@"
+          }
+        }
+      }
+    },
+    "!Video duration" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video duration"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durée de la vidéo"
+          }
+        }
+      }
+    },
+    "!Video progress bar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video progress bar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barre de progression de la vidéo"
+          }
+        }
+      }
+    },
+    "!Video publish date" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video publish date"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date de publication de la vidéo"
+          }
+        }
+      }
+    },
+    "!Video title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video title"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titre de la vidéo"
           }
         }
       }
@@ -791,6 +1178,12 @@
     },
     "10:10" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10:10"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -811,6 +1204,12 @@
     },
     "My channel" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Channel"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -821,6 +1220,12 @@
     },
     "This is a video title" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is a video title"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",

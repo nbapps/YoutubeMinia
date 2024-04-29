@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "09EA239A-0C0D-4545-919C-86C1941CBA6F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "IDEPreferLogStreaming",
+        "value" : "YES"
+      }
+    ],
+    "language" : "en",
+    "region" : "FR",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:YoutubeMinia.xcodeproj",
+      "identifier" : "377E2FBF2BD9943A00135B48",
+      "name" : "YoutubeMinia"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:YoutubeMinia.xcodeproj",
+        "identifier" : "374D14E62BDE7DCB00BCEB93",
+        "name" : "YT Minia MakerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

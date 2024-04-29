@@ -1,14 +1,14 @@
 //
-//  SaveInDownloadButton.swift
+//  SaveToPhotoLibraryButtonView.swift
 //  YoutubeMinia
 //
-//  Created by Nicolas Bachur on 25/04/2024.
+//  Created by Nicolas Bachur on 26/04/2024.
 //
 
 import SwiftUI
 
-#if os(macOS)
-struct SaveInDownloadButton: View {
+#if os(iOS)
+struct SaveToPhotoLibraryButtonView: View {
     @EnvironmentObject private var viewModel: ThumbnailMakerViewModel
     
     var padding: CGFloat = 0
@@ -18,17 +18,16 @@ struct SaveInDownloadButton: View {
     var body: some View {
         Button {
             guard let thumbnailData = viewModel.ymThumbnailData else { return }
-
             Task { @MainActor in
                 do {
-                    try viewModel.exportToDownloads(thumbnailData: thumbnailData)
+                    try viewModel.saveInPhotoLibrary(thumbnailData: thumbnailData)
                 } catch {
                     errorMessage = error.localizedDescription
                     showError = true
                 }
             }
         } label: {
-            Label("!Save in Dowmloads", systemImage: "photo.badge.arrow.down")
+            Label("!Save in Photo library", systemImage: "photo.badge.arrow.down")
                 .padding(padding)
         }
         .keyboardShortcut("1")
@@ -38,10 +37,10 @@ struct SaveInDownloadButton: View {
 }
 
 #Preview {
-    SaveInDownloadButton(
-        showError: .constant(false), 
+    SaveToPhotoLibraryButtonView(
+        showError: .constant(false),
         errorMessage: .constant("")
     )
-        .environmentObject(ThumbnailMakerViewModel.preview)
+    .environmentObject(ThumbnailMakerViewModel.preview)
 }
 #endif
