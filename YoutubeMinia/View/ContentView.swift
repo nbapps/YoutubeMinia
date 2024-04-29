@@ -19,22 +19,43 @@ struct ContentView: View {
     var body: some View {
         Group {
 #if os(macOS)
-            NavigationSplitView {
-                LastUrlsListView()
-                    .navigationSplitViewColumnWidth(min: 200, ideal: 200, max: 300)
-            } detail: {
-                ThumbnailMakerView()
-                    .navigationTitle("!Youtube Minia Maker")
-            }
+            macBody
 #else
-            NavigationStack {
-                ThumbnailMakerView()
-                    .navigationTitle("!Youtube Minia Maker")
+            if UIDevice.current.isPad {
+                iPadBody
+            } else {
+                iPhoneBody
             }
 #endif
         }
         .onChange(of: scenePhase) { _, _ in
             UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        }
+    }
+    
+    var macBody: some View {
+        NavigationSplitView {
+            LastUrlsListView()
+                .navigationSplitViewColumnWidth(min: 200, ideal: 200, max: 300)
+        } detail: {
+            ThumbnailMakerView()
+                .navigationTitle("!Youtube Minia Maker")
+        }
+    }
+    
+    var iPadBody: some View {
+        NavigationSplitView {
+            LastUrlsListView()
+        } detail: {
+            ThumbnailMakerView()
+                .navigationTitle("!Youtube Minia Maker")
+        }
+    }
+    
+    var iPhoneBody: some View {
+        NavigationStack {
+            ThumbnailMakerView()
+                .navigationTitle("!Youtube Minia Maker")
         }
     }
 }

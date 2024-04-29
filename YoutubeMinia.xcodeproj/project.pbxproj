@@ -94,7 +94,7 @@
 		3744003F2BDA9E5F005E432B /* SaveInDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744003E2BDA9E5F005E432B /* SaveInDownloadButton.swift */; };
 		374400412BDA9F33005E432B /* CopyImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400402BDA9F33005E432B /* CopyImageButtonView.swift */; };
 		374400432BDAA04A005E432B /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400422BDAA04A005E432B /* PreferencesView.swift */; };
-		374400462BDAA109005E432B /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 374400452BDAA109005E432B /* KeyboardShortcuts */; };
+		374400462BDAA109005E432B /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; platformFilters = (macos, ); productRef = 374400452BDAA109005E432B /* KeyboardShortcuts */; };
 		374400482BDAA136005E432B /* WindowId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400472BDAA135005E432B /* WindowId.swift */; };
 		3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374400492BDAA199005E432B /* KeyboardShortcuts+Extensions.swift */; };
 		3744004C2BDAA656005E432B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744004B2BDAA656005E432B /* NotificationService.swift */; };
@@ -111,6 +111,8 @@
 		374D14DD2BDE790700BCEB93 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374D14DB2BDE78BB00BCEB93 /* Shared.xcassets */; };
 		374D14E22BDE7AB500BCEB93 /* yttm_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 374D14E12BDE7AB500BCEB93 /* yttm_icon.png */; };
 		374D14EA2BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */; };
+		374D14F22BDFE55200BCEB93 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14F12BDFE55200BCEB93 /* UIDevice+Extensions.swift */; };
+		374D14F32BDFE55200BCEB93 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14F12BDFE55200BCEB93 /* UIDevice+Extensions.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
@@ -231,6 +233,7 @@
 		374D14E72BDE7DCB00BCEB93 /* YT Minia MakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YT Minia MakerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YT_Minia_MakerTests.swift; sourceTree = "<group>"; };
 		374D14F02BDE7FDC00BCEB93 /* YoutubeMinia.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = YoutubeMinia.xctestplan; sourceTree = "<group>"; };
+		374D14F12BDFE55200BCEB93 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -505,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				374400362BDA9982005E432B /* Draggable.swift */,
+				374D14F12BDFE55200BCEB93 /* UIDevice+Extensions.swift */,
 				374400812BDBE3B8005E432B /* Pastboard+Extensions.swift */,
 				377E300A2BD99F4900135B48 /* Double+Extensions.swift */,
 				377E30082BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift */,
@@ -734,6 +738,7 @@
 				3700A49B2BDD304E00FB9E81 /* Database.swift in Sources */,
 				3700A49C2BDD304E00FB9E81 /* YTDecodable.swift in Sources */,
 				3700A49D2BDD304E00FB9E81 /* SharableFile.swift in Sources */,
+				374D14F32BDFE55200BCEB93 /* UIDevice+Extensions.swift in Sources */,
 				3700A4B42BDD306D00FB9E81 /* KeyboardShortcuts+Extensions.swift in Sources */,
 				3700A4B52BDD306D00FB9E81 /* Draggable.swift in Sources */,
 				3700A4B62BDD306D00FB9E81 /* Collection+Extensions.swift in Sources */,
@@ -808,6 +813,7 @@
 				377E30092BD99CF400135B48 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */,
 				3700A47A2BDD023A00FB9E81 /* ImageSaverService.swift in Sources */,
 				377E30482BDA3F7300135B48 /* Font+Extensions.swift in Sources */,
+				374D14F22BDFE55200BCEB93 /* UIDevice+Extensions.swift in Sources */,
 				3744004A2BDAA199005E432B /* KeyboardShortcuts+Extensions.swift in Sources */,
 				377E305A2BDA524500135B48 /* ThumbnailMakerView.swift in Sources */,
 				3700A4722BDCF7E700FB9E81 /* ChannelSubCountView.swift in Sources */,
@@ -1105,6 +1111,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow acces to save image";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1118,7 +1125,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1146,6 +1153,7 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow acces to save image";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1159,7 +1167,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

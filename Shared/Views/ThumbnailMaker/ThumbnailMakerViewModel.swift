@@ -251,7 +251,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
             url: ytChannelUrl,
             channelThumbnailUrl: channelThumbnailUrl,
             channelTitle: channelTitle,
-            channelCount: channelCount
+            channelCount: channelStatistics.subscriberCount ?? "0"
         )
         self.ymChannelData = channelData
         

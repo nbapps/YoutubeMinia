@@ -126,17 +126,10 @@ struct ThumbnailMakerView: View {
             }
         }
         .frame(minWidth: 300)
-#if os(macOS)
-        .inspector(isPresented: $showInspector) {
-            YMOptionsView()
-                .disabled(viewModel.isFetching)
-        }
-#else
-        .sheet(isPresented: $showInspector) {
-            YMOptionsWithPreview()
-                .disabled(viewModel.isFetching)
-        }
-#endif
+        .inspectorOrModale(
+            showInspector: $showInspector,
+            disabled: viewModel.isFetching
+        )
         .scrollDismissesKeyboard(.interactively)
         .toolbar {
             makeSaveButton()
@@ -217,6 +210,31 @@ private extension ThumbnailMakerView {
                 showError = true
             }
         }
+    }
+}
+
+private extension View {
+    @ViewBuilder
+    func inspectorOrModale(showInspector: Binding<Bool>, disabled: Bool) -> some View {
+#if os(macOS)
+        inspector(isPresented: showInspector) {
+            YMOptionsView()
+                .disabled(disabled)
+        }
+#else
+        if UIDevice.current.isPad {
+            inspector(isPresented: showInspector) {
+                YMOptionsView()
+                    .disabled(disabled)
+                    .inspectorColumnWidth(300)
+            }
+        } else {
+            sheet(isPresented: showInspector) {
+                YMOptionsWithPreview()
+                    .disabled(disabled)
+            }
+        }
+#endif
     }
 }
 
