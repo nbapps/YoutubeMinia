@@ -87,7 +87,11 @@ final class ThumbnailMakerViewModel: ObservableObject {
             .sink { [weak self] newValue in
                 guard let self else { return }
                 Task { @MainActor in
-                    try await self.fetch()
+                    do {
+                        try await self.fetch()
+                    } catch {
+                        print(error)
+                    }
                 }
             }
             .store(in: &cancellables)
@@ -197,8 +201,6 @@ final class ThumbnailMakerViewModel: ObservableObject {
               let channelThumbnailUrl = URL(string: channelThumbnails),
               let videoTitle = videoSnippet.title,
               let channelTitle = channelSnippet.title,
-              let viewCount = videoStatistics.viewCount,
-              let channelCount = channelStatistics.subscriberCount,
               let videoDuration = videoItem.contentDetails?.duration,
               let publicationDate = videoSnippet.publishedAt,
               let publicationDate = ISO8601DateFormatter().date(from: publicationDate)
@@ -210,8 +212,8 @@ final class ThumbnailMakerViewModel: ObservableObject {
             channelThumbnailUrl: channelThumbnailUrl,
             videoTitle: videoTitle,
             channelTitle: channelTitle,
-            viewCount: viewCount,
-            channelCount: channelCount,
+            viewCount: videoStatistics.viewCount ?? "0",
+            channelCount: channelStatistics.subscriberCount ?? "0",
             videoDuration: videoDuration.formattedVideoDuration(),
             publicationDate: publicationDate
         )
