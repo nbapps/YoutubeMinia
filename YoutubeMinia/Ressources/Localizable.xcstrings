@@ -4,6 +4,38 @@
     "" : {
 
     },
+    "!%@ subscribers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ subscribers"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ subscribers"
+          }
+        }
+      }
+    },
+    "!%@ views" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ views"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ views"
+          }
+        }
+      }
+    },
     "!%lld day%@ ago" : {
       "localizations" : {
         "en" : {
@@ -32,70 +64,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "il y a %1$lld heure%2$@"
-          }
-        }
-      }
-    },
-    "!%lld k subscribers" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld k subscribers"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld k abonnés"
-          }
-        }
-      }
-    },
-    "!%lld k views" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld k views"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld k vues"
-          }
-        }
-      }
-    },
-    "!%lld m subscribers" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld m subscribers"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld m abonnés"
-          }
-        }
-      }
-    },
-    "!%lld m views" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld m views"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld m vues"
           }
         }
       }
@@ -160,22 +128,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld abonnés"
-          }
-        }
-      }
-    },
-    "!%lld views" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld views"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld vues"
           }
         }
       }

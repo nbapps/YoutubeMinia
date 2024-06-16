@@ -77,12 +77,12 @@ final class YT_Minia_MakerTests: XCTestCase {
         
         XCTAssertEqual(count1.formatViewCount(),  String(localized: "10 views"))
         XCTAssertEqual(count2.formatViewCount(),  String(localized: "100 views"))
-        XCTAssertEqual(count3.formatViewCount(),  String(localized: "1 k views"))
-        XCTAssertEqual(count4.formatViewCount(),  String(localized: "10 k views"))
-        XCTAssertEqual(count5.formatViewCount(),  String(localized: "100 k views"))
-        XCTAssertEqual(count6.formatViewCount(),  String(localized: "1 m views"))
-        XCTAssertEqual(count7.formatViewCount(),  String(localized: "10 m views"))
-        XCTAssertEqual(count8.formatViewCount(),  String(localized: "100 m views"))
+        XCTAssertEqual(count3.formatViewCount(),  String(localized: "1k views"))
+        XCTAssertEqual(count4.formatViewCount(),  String(localized: "10k views"))
+        XCTAssertEqual(count5.formatViewCount(),  String(localized: "100k views"))
+        XCTAssertEqual(count6.formatViewCount(),  String(localized: "1m views"))
+        XCTAssertEqual(count7.formatViewCount(),  String(localized: "10m views"))
+        XCTAssertEqual(count8.formatViewCount(),  String(localized: "100m views"))
     }
     
     func testChannelCount() throws {
@@ -101,12 +101,12 @@ final class YT_Minia_MakerTests: XCTestCase {
         
         XCTAssertEqual(count1.formatChannelCount(),  String(localized: "10 subscribers"))
         XCTAssertEqual(count2.formatChannelCount(),  String(localized: "100 subscribers"))
-        XCTAssertEqual(count3.formatChannelCount(),  String(localized: "1 k subscribers"))
-        XCTAssertEqual(count4.formatChannelCount(),  String(localized: "10 k subscribers"))
-        XCTAssertEqual(count5.formatChannelCount(),  String(localized: "100 k subscribers"))
-        XCTAssertEqual(count6.formatChannelCount(),  String(localized: "1 m subscribers"))
-        XCTAssertEqual(count7.formatChannelCount(),  String(localized: "10 m subscribers"))
-        XCTAssertEqual(count8.formatChannelCount(),  String(localized: "100 m subscribers"))
+        XCTAssertEqual(count3.formatChannelCount(),  String(localized: "1k subscribers"))
+        XCTAssertEqual(count4.formatChannelCount(),  String(localized: "10k subscribers"))
+        XCTAssertEqual(count5.formatChannelCount(),  String(localized: "100k subscribers"))
+        XCTAssertEqual(count6.formatChannelCount(),  String(localized: "1m subscribers"))
+        XCTAssertEqual(count7.formatChannelCount(),  String(localized: "10m subscribers"))
+        XCTAssertEqual(count8.formatChannelCount(),  String(localized: "100m subscribers"))
     }
     
     func testVideoDuration() throws {

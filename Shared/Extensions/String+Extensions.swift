@@ -20,16 +20,9 @@ extension String {
         guard let number = Double(self) else {
             return String(localized: "!Invalid Number")
         }
-        
-        if number >= 1000 && number < 1000000 {
-            let roundedNumber = round(number / 1000)
-            return String(localized: "!\(Int(roundedNumber)) k views")
-        } else if number >= 1000000 {
-            let roundedNumber = round(number / 1000000)
-            return String(localized: "!\(Int(roundedNumber)) m views")
-        } else {
-            return String(localized: "!\(Int(number)) views")
-        }
+
+        let value = number.formatted(.number.notation(.compactName))
+        return String(localized: "!\(value.lowercased()) views")
     }
     
     func formatChannelCount() -> String {
@@ -37,15 +30,8 @@ extension String {
             return String(localized: "!Invalid Number")
         }
         
-        if number >= 1000 && number < 1000000 {
-            let roundedNumber = round(number / 1000)
-            return String(localized: "!\(Int(roundedNumber)) k subscribers")
-        } else if number >= 1000000 {
-            let roundedNumber = round(number / 1000000)
-            return String(localized: "!\(Int(roundedNumber)) m subscribers")
-        } else {
-            return String(localized: "!\(Int(number)) subscribers")
-        }
+        let value = number.formatted(.number.notation(.compactName))
+        return String(localized: "!\(value.lowercased()) subscribers")
     }
     
     func formattedVideoDuration() -> String {
