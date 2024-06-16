@@ -113,6 +113,8 @@
 		374D14EA2BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */; };
 		374D14F22BDFE55200BCEB93 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14F12BDFE55200BCEB93 /* UIDevice+Extensions.swift */; };
 		374D14F32BDFE55200BCEB93 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374D14F12BDFE55200BCEB93 /* UIDevice+Extensions.swift */; };
+		375D8F692BE50D2B00AD8202 /* ChannelBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D8F682BE50D2B00AD8202 /* ChannelBadgeView.swift */; };
+		375D8F6A2BE511EC00AD8202 /* ChannelBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D8F682BE50D2B00AD8202 /* ChannelBadgeView.swift */; };
 		377E2FC42BD9943A00135B48 /* YoutubeMiniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */; };
 		377E2FC62BD9943A00135B48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E2FC52BD9943A00135B48 /* ContentView.swift */; };
 		377E2FCA2BD9943B00135B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377E2FC92BD9943B00135B48 /* Assets.xcassets */; };
@@ -234,6 +236,7 @@
 		374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YT_Minia_MakerTests.swift; sourceTree = "<group>"; };
 		374D14F02BDE7FDC00BCEB93 /* YoutubeMinia.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = YoutubeMinia.xctestplan; sourceTree = "<group>"; };
 		374D14F12BDFE55200BCEB93 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		375D8F682BE50D2B00AD8202 /* ChannelBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelBadgeView.swift; sourceTree = "<group>"; };
 		377E2FC02BD9943A00135B48 /* YT Minia Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Minia Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377E2FC32BD9943A00135B48 /* YoutubeMiniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeMiniaApp.swift; sourceTree = "<group>"; };
 		377E2FC52BD9943A00135B48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -307,10 +310,8 @@
 		3700A4652BDCF3BB00FB9E81 /* Thumbnail */ = {
 			isa = PBXGroup;
 			children = (
-				374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */,
-				3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */,
-				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
-				3700A4772BDCF95300FB9E81 /* HiddenComponents.swift */,
+				375D8F672BE50D1500AD8202 /* Channel thumbnail */,
+				375D8F662BE50D0700AD8202 /* Video thumbnail */,
 				3700A4682BDCF4BD00FB9E81 /* Components */,
 			);
 			path = Thumbnail;
@@ -408,6 +409,25 @@
 				374D14E92BDE7DCB00BCEB93 /* YT_Minia_MakerTests.swift */,
 			);
 			path = "YT Minia MakerTests";
+			sourceTree = "<group>";
+		};
+		375D8F662BE50D0700AD8202 /* Video thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				374D14D42BDE3EC000BCEB93 /* ThumbnailViewOrEmpty.swift */,
+				3744004E2BDB8ABE005E432B /* EmptyThumbnailView.swift */,
+				3744003C2BDA9BFF005E432B /* ThumbnailView.swift */,
+				3700A4772BDCF95300FB9E81 /* HiddenComponents.swift */,
+			);
+			path = "Video thumbnail";
+			sourceTree = "<group>";
+		};
+		375D8F672BE50D1500AD8202 /* Channel thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				375D8F682BE50D2B00AD8202 /* ChannelBadgeView.swift */,
+			);
+			path = "Channel thumbnail";
 			sourceTree = "<group>";
 		};
 		377E2FB72BD9943A00135B48 = {
@@ -749,6 +769,7 @@
 				3700A4BB2BDD306D00FB9E81 /* String+Extensions.swift in Sources */,
 				3700A4BC2BDD306D00FB9E81 /* NSUbiquitousKeyValueStore+Extensions.swift in Sources */,
 				3700A4BD2BDD306D00FB9E81 /* Double+Extensions.swift in Sources */,
+				375D8F6A2BE511EC00AD8202 /* ChannelBadgeView.swift in Sources */,
 				3700A4BE2BDD306D00FB9E81 /* FileManager+Extensions.swift in Sources */,
 				3700A4BF2BDD306D00FB9E81 /* Date+Extensions.swift in Sources */,
 				3700A4C02BDD306D00FB9E81 /* AppImage+Extensions.swift in Sources */,
@@ -803,6 +824,7 @@
 				3700A4602BDC012100FB9E81 /* PreviousURLs.swift in Sources */,
 				3700A4762BDCF8EB00FB9E81 /* VideoPublishDateView.swift in Sources */,
 				3700A4702BDCF76500FB9E81 /* ChannelTitleView.swift in Sources */,
+				375D8F692BE50D2B00AD8202 /* ChannelBadgeView.swift in Sources */,
 				377E30582BDA51BD00135B48 /* NetworkService.swift in Sources */,
 				374400822BDBE3B8005E432B /* Pastboard+Extensions.swift in Sources */,
 				377E30022BD9981900135B48 /* Database.swift in Sources */,

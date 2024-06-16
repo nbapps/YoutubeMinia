@@ -60,11 +60,11 @@ struct EmptyThumbnailView: View {
             
             HStack(
                 alignment: .top,
-                spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 16)
+                spacing: viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8)
             ) {
                 if viewModel.showChannelIcon {
                     ChannelThumbnailView(
-                        value: viewModel.channelThumbnail,
+                        value: viewModel.ymThumbnailData != nil ? viewModel.channelThumbnail : nil,
                         thumbnailWidth: width
                     )
                 }
@@ -126,7 +126,7 @@ struct EmptyThumbnailView: View {
                 }
                 .redacted(reason: .placeholder)
             }
-            .padding(.horizontal, viewModel.responsiveFontSize(currentWidth: width, referenceSize: 8))
+            .padding(.horizontal, viewModel.responsiveFontSize(currentWidth: width, referenceSize: 4))
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(viewModel.responsiveFontSize(currentWidth: width, referenceSize: viewModel.thumbnailPadding))

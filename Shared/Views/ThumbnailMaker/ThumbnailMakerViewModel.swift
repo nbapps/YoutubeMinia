@@ -545,7 +545,7 @@ extension ThumbnailMakerViewModel {
     }
     
     var outerCornerRadius: Double {
-        (innerCornerRadius + thumbnailPadding).rounded(.up)
+        (innerCornerRadius * 1.2).rounded(.up)
     }
     
     var allComponentsDisplayed: Bool {
