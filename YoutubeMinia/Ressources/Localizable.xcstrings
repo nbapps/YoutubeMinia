@@ -868,18 +868,18 @@
         }
       }
     },
-    "!This app was created following Basti Ui and Benjamin Code's network challenge. This app is open source. The Github link is below." : {
+    "!This app was created following Basti Ui and Benjamin Code's on social networks challenge." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This app was created following Basti Ui and Benjamin Code's network challenge. This app is open source. The Github link is below."
+            "value" : "This app was created following Basti Ui and Benjamin Code's on social networks challenge."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cette application a été créée suite au défi réseau de Basti Ui et Benjamin Code. Cette application est open source. Le lien Github est ci-dessous."
+            "value" : "Cette application a été créée à la suite du défi lancé par Basti Ui et Benjamin Code sur les réseaux sociaux."
           }
         }
       }
