@@ -67,33 +67,31 @@ struct PreferencesView: View {
                 Divider()
                     .padding()
                 
-                VStack(alignment: .trailing, spacing: 8) {
-                    Text("!Context")
-                        .font(.title)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Text("!This app was created following Basti Ui and Benjamin Code's network challenge. This app is open source. The Github link is below.")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("!Thanks to this app, you can create a thumbnail of an already published YouTube video for use in your montages or for sharing on the networks. Works with long videos and shorts.")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("!You can share a configuration file with your editor so that he can use exactly the same configuration as you had created.")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("!To create a thumbnail, you can either copy and paste the Youtube url into the app, or drag and drop it into the app, or configure a keyboard shortcut to automatically generate the thumbnail after copying the URL.")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("!You can then share the image by saving it in the download folder, copying it to the clipboard or directly dragging and dropping it into your editing or graphics software.")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Link("!Source code", destination: URL(string: "https://github.com/nbapps/YoutubeMinia")!)
-                            Link("!Our other apps", destination: URL(string: "https://nbapps.fr")!)
-                        }
-                        Spacer()
-                        VStack(alignment: .trailing) {
-                            Link("@BastiUi", destination: URL(string: "https://www.youtube.com/@BastiUi/videos")!)
-                            Link("@BenjaminCode", destination: URL(string: "https://www.youtube.com/@BenjaminCode/videos")!)
-                        }
+                VStack(alignment: .trailing, spacing: 20) {
+                    VStack(alignment: .trailing, spacing: 8) {
+                        Text("!Context")
+                            .font(.title)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        Text("!This app was created following Basti Ui and Benjamin Code's on social networks challenge.")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("!Thanks to this app, you can create a thumbnail of an already published YouTube video for use in your montages or for sharing on the networks. Works with long videos and shorts.")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("!You can share a configuration file with your editor so that he can use exactly the same configuration as you had created.")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("!To create a thumbnail, you can either copy and paste the Youtube url into the app, or drag and drop it into the app, or configure a keyboard shortcut to automatically generate the thumbnail after copying the URL.")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("!You can then share the image by saving it in the download folder, copying it to the clipboard or directly dragging and dropping it into your editing or graphics software.")
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
+                    
+                    VStack(alignment: .leading) {
+                        Link("!Our other apps", destination: URL(string: "https://nbapps.fr")!)
+                        Link("!Source code", destination: URL(string: "https://github.com/nbapps/YoutubeMinia")!)
+                        Link("@BastiUi", destination: URL(string: "https://www.youtube.com/@BastiUi/videos")!)
+                        Link("@BenjaminCode", destination: URL(string: "https://www.youtube.com/@BenjaminCode/videos")!)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
             .padding()
