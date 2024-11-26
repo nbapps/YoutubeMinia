@@ -1090,7 +1090,7 @@
 				CODE_SIGN_ENTITLEMENTS = YoutubeMinia/YoutubeMinia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = $BUILD_VERSION;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"YoutubeMinia/Preview Content\"";
 				DEVELOPMENT_TEAM = V4U726YWM5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1111,7 +1111,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = $APP_VERSION;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeThumbnailMaker;
 				PRODUCT_NAME = "YT Minia Maker";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -1131,7 +1131,7 @@
 				CODE_SIGN_ENTITLEMENTS = YoutubeMinia/YoutubeMinia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = $BUILD_VERSION;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"YoutubeMinia/Preview Content\"";
 				DEVELOPMENT_TEAM = V4U726YWM5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1152,7 +1152,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = $APP_VERSION;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nbapps.YoutubeThumbnailMaker;
 				PRODUCT_NAME = "YT Minia Maker";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
