@@ -183,7 +183,7 @@ final class ThumbnailMakerViewModel: ObservableObject {
               let videoSnippet = videoItem.snippet,
               let videoStatistics = videoItem.statistics,
               let thumbnails = videoSnippet.thumbnails,
-              let videoThumbnails = thumbnails.maxres?.url,
+              let videoThumbnails = (thumbnails.maxres ?? thumbnails.medium)?.url,
               let channelId = videoSnippet.channelId
         else { throw YMViewModelError.missingResponse }
         
